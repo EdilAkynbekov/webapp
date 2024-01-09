@@ -1,8 +1,28 @@
+<<<<<<< HEAD
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+=======
+
+# Web Application
+
+> > > > > > > Incoming
+
+<<<<<<< HEAD
 
 ## Getting Started
 
+=======
+Note: Please ensure you have installed <code><a href="https://nodejs.org/en/download/">nodejs</a></code>
+
+> > > > > > > Incoming
+
+<<<<<<< HEAD
 First, run the development server:
+=======
+To preview and run the project on your device:
+
+> > > > > > > Incoming
+
+<<<<<<< HEAD
 
 ```bash
 npm run dev
@@ -33,4 +53,10 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+# Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+1. Open project folder in <a href="https://code.visualstudio.com/download">Visual Studio Code</a>
+2. In the terminal, run `npm install`
+3. Run `npm start` to view project in browser
+
+> > > > > > > Incoming

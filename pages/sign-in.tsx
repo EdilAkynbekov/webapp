@@ -19,32 +19,53 @@ const SignIn: NextPage = () => {
 
   return (
     <div className="relative bg-white w-full h-[832px] overflow-hidden text-center text-11xl text-black1 font-poppins">
-      <section className="absolute top-[0px] left-[-87px] w-[846px] h-[832px] bg-[url('/background@3x.png')] bg-cover bg-no-repeat bg-[top]" />
-      <section className="absolute top-[0px] left-[405px] rounded-47xl bg-white w-[875px] h-[832px]" />
-      <div className="absolute top-[152px] left-[20px] w-[342px] overflow-hidden flex flex-col items-center justify-end">
-        <h1 className="m-0 self-stretch relative text-inherit font-medium font-inherit">
-          Are you a Healthcare Professional?
-        </h1>
-      </div>
-      <div className="absolute top-[438px] left-[529px] w-[177px] h-7 overflow-hidden flex flex-col items-center justify-end text-left text-mini">
-        <div className="relative flex items-center w-[177px] h-7 shrink-0">
-          Email Address
+      <div className="relative min-h-screen bg-gray-100">
+        {/* Background Sections */}
+        <section className="absolute inset-0 bg-[url('/background@3x.png')] bg-cover" />
+        <section className="absolute top-0 left-1/2 rounded-47xl bg-white w-1/2 h-screen transform -translate-x-1/2" />
+
+        {/* Sign In Section */}
+        <div className="absolute top-0 left-1/2 w-full max-w-md p-6 transform -translate-x-1/2">
+          <h3
+            className="text-white text-lg font-bold mb-4 cursor-pointer"
+            onClick={onSignInClick}
+          >
+            Sign in
+          </h3>
+          <div className="mb-4">
+            <label htmlFor="email" className="text-sm text-gray-600">
+              Email Address
+            </label>
+            <input
+              type="email"
+              id="email"
+              className="w-full p-2 border rounded"
+            />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="password" className="text-sm text-gray-600">
+              Password
+            </label>
+            <input
+              type="password"
+              id="password"
+              className="w-full p-2 border rounded"
+            />
+          </div>
+          <button
+            className="w-full bg-blue-500 text-white p-3 rounded"
+            onClick={onSignInClick}
+          >
+            Sign In
+          </button>
         </div>
-      </div>
-      <div className="absolute top-[501px] left-[529px] w-[122px] h-7 overflow-hidden flex flex-col items-center justify-end text-left text-mini">
-        <div className="relative flex items-center w-[122px] h-7 shrink-0">
-          Password
+
+        {/* Healthcare Professional Check */}
+        <div className="absolute top-40 left-5">
+          <h1 className="text-xl font-medium">
+            Are you a Healthcare Professional?
+          </h1>
         </div>
-      </div>
-      <div className="absolute top-[0px] left-[530px] bg-black1 w-[614px] overflow-hidden" />
-      <div className="absolute top-[0px] left-[529px] bg-black1 w-[614px] overflow-hidden" />
-      <div className="absolute top-[0px] left-[714px] w-[243px] overflow-hidden flex flex-col items-center justify-end text-mid text-white">
-        <h3
-          className="m-0 self-stretch relative text-inherit tracking-[0.04em] font-bold font-inherit cursor-pointer"
-          onClick={onSignInClick}
-        >
-          Sign in
-        </h3>
       </div>
       <div className="absolute top-[366px] left-[731px] w-[55px] h-[27px] overflow-hidden flex flex-col items-center justify-end text-left text-lg">
         <h3 className="m-0 relative text-inherit font-normal font-inherit">

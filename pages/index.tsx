@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import { useState, useCallback } from "react";
+import Link from "next/link";
 import SubmitButton from "../components/submit-button";
 import Google from "../components/google";
 import Facebook from "../components/facebook";
@@ -10,15 +11,12 @@ const ProfileSetup1b: NextPage = () => {
   const [inputField3Value, setInputField3Value] = useState("");
   const [inputField4Value, setInputField4Value] = useState("");
 
-
   const onProfileSetup1bClick = useCallback(() => {
     // Please sync "diet goal (cindy)" to the project
-
   }, []);
 
   const onGroupButtonClick = useCallback(() => {
     // Please sync "Profile Setup 2" to the project
-
   }, []);
 
   const onSignIn2Click = useCallback(() => {
@@ -30,6 +28,9 @@ const ProfileSetup1b: NextPage = () => {
       className="relative bg-orange w-full h-[832px] overflow-hidden cursor-pointer text-left text-lg text-black1 font-poppins"
       onClick={onProfileSetup1bClick}
     >
+      <div className="mt-4 text-center">
+        <Link href="/signin2">Sign Up</Link>
+      </div>
       <img
         className="absolute top-[0px] left-[-4px] rounded-t-sm rounded-b-none w-[505px] h-[832px] object-cover"
         alt=""
@@ -42,16 +43,12 @@ const ProfileSetup1b: NextPage = () => {
         <div className="relative rounded-[50%] bg-background-green-10 w-[15px] h-[15px]" />
         <div className="relative rounded-[50%] bg-background-green-10 w-[15px] h-[15px]" />
         <div className="relative rounded-[50%] bg-background-green-10 w-[15px] h-[15px]" />
-
       </div>
       <div className="absolute top-[calc(50%_-_255px)] left-[calc(50%_-_478px)] rounded-lg w-[941px] h-[498px] flex items-center justify-center">
-
         <img
           className="w-full h-full object-contain absolute left-[8px] top-[8px] [transform:scale(1.201)]"
-
           alt=""
           src="/rectangle-297@2x.png"
-
         />
       </div>
       <input
@@ -72,10 +69,8 @@ const ProfileSetup1b: NextPage = () => {
 
         <img
           className="absolute w-[18px] h-[18px] overflow-hidden shrink-0 object-cover z-[2] right-[16px] top-[15px]"
-
           alt=""
           src="/calendar@2x.png"
-
         />
       </div>
       <button className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[467px] left-[216px] w-[180px] h-12">
@@ -111,7 +106,6 @@ const ProfileSetup1b: NextPage = () => {
               src="/arrow-down@2x.png"
             />
           </div>
-
         </div>
       </button>
       <input
@@ -162,7 +156,6 @@ const ProfileSetup1b: NextPage = () => {
             />
           </div>
         </div>
-
       </button>
       <button
         className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[587px] left-[938px] shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] w-[110px] h-10"
@@ -206,7 +199,6 @@ const ProfileSetup1b: NextPage = () => {
               src="/arrow-down@2x.png"
             />
           </div>
-
         </div>
       </button>
       <button className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[351px] left-[752px] w-[85px] h-12">
@@ -242,7 +234,6 @@ const ProfileSetup1b: NextPage = () => {
               src="/arrow-down@2x.png"
             />
           </div>
-
         </div>
       </button>
       <button className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[351px] left-[862px] w-[85px] h-12">
@@ -278,7 +269,6 @@ const ProfileSetup1b: NextPage = () => {
               src="/arrow-down@2x.png"
             />
           </div>
-
         </div>
       </button>
       <button className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[351px] left-[962px] w-[85px] h-12">
@@ -368,7 +358,6 @@ const ProfileSetup1b: NextPage = () => {
             </span>
           </p>
         </span>
-
       </div>
       <button className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[583px] left-[216px] w-[180px] h-12">
         <div className="absolute h-full w-full top-[0%] right-[0%] bottom-[0%] left-[0%]">
@@ -404,7 +393,6 @@ const ProfileSetup1b: NextPage = () => {
             />
           </div>
         </div>
-
       </button>
       <button className="cursor-pointer [border:none] p-0 bg-[transparent] absolute top-[583px] left-[411px] w-[179px] h-12">
         <div className="absolute h-full w-full top-[0%] right-[0%] bottom-[0%] left-[0%]">
@@ -440,7 +428,6 @@ const ProfileSetup1b: NextPage = () => {
             />
           </div>
         </div>
-
       </button>
       <div className="absolute w-[16.02%] top-[calc(50%_-_99px)] left-[16.88%] font-semibold flex items-center h-5">
         Birthday
@@ -463,10 +450,8 @@ const ProfileSetup1b: NextPage = () => {
       <div className="absolute w-[20.78%] top-[calc(50%_-_99px)] left-[50.78%] font-semibold flex items-center h-5">
         Number of Meals Per Day
       </div>
-
     </div>
   );
 };
 
 export default ProfileSetup1b;
-

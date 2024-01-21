@@ -2,6 +2,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import ButtonPrimary from "../components/ButtonPrimary";
 
 export default function SignIn() {
   return (
@@ -72,9 +73,9 @@ export default function SignIn() {
               placeholder="Password"
             />
           </div>
-          <button className="w-full bg-black hover:bg-gray-900 text-white rounded-lg py-3 px-4 font-semibold">
-            Sign in
-          </button>
+          <Link href="/profileSetup1" className="no-underline">
+            <ButtonPrimary title="Next" className="block w-full" />
+          </Link>
         </div>
 
         {/* Bottom Links */}
@@ -86,7 +87,7 @@ export default function SignIn() {
             Forgot your password?
           </Link>
           <Link
-            href="/signup"
+            href="/"
             className="text-blue-600 hover:text-blue-700 hover:underline text-sm"
           >
             You don't have an account yet? Sign Up

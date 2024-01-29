@@ -15,11 +15,12 @@ module.exports = {
         orange: "#ffb527",
         black1: "#000",
         red: "#ff0000",
-
+        saddlebrown: "#745822",
         white: "#fff",
         black: "#000",
         darkgray: "#a0a0a0",
         orange: "#ffb527",
+        "gray-50": "#333333"
       },
       spacing: {},
       fontFamily: {
@@ -60,6 +61,7 @@ module.exports = {
       "11xl": "30px",
       sm: "14px",
       lg: "18px",
+      "2xl":"24px",
 
       inherit: "inherit",
     },

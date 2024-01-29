@@ -94,8 +94,17 @@ export default function Home() {
               placeholder="Password"
             />
           </div>
-          <Link href="/profileSetup1" className="no-underline">
+          <Link href="/Prsetup1" className="no-underline">
             <ButtonPrimary title="Next" className="block w-full" />
+          </Link>
+          <Link href="/Prsetup2a" className="no-underline">
+            <ButtonPrimary title="Setup2" className="block w-full" />
+          </Link>
+          <Link href="/Prsetup3" className="no-underline">
+            <ButtonPrimary title="Setup3" className="block w-full" />
+          </Link>
+          <Link href="/Prsetup1a" className="no-underline">
+            <ButtonPrimary title="Setup1a" className="block w-full" />
           </Link>
         </div>
 

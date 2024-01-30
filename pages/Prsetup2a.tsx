@@ -1,6 +1,7 @@
 import { useCallback } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
+import React, { useState } from "react";
 
 const Setup2a = () => {
   const router = useRouter();
@@ -9,25 +10,27 @@ const Setup2a = () => {
     router.push("/profile-setup1");
   }, [router]);
 
+  const [isPressed, setIsPressed] = useState(false);
+
+  const handleClick = () => {
+    setIsPressed(true);
+  };
   return (
-    <div className="bg-orange py-[10px] px-[20px] md:py-[33px] md:px-[30px] lg:py-[66px] lg:px-[30px] xl:py-[60px] xl:px-[100px] text-left text-base text-black1 font-poppins ">
+    <div className=" bg-saddlebrown py-[40px] px-[20px] md:px-[50px] md:py-[50px] lg:py-[100px] lg:px-[120px] xl:py-[150px] xl:px-[170px] text-left text-base text-black1 font-poppins ">
       <div className="flex-1 rounded-xl bg-white flex flex-col items-start justify-start gap-[10px] z-[0]">
         <div className="self-stretch flex flex-col items-start justify-start py-5 px-[20px] md:px-[50px] lg:px-20 gap-[26px]">
           <button
             className="cursor-pointer [border:none] p-0 bg-[transparent] w-10 relative h-10"
             onClick={onSignOutClick}
           >
-            <Image
+            <img
               className="relative w-[33.2px] h-[33.3px]"
+              alt=""
               src="/subtract.svg"
-              alt="Back"
-              width={33.2}
-              height={33.3}
             />
-            Back
           </button>
           <div className="self-stretch relative font-semibold flex items-center h-5 shrink-0 text-mid md:text-lg lg:text-2xl">
-            What is your goal?
+            How active are you?
           </div>
         </div>
         {/* Activity Level Options */}
@@ -36,9 +39,9 @@ const Setup2a = () => {
         <div className="self-stretch flex flex-col md:flex-row items-center justify-center py-2.5 px-[10px] md:pr-[20px] md:pl-[30px] lg:pl-[60px] xl:pl-[50px] gap-[10px] md:gap-[20px] lg:gap-[40px] xl:gap-[30px] 2xl:gap-[50px]">
           <div className="max-w-7xl mx-auto">
             <div className="relative group">
-              <div className="relative px-[90px] py-4  md:px-24 md:py-6 lg:px-26 xl:px-40 2xl:px-48 bg-white ring-1 ring-gray-900/5 rounded-lg leading-none flex items-top justify-start space-x-6 shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)]">
+              <div className="relative px-[90px] py-4  md:px-24 md:py-6 lg:px-26 xl:px-40 2xl:px-48 bg-white ring-1 ring-gray-900/5 rounded-lg leading-none flex items-top justify-start space-x-6 shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] hover:bg-slate-300 cursor-pointer hover-parent">
                 <div className="space-y-2">
-                  <button className="w-full  cursor-pointer [border:none] bg-white flex-1  rounded-8xs ">
+                  <button className="w-full cursor-pointer [border:none] bg-white flex-1  rounded-8xs ">
                     <div className="relative max-w-[200px] text-xs md:text-xs lg:text-mid font-semibold font-poppins text-darkslategray text-center [text-shadow:0px_1px_10px_rgba(0,_0,_0,_0.25)] whitespace-nowrap overflow-hidden">
                       Low Active
                     </div>
@@ -75,9 +78,9 @@ const Setup2a = () => {
         <div className="self-stretch flex flex-col md:flex-row items-center justify-center py-2.5 px-[10px] md:pr-[20px] md:pl-[30px] lg:pl-[60px] xl:pl-[50px] gap-[10px] md:gap-[20px] lg:gap-[40px] xl:gap-[30px] 2xl:gap-[50px]">
           <div className="max-w-7xl mx-auto">
             <div className="relative group">
-              <div className="relative px-[90px] py-4  md:px-24 md:py-6 lg:px-26 xl:px-40 2xl:px-48 bg-white ring-1 ring-gray-900/5 rounded-lg leading-none flex items-top justify-start space-x-6 shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)]">
+              <div className="relative px-[90px] py-4  md:px-24 md:py-6 lg:px-26 xl:px-40 2xl:px-48 bg-white ring-1 ring-gray-900/5 rounded-lg leading-none flex items-top justify-start space-x-6 shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] hover:bg-slate-300 cursor-pointer hover-parent">
                 <div className="space-y-2">
-                  <button className="w-full  cursor-pointer [border:none] bg-white flex-1  rounded-8xs ">
+                  <button className="w-full cursor-pointer [border:none] bg-white flex-1  rounded-8xs ">
                     <div className="relative max-w-[200px] text-xs md:text-xs lg:text-mid font-semibold font-poppins text-darkslategray text-center [text-shadow:0px_1px_10px_rgba(0,_0,_0,_0.25)] whitespace-nowrap overflow-hidden">
                       Sedentary
                     </div>
@@ -114,9 +117,9 @@ const Setup2a = () => {
         <div className="self-stretch flex flex-col md:flex-row items-center justify-center py-2.5 px-[10px] md:pr-[20px] md:pl-[30px] lg:pl-[60px] xl:pl-[50px] gap-[10px] md:gap-[20px] lg:gap-[40px] xl:gap-[30px] 2xl:gap-[50px]">
           <div className="max-w-7xl mx-auto">
             <div className="relative group">
-              <div className="relative px-[90px] py-4  md:px-24 md:py-6 lg:px-26 xl:px-40 2xl:px-48 bg-white ring-1 ring-gray-900/5 rounded-lg leading-none flex items-top justify-start space-x-6 shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)]">
+              <div className="relative px-[90px] py-4  md:px-24 md:py-6 lg:px-26 xl:px-40 2xl:px-48 bg-white ring-1 ring-gray-900/5 rounded-lg leading-none flex items-top justify-start space-x-6 shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] hover:bg-slate-300 cursor-pointer hover-parent">
                 <div className="space-y-2">
-                  <button className="w-full  cursor-pointer [border:none] bg-white flex-1  rounded-8xs ">
+                  <button className="w-full cursor-pointer [border:none] bg-white flex-1  rounded-8xs ">
                     <div className="relative max-w-[200px] px-[15px] text-xs md:text-xs lg:text-mid font-semibold font-poppins text-darkslategray text-center [text-shadow:0px_1px_10px_rgba(0,_0,_0,_0.25)] whitespace-nowrap overflow-hidden">
                       Active
                     </div>
@@ -153,10 +156,10 @@ const Setup2a = () => {
         <div className="self-stretch flex flex-col md:flex-row items-center justify-center py-2.5 px-[10px] md:pr-[20px] md:pl-[30px] lg:pl-[60px] xl:pl-[50px] gap-[10px] md:gap-[20px] lg:gap-[40px] xl:gap-[30px] 2xl:gap-[50px]">
           <div className="max-w-7xl mx-auto">
             <div className="relative group">
-              <div className="relative px-[90px] py-4  md:px-24 md:py-6 lg:px-26 xl:px-40 2xl:px-48 bg-white ring-1 ring-gray-900/5 rounded-lg leading-none flex items-top justify-start space-x-6 shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)]">
+              <div className="relative  px-[90px] py-4 md:px-24 md:py-6 lg:px-26 xl:px-40 2xl:px-48 bg-white ring-1 ring-gray-900/5 rounded-lg leading-none flex items-top justify-start space-x-6 shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] hover:bg-slate-300 cursor-pointer hover-parent">
                 <div className="space-y-2">
-                  <button className="w-full  cursor-pointer [border:none] bg-white flex-1  rounded-8xs ">
-                    <div className="relative max-w-[200px] text-xs md:text-xs lg:text-mid font-semibold font-poppins text-darkslategray text-center [text-shadow:0px_1px_10px_rgba(0,_0,_0,_0.25)] whitespace-nowrap overflow-hidden">
+                  <button className="w-full cursor-pointer border-none bg-white flex-1 rounded-8xs">
+                    <div className="relative max-w-[200px] text-xs md:text-xs lg:text-mid font-semibold font-poppins text-darkslategray text-center text-shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] whitespace-nowrap overflow-hidden">
                       Very Active
                     </div>
                   </button>
@@ -189,8 +192,15 @@ const Setup2a = () => {
         </div>
         {/*Box end*/}
         <div className="self-stretch flex flex-col items-end justify-end py-5 px-[70px]">
-          <button className="cursor-pointer [border:none] py-1 px-[18px] bg-orange w-[103px] rounded-xl shadow-[0px_1px_10px_rgba(0,_0,_0,_0.3)] h-[39px] flex flex-row items-center justify-center box-border">
-            <b className="relative text-lg font-poppins text-white text-center">
+          <button
+            className={`cursor-pointer [border:none] py-1 px-[18px] bg-orange w-[103px] rounded-xl shadow-[0px_1px_10px_rgba(0,_0,_0,_0.3)] flex flex-row items-center justify-center box-border  hover:bg-slate-300`}
+            onClick={handleClick}
+          >
+            <b
+              className={`flex-1 relative text-lg font-poppins text-white ${
+                isPressed ? "text-orange" : "text-white"
+              } text-center`}
+            >
               Next
             </b>
           </button>

@@ -14,3 +14,6 @@ body {
 ::after {
   border-width: 0;
 }
+.hover-parent:hover .cursor-pointer {
+  background-color: rgb(209 213 219);
+}

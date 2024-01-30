@@ -1,10 +1,7 @@
 import type { NextPage } from "next";
+import React, { useState } from "react";
 import { useCallback } from "react";
 import { useRouter } from "next/router";
-import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
-import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 
 const Setup1a: NextPage = () => {
   const router = useRouter();
@@ -13,10 +10,16 @@ const Setup1a: NextPage = () => {
     router.push("/profile-setup1");
   }, [router]);
 
+  const [isPressed, setIsPressed] = useState(false);
+
+  const handleClick = () => {
+    setIsPressed(true);
+  };
+
   return (
-    <div className="w-full relative bg-saddlebrown overflow-hidden flex flex-row items-center justify-center py-[100px] px-[120px] box-border text-left text-lg text-black1 font-poppins">
+    <div className="w-full relative bg-saddlebrown overflow-hidden flex flex-row items-center justify-center py-[40px] px-[20px] md:px-[50px] md:py-[50px] lg:py-[100px] lg:px-[120px] xl:py-[150px] xl:px-[170px] box-border text-left text-lg text-black1 font-poppins">
       <div className="flex-1 rounded-xl bg-white overflow-y-auto flex flex-col items-center justify-center">
-        <div className="self-stretch flex flex-col items-start justify-start py-5 px-20 gap-[26px]">
+        <div className="self-stretch flex flex-col items-start justify-start px-[20px] py-5 md:px-[40px] lg:px-20 gap-[26px]">
           <button
             className="cursor-pointer [border:none] p-0 bg-[transparent] w-10 relative h-10"
             onClick={onSignOutClick}
@@ -31,16 +34,18 @@ const Setup1a: NextPage = () => {
             Tell us more about you
           </div>
         </div>
-        <div className="self-stretch flex flex-col md:flex-row items-start justify-center py-0 px-20 gap-[80px] text-orange">
+        <div className="self-stretch flex flex-col md:flex-row items-start justify-center px-[20px] md:px-[40px] py-0 lg:px-20 gap-[20px] md:gap-[40px] lg:gap-[80px] text-orange">
           <div className="flex-1 flex flex-col items-start justify-start">
-            <div className="self-stretch flex flex-col items-start justify-start pt-[5px] px-[5px] pb-[26px] gap-[3px]">
+            <div className="self-stretch flex flex-col items-start justify-start p-[5px] gap-[3px]">
               <div className="self-stretch relative font-semibold">
                 Birthday
               </div>
-              <div className="relative bg-[transparent] self-stretch rounded-8xs flex flex-row items-center justify-between border-[1px] border-solid border-gray"></div>
-              <div className="w-[345px] relative text-xs text-black1 hidden">
-                Info Text
-              </div>
+              <input
+                className="[outline:none] font-poppins text-base bg-[transparent] self-stretch rounded-8xs flex flex-row items-center justify-start p-2.5 text-gray border-[1px] border-solid border-gray"
+                placeholder="Select date"
+                type="text"
+              />
+              <div className="self-stretch relative text-sm text-black1" />
             </div>
             <div className="self-stretch flex flex-col items-start justify-start p-[5px] gap-[3px]">
               <div className="self-stretch relative font-semibold">
@@ -69,7 +74,7 @@ const Setup1a: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className="flex-1 flex flex-col items-start justify-start gap-[5px]">
+          <div className="flex-1 flex flex-col items-start justify-start gap-[5px] max-w-[300px] lg:max-w-[1000px]">
             <div className="self-stretch flex flex-col items-start justify-start p-[5px] gap-[3px]">
               <div className="self-stretch relative font-semibold">
                 Height (cm)
@@ -79,7 +84,6 @@ const Setup1a: NextPage = () => {
                 placeholder="0"
                 type="text"
               />
-              <div className="self-stretch relative text-xs">Info Text</div>
             </div>
             <div className="self-stretch flex flex-col items-start justify-start p-[5px] gap-[3px]">
               <div className="self-stretch relative font-semibold">
@@ -90,7 +94,6 @@ const Setup1a: NextPage = () => {
                 placeholder="0"
                 type="text"
               />
-              <div className="self-stretch relative text-sm">Info Text</div>
             </div>
             <div className="self-stretch flex flex-col items-start justify-start p-[5px] gap-[7px]">
               <div className="self-stretch relative font-semibold">
@@ -173,8 +176,15 @@ const Setup1a: NextPage = () => {
           </div>
         </div>
         <div className="self-stretch flex flex-col items-end justify-end py-5 px-[70px]">
-          <button className="cursor-pointer [border:none] py-1 px-[18px] bg-orange w-[103px] rounded-xl shadow-[0px_1px_10px_rgba(0,_0,_0,_0.3)] flex flex-row items-center justify-center box-border">
-            <b className="flex-1 relative text-lg font-poppins text-white text-center">
+          <button
+            className={`cursor-pointer [border:none] py-1 px-[18px] bg-orange w-[103px] rounded-xl shadow-[0px_1px_10px_rgba(0,_0,_0,_0.3)] flex flex-row items-center justify-center box-border  hover:bg-slate-300`}
+            onClick={handleClick}
+          >
+            <b
+              className={`flex-1 relative text-lg font-poppins text-white ${
+                isPressed ? "text-orange" : "text-white"
+              } text-center`}
+            >
               Next
             </b>
           </button>

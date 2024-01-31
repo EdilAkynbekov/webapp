@@ -6,8 +6,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+html {
+  height: 100%;
+}
 body {
   @apply leading-[normal] m-0;
+  height: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#__next {
+  height: 100%;
 }
 *,
 ::before,
@@ -16,4 +25,12 @@ body {
 }
 .hover-parent:hover .cursor-pointer {
   background-color: rgb(209 213 219);
+}
+
+.unstyled-btn {
+  all: unset;
+  cursor: pointer;
+}
+.unstyled-btn:focus {
+  outline: revert;
 }

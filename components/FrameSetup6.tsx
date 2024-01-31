@@ -2,12 +2,9 @@ import type { NextPage } from "next";
 import React, { useState } from "react";
 import { useCallback } from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
 const ChoiceFrame: NextPage = () => {
   const router = useRouter();
-
-  const onSignOutClick = useCallback(() => {
-    router.push("/profile-setup1");
-  }, [router]);
 
   const [isPressed, setIsPressed] = useState(false);
 
@@ -18,16 +15,15 @@ const ChoiceFrame: NextPage = () => {
   return (
     <section className="w-[951px] relative rounded-xl bg-white flex flex-col items-center justify-start py-5 px-0 box-border gap-[20px] md:gap-[40px] text-left text-lg text-black font-poppins">
       <div className="self-stretch flex flex-col items-start justify-start px-[20px] py-5 md:px-[40px] lg:px-16 gap-[26px]">
-        <button
-          className="cursor-pointer [border:none] p-0 bg-[transparent] w-10 relative h-10"
-          onClick={onSignOutClick}
-        >
-          <img
-            className="relative w-[33.2px] h-[33.3px]"
-            alt=""
-            src="/subtract.svg"
-          />
-        </button>
+        <Link href="/Prsetup5a" className="no-underline">
+          <button className="cursor-pointer [border:none] p-0 bg-[transparent] w-10 relative h-10">
+            <img
+              className="relative w-[33.2px] h-[33.3px]"
+              alt=""
+              src="/subtract.svg"
+            />
+          </button>
+        </Link>
         <div className="self-stretch relative font-semibold flex items-center h-5 shrink-0">
           What do you like?
         </div>
@@ -156,18 +152,20 @@ const ChoiceFrame: NextPage = () => {
       </div>
 
       <div className="self-stretch flex flex-col items-end justify-end py-5 px-[70px]">
-        <button
-          className={`cursor-pointer [border:none] py-1 px-[18px] bg-orange w-[103px] rounded-xl shadow-[0px_1px_10px_rgba(0,_0,_0,_0.3)] flex flex-row items-center justify-center box-border  hover:bg-slate-300`}
-          onClick={handleClick}
-        >
-          <b
-            className={`flex-1 relative text-lg font-poppins text-white ${
-              isPressed ? "text-orange" : "text-white"
-            } text-center`}
+        <Link href="/Prsetup6a" className="no-underline">
+          <button
+            className={`cursor-pointer [border:none] py-1 px-[18px] bg-orange w-[103px] rounded-xl shadow-[0px_1px_10px_rgba(0,_0,_0,_0.3)] flex flex-row items-center justify-center box-border  hover:bg-slate-300`}
+            onClick={handleClick}
           >
-            Next
-          </b>
-        </button>
+            <b
+              className={`flex-1 relative text-lg font-poppins text-white ${
+                isPressed ? "text-orange" : "text-white"
+              } text-center`}
+            >
+              Next
+            </b>
+          </button>
+        </Link>
       </div>
     </section>
   );

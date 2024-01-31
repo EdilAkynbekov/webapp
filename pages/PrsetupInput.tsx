@@ -2,14 +2,10 @@ import type { NextPage } from "next";
 import React, { useState } from "react";
 import { useCallback } from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const Setup51a: NextPage = () => {
   const router = useRouter();
-
-  const onSignOutClick = useCallback(() => {
-    router.push("/profile-setup1");
-  }, [router]);
-
   const [isPressed, setIsPressed] = useState(false);
 
   const handleClick = () => {
@@ -20,16 +16,15 @@ const Setup51a: NextPage = () => {
     <div className="w-full relative bg-saddlebrown overflow-hidden flex flex-row items-center justify-center py-[80px] px-[20px] md:px-[50px] md:py-[100px] lg:py-[200px] lg:px-[120px] xl:py-[300px] xl:px-[170px] box-border text-left text-lg text-black1 font-poppins">
       <div className="flex-1 rounded-xl bg-white overflow-y-auto flex flex-col items-center justify-center">
         <div className="self-stretch flex flex-col items-start justify-start px-[30px] py-5 md:px-[40px] lg:px-20 gap-[26px] mb-5">
-          <button
-            className="cursor-pointer [border:none] p-0 bg-[transparent] w-10 relative h-10"
-            onClick={onSignOutClick}
-          >
-            <img
-              className="relative w-[33.2px] h-[33.3px]"
-              alt=""
-              src="/subtract.svg"
-            />
-          </button>
+          <Link href="/Prsetup4a" className="no-underline">
+            <button className="cursor-pointer [border:none] p-0 bg-[transparent] w-10 relative h-10">
+              <img
+                className="relative w-[33.2px] h-[33.3px]"
+                alt=""
+                src="/subtract.svg"
+              />
+            </button>
+          </Link>
           <div className="self-stretch relative font-semibold flex items-center h-5 shrink-0">
             Please specify your allergen(s)
           </div>
@@ -44,18 +39,20 @@ const Setup51a: NextPage = () => {
           <div className="w-[345px] relative text-xs text-black1 hidden" />
         </div>
         <div className="self-stretch flex flex-col items-end justify-end py-5 px-[30px] lg:px-[70px]">
-          <button
-            className={`cursor-pointer [border:none] py-1 px-[18px] bg-orange w-[103px] rounded-xl shadow-[0px_1px_10px_rgba(0,_0,_0,_0.3)] flex flex-row items-center justify-center box-border  hover:bg-slate-300`}
-            onClick={handleClick}
-          >
-            <b
-              className={`flex-1 relative text-lg font-poppins text-white ${
-                isPressed ? "text-orange" : "text-white"
-              } text-center`}
+          <Link href="/Prsetup5a" className="no-underline">
+            <button
+              className={`cursor-pointer [border:none] py-1 px-[18px] bg-orange w-[103px] rounded-xl shadow-[0px_1px_10px_rgba(0,_0,_0,_0.3)] flex flex-row items-center justify-center box-border  hover:bg-slate-300`}
+              onClick={handleClick}
             >
-              Next
-            </b>
-          </button>
+              <b
+                className={`flex-1 relative text-lg font-poppins text-white ${
+                  isPressed ? "text-orange" : "text-white"
+                } text-center`}
+              >
+                Next
+              </b>
+            </button>
+          </Link>
         </div>
       </div>
     </div>

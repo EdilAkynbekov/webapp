@@ -95,25 +95,10 @@ export default function Home() {
             />
           </div>
           <Link href="/Prsetup1a" className="no-underline">
-            <ButtonPrimary title="Next" className="block w-full" />
-          </Link>
-          <Link href="/Prsetup2a" className="no-underline">
-            <ButtonPrimary title="Setup2" className="block w-full" />
-          </Link>
-          <Link href="/Prsetup3" className="no-underline">
-            <ButtonPrimary title="Setup3" className="block w-full" />
-          </Link>
-          <Link href="/Prsetup4a" className="no-underline">
-            <ButtonPrimary title="Setup4" className="block w-full" />
-          </Link>
-          <Link href="/Prsetup5a" className="no-underline">
-            <ButtonPrimary title="Setup5" className="block w-full" />
-          </Link>
-          <Link href="/Prsetup6a" className="no-underline">
-            <ButtonPrimary title="Setup6" className="block w-full" />
-          </Link>
-          <Link href="/PrsetupInput" className="no-underline">
-            <ButtonPrimary title="Input" className="block w-full" />
+            <ButtonPrimary
+              title="Next"
+              className="block w-full cursor-pointer"
+            />
           </Link>
         </div>
 

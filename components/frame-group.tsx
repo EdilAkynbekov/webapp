@@ -1,5 +1,7 @@
 import type { NextPage } from "next";
 import { useCallback } from "react";
+import { useRouter } from "next/router";
+import Link from "next/link";
 import Slider, {
   SliderThumb,
   SliderValueLabelProps,
@@ -68,25 +70,21 @@ function valuetext(value: number) {
 }
 
 const FrameGroup: NextPage = () => {
-  const onSignOutContainerClick = useCallback(() => {
-    // Please sync "Profile Setup 1" to the project
-  }, []);
+  const router = useRouter();
 
   return (
     <div className="self-stretch flex flex-col items-center justify-start gap-[34px] max-w-full text-center text-lg text-black font-poppins md:gap-[17px] ">
       <div className="w-[791px] flex flex-col items-start justify-start gap-[26px] lg:min-h-[150px] max-w-full text-left pl-8 md:pl-16 lg:pl-24">
         <div className="flex flex-row items-center justify-center">
-          <div
-            className="flex flex-row items-center justify-center pt-1 pb-[3px] pr-1 pl-[3px] cursor-pointer"
-            onClick={onSignOutContainerClick}
-          >
-            <img
-              className="h-[33.3px] w-[33.2px] relative"
-              loading="eager"
-              alt=""
-              src="/subtract.svg"
-            />
-          </div>
+          <Link href="/Prsetup2a" className="no-underline">
+            <button className="cursor-pointer [border:none] p-0 bg-[transparent] w-10 relative h-10">
+              <img
+                className="relative w-[33.2px] h-[33.3px]"
+                alt=""
+                src="/subtract.svg"
+              />
+            </button>
+          </Link>
         </div>
         <div className="self-stretch h-5 relative font-semibold flex items-center shrink-0">
           What is your goal?

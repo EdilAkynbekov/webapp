@@ -12,7 +12,10 @@ const Setup2a = () => {
 
   const [isPressed, setIsPressed] = useState(false);
 
+  const [activityLevel, setActivityLevel] = useState("");
+
   const handleClick = () => {
+    console.log("Pressed");
     setIsPressed(true);
   };
   return (
@@ -41,7 +44,12 @@ const Setup2a = () => {
             <div className="relative group">
               <div className="relative px-[90px] py-4  md:px-24 md:py-6 lg:px-26 xl:px-40 2xl:px-48 bg-white ring-1 ring-gray-900/5 rounded-lg leading-none flex items-top justify-start space-x-6 shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] hover:bg-slate-300 cursor-pointer hover-parent">
                 <div className="space-y-2">
-                  <button className="w-full cursor-pointer [border:none] bg-white flex-1  rounded-8xs ">
+                  <button
+                    className="w-full cursor-pointer [border:none] bg-white flex-1  rounded-8xs "
+                    onClick={() => {
+                      setActivityLevel("low");
+                    }}
+                  >
                     <div className="relative max-w-[200px] text-xs md:text-xs lg:text-mid font-semibold font-poppins text-darkslategray text-center [text-shadow:0px_1px_10px_rgba(0,_0,_0,_0.25)] whitespace-nowrap overflow-hidden">
                       Low Active
                     </div>
@@ -80,7 +88,12 @@ const Setup2a = () => {
             <div className="relative group">
               <div className="relative px-[90px] py-4  md:px-24 md:py-6 lg:px-26 xl:px-40 2xl:px-48 bg-white ring-1 ring-gray-900/5 rounded-lg leading-none flex items-top justify-start space-x-6 shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] hover:bg-slate-300 cursor-pointer hover-parent">
                 <div className="space-y-2">
-                  <button className="w-full cursor-pointer [border:none] bg-white flex-1  rounded-8xs ">
+                  <button
+                    className="w-full cursor-pointer [border:none] bg-white flex-1  rounded-8xs "
+                    onClick={() => {
+                      setActivityLevel("sedentary");
+                    }}
+                  >
                     <div className="relative max-w-[200px] text-xs md:text-xs lg:text-mid font-semibold font-poppins text-darkslategray text-center [text-shadow:0px_1px_10px_rgba(0,_0,_0,_0.25)] whitespace-nowrap overflow-hidden">
                       Sedentary
                     </div>
@@ -119,7 +132,12 @@ const Setup2a = () => {
             <div className="relative group">
               <div className="relative px-[90px] py-4  md:px-24 md:py-6 lg:px-26 xl:px-40 2xl:px-48 bg-white ring-1 ring-gray-900/5 rounded-lg leading-none flex items-top justify-start space-x-6 shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] hover:bg-slate-300 cursor-pointer hover-parent">
                 <div className="space-y-2">
-                  <button className="w-full cursor-pointer [border:none] bg-white flex-1  rounded-8xs ">
+                  <button
+                    className="w-full cursor-pointer [border:none] bg-white flex-1  rounded-8xs "
+                    onClick={() => {
+                      setActivityLevel("active");
+                    }}
+                  >
                     <div className="relative max-w-[200px] px-[15px] text-xs md:text-xs lg:text-mid font-semibold font-poppins text-darkslategray text-center [text-shadow:0px_1px_10px_rgba(0,_0,_0,_0.25)] whitespace-nowrap overflow-hidden">
                       Active
                     </div>
@@ -158,7 +176,12 @@ const Setup2a = () => {
             <div className="relative group">
               <div className="relative  px-[90px] py-4 md:px-24 md:py-6 lg:px-26 xl:px-40 2xl:px-48 bg-white ring-1 ring-gray-900/5 rounded-lg leading-none flex items-top justify-start space-x-6 shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] hover:bg-slate-300 cursor-pointer hover-parent">
                 <div className="space-y-2">
-                  <button className="w-full cursor-pointer border-none bg-white flex-1 rounded-8xs">
+                  <button
+                    className="w-full cursor-pointer border-none bg-white flex-1 rounded-8xs"
+                    onClick={() => {
+                      setActivityLevel("very active");
+                    }}
+                  >
                     <div className="relative max-w-[200px] text-xs md:text-xs lg:text-mid font-semibold font-poppins text-darkslategray text-center text-shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] whitespace-nowrap overflow-hidden">
                       Very Active
                     </div>
@@ -193,7 +216,10 @@ const Setup2a = () => {
         {/*Box end*/}
         <div className="self-stretch flex flex-col items-end justify-end py-5 px-[70px]">
           <button
-            className={`cursor-pointer [border:none] py-1 px-[18px] bg-orange w-[103px] rounded-xl shadow-[0px_1px_10px_rgba(0,_0,_0,_0.3)] flex flex-row items-center justify-center box-border  hover:bg-slate-300`}
+            disabled={activityLevel === ""}
+            className={` ${
+              activityLevel === "" ? "bg-slate-300" : "bg-orange"
+            } cursor-pointer [border:none] py-1 px-[18px]  w-[103px] rounded-xl shadow-[0px_1px_10px_rgba(0,_0,_0,_0.3)] flex flex-row items-center justify-center box-border  hover:bg-slate-300 }`}
             onClick={handleClick}
           >
             <b

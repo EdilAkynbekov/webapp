@@ -42,6 +42,7 @@ const Setup1a: NextPage = () => {
               <div className="self-stretch relative font-semibold">
                 Birthday
               </div>
+              {/* <DatePicker /> */}
 
               <input
                 className="[outline:none] font-poppins text-base bg-[transparent] self-stretch rounded-8xs flex flex-row items-center justify-start p-2.5 text-gray border-[1px] border-solid border-gray max-w-[250px] lg:max-w-[1000px]"

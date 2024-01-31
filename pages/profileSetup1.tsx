@@ -1,6 +1,7 @@
 import React from "react";
 import ButtonPrimary from "../components/ButtonPrimary";
 import Link from "next/link";
+import { DatePicker } from "@mui/x-date-pickers";
 
 const profileSetup1 = () => {
   return (

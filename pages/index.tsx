@@ -112,6 +112,9 @@ export default function Home() {
           <Link href="/Prsetup6a" className="no-underline">
             <ButtonPrimary title="Setup6" className="block w-full" />
           </Link>
+          <Link href="/PrsetupInput" className="no-underline">
+            <ButtonPrimary title="Input" className="block w-full" />
+          </Link>
         </div>
 
         {/* Bottom Links */}

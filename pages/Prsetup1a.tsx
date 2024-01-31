@@ -1,7 +1,9 @@
 import type { NextPage } from "next";
 import React, { useState } from "react";
 import { useCallback } from "react";
+// import { useRouter } from "next/router";
 import { useRouter } from "next/router";
+import { DatePicker } from "@mui/x-date-pickers";
 
 const Setup1a: NextPage = () => {
   const router = useRouter();
@@ -40,8 +42,9 @@ const Setup1a: NextPage = () => {
               <div className="self-stretch relative font-semibold">
                 Birthday
               </div>
+
               <input
-                className="[outline:none] font-poppins text-base bg-[transparent] self-stretch rounded-8xs flex flex-row items-center justify-start p-2.5 text-gray border-[1px] border-solid border-gray"
+                className="[outline:none] font-poppins text-base bg-[transparent] self-stretch rounded-8xs flex flex-row items-center justify-start p-2.5 text-gray border-[1px] border-solid border-gray max-w-[250px] lg:max-w-[1000px]"
                 placeholder="Select date"
                 type="text"
               />
@@ -52,7 +55,7 @@ const Setup1a: NextPage = () => {
                 Phone Number
               </div>
               <input
-                className="[outline:none] font-poppins text-base bg-[transparent] self-stretch rounded-8xs flex flex-row items-center justify-start p-2.5 text-gray border-[1px] border-solid border-gray"
+                className="[outline:none] font-poppins text-base bg-[transparent] self-stretch rounded-8xs flex flex-row items-center justify-start p-2.5 text-gray border-[1px] border-solid border-gray max-w-[250px] lg:max-w-[1000px]"
                 placeholder="XXXX XXXX"
                 type="text"
               />
@@ -74,7 +77,7 @@ const Setup1a: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className="flex-1 flex flex-col items-start justify-start gap-[5px] max-w-[300px] lg:max-w-[1000px]">
+          <div className="flex-1 flex flex-col items-start justify-start gap-[5px] max-w-[270px] lg:max-w-[1000px]">
             <div className="self-stretch flex flex-col items-start justify-start p-[5px] gap-[3px]">
               <div className="self-stretch relative font-semibold">
                 Height (cm)

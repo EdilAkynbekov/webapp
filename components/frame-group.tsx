@@ -74,7 +74,7 @@ const FrameGroup: NextPage = () => {
 
   return (
     <div className="self-stretch flex flex-col items-center justify-start gap-[34px] max-w-full text-center text-lg text-black font-poppins md:gap-[17px] ">
-      <div className="w-[791px] flex flex-col items-start justify-start gap-[26px] lg:min-h-[150px] max-w-full text-left pl-8 md:pl-16 lg:pl-24">
+      <div className="w-[791px] flex flex-col items-start justify-start gap-[26px] lg:min-h-[150px] max-w-full text-left pl-8 md:pl-12 lg:pl-12 mb-4 md:mb-8">
         <div className="flex flex-row items-center justify-center">
           <Link href="/Prsetup2a" className="no-underline">
             <button className="cursor-pointer [border:none] p-0 bg-[transparent] w-10 relative h-10">
@@ -90,24 +90,24 @@ const FrameGroup: NextPage = () => {
           What is your goal?
         </div>
       </div>
-      <div className="w-[651px] flex items-center justify-center text-sm max-w-[320px] md:max-w-full mb-20 md:mb-12 lg:mb-20">
+      <div className="w-[80%] lg:w-[651px] flex items-center justify-center text-sm max-w-[600px] md:max-w-full mb-0 md:mb-4 lg:mb-8 ">
         <PrettoSlider
-          valueLabelDisplay="auto"
+          valueLabelDisplay="on"
           aria-label="pretto slider"
           defaultValue={20}
           marks={marks}
           className=""
         />
       </div>
-      <div className="self-stretch h-[142px] flex flex-col items-center justify-center py-0 px-5 box-border max-w-full text-xs text-white mb-10 lg:min-h-[200px]">
+      <div className="self-stretch h-[142px] flex flex-col items-center justify-center py-0 px-5 md:px-10 box-border max-w-full text-xs text-white mb-8 lg:min-h-[200px]">
         <div className="w-[651px] flex flex-col items-center justify-center gap-[12px] max-w-full shrink-3">
-          <div className="self-stretch relative text-black flex items-center justify-between mb-4 lg:mb-12 lg:text-base">
+          <div className="self-stretch relative font-poppins text-sm8 md:text-sm lg:text-base text-black flex items-center justify-between mb-4 lg:mb-12 ">
             <p className="m-0">Weight Loss</p>
             <p className="m-0">Weight Maintenance</p>
             <p className="m-0"> Weight Gain</p>
           </div>
           <div className="self-stretch rounded-xl bg-gray-50 flex flex-row items-center justify-center py-5 px-[30px] box-border max-w-full">
-            <div className="flex-1 relative inline-block max-w-full lg:text-base">
+            <div className="flex-1 relative inline-block max-w-full text-sm10 md:text-xs">
               <p className="m-0">
                 <span className="font-poppins text-white">
                   According to the BMI scale, your healthy weight range is
@@ -134,7 +134,7 @@ const FrameGroup: NextPage = () => {
               </p>
             </div>
           </div>
-          <div className="self-stretch relative text-black mb-20 lg:text-base">
+          <div className="self-stretch relative text-black text-sm8 md:text-xs">
             <p className="m-0">
               We suggest consulting a medical professional for a more accurate
               estimation.

@@ -3,7 +3,7 @@ import ChoiceFrame from "../components/FrameSetup4a";
 
 const Setup4a: NextPage = () => {
   return (
-    <div className="w-full relative bg-saddlebrown flex flex-row items-center justify-center py-[40px] px-[20px] md:px-[50px] md:py-[50px] lg:py-[100px] lg:px-[120px] xl:py-[150px] xl:px-[170px] box-border">
+    <div className="w-full min-h-screen relative bg-saddlebrown flex flex-row items-center justify-center py-[40px] px-[30px] md:px-[50px] md:py-[50px] lg:py-[0px] lg:px-[120px] xl:py-[0px] xl:px-[170px] box-border">
       <ChoiceFrame />
     </div>
   );

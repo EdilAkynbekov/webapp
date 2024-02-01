@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import React, { useState } from "react";
 import { useCallback } from "react";
-import AddOtherBox from "./profileSetup/AddOtherBox";
+import AddOtherBox from "./profileSetup/AddOtherBoxSetup4";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
@@ -43,7 +43,10 @@ const ChoiceFrame: NextPage = () => {
   return (
     <>
       {activityLevel.includes("other") ? (
-        <AddOtherBox activityLevel={activityLevel} setActivityLevel={setActivityLevel}/>
+        <AddOtherBox
+          activityLevel={activityLevel}
+          setActivityLevel={setActivityLevel}
+        />
       ) : (
         <section className="w-[951px] relative rounded-xl bg-white flex flex-col items-center justify-start py-5 px-0 box-border gap-[20px] md:gap-[54px] text-left text-lg text-black font-poppins">
           <div className="self-stretch flex flex-col items-start justify-start px-[20px] py-5 md:px-[40px] lg:px-20 gap-[26px]">
@@ -65,8 +68,8 @@ const ChoiceFrame: NextPage = () => {
               <button
                 onClick={() => handleSelect("no")}
                 className={`${
-                  isSelected("no") ? "bg-orange" : "bg-white"
-                } col-span-full h-[0px] cursor-pointer py-[10px] md:py-[20px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none border-white hover:bg-slate-300 hover-parent`}
+                  isSelected("no") ? "bg-orange" : "bg-white hover:bg-slate-300"
+                } col-span-full h-[62px] cursor-pointer py-[10px] md:py-[20px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none  hover-parent`}
               >
                 <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
                   No
@@ -78,8 +81,10 @@ const ChoiceFrame: NextPage = () => {
               <button
                 onClick={() => handleSelect("diabetes")}
                 className={`${
-                  isSelected("diabetes") ? "bg-orange" : "bg-white"
-                } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none border-white hover:bg-slate-300 hover-parent`}
+                  isSelected("diabetes")
+                    ? "bg-orange"
+                    : "bg-white hover:bg-slate-300"
+                } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none   hover-parent`}
               >
                 <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
                   Diabetes
@@ -88,8 +93,10 @@ const ChoiceFrame: NextPage = () => {
               <button
                 onClick={() => handleSelect("testosterone")}
                 className={`${
-                  isSelected("testosterone") ? "bg-orange" : "bg-white"
-                } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none border-white hover:bg-slate-300 hover-parent`}
+                  isSelected("testosterone")
+                    ? "bg-orange"
+                    : "bg-white hover:bg-slate-300"
+                } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none hover-parent`}
               >
                 <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
                   Testosterone Deficiency
@@ -98,8 +105,10 @@ const ChoiceFrame: NextPage = () => {
               <button
                 onClick={() => handleSelect("pressure")}
                 className={`${
-                  isSelected("pressure") ? "bg-orange" : "bg-white"
-                } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none border-white hover:bg-slate-300 hover-parent`}
+                  isSelected("pressure")
+                    ? "bg-orange"
+                    : "bg-white hover:bg-slate-300"
+                } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none hover-parent`}
               >
                 <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
                   High Blood Pressure
@@ -108,8 +117,10 @@ const ChoiceFrame: NextPage = () => {
               <button
                 onClick={() => handleSelect("stroke")}
                 className={`${
-                  isSelected("stroke") ? "bg-orange" : "bg-white"
-                } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none border-white hover:bg-slate-300 hover-parent`}
+                  isSelected("stroke")
+                    ? "bg-orange"
+                    : "bg-white hover:bg-slate-300"
+                } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none  hover-parent`}
               >
                 <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
                   Heart Disease / Stroke
@@ -118,8 +129,10 @@ const ChoiceFrame: NextPage = () => {
               <button
                 onClick={() => handleSelect("cholesterol")}
                 className={`${
-                  isSelected("cholesterol") ? "bg-orange" : "bg-white"
-                } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none border-white hover:bg-slate-300 hover-parent`}
+                  isSelected("cholesterol")
+                    ? "bg-orange"
+                    : "bg-white hover:bg-slate-300"
+                } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none  hover-parent`}
               >
                 <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
                   High Cholesterol
@@ -128,8 +141,10 @@ const ChoiceFrame: NextPage = () => {
               <button
                 onClick={() => handleSelect("eating")}
                 className={`${
-                  isSelected("eating") ? "bg-orange" : "bg-white"
-                } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none border-white hover:bg-slate-300 hover-parent`}
+                  isSelected("eating")
+                    ? "bg-orange"
+                    : "bg-white hover:bg-slate-300"
+                } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none  hover-parent`}
               >
                 <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
                   Eating Disorder
@@ -138,8 +153,10 @@ const ChoiceFrame: NextPage = () => {
               <button
                 onClick={() => handleSelect("depression")}
                 className={`${
-                  isSelected("depression") ? "bg-orange" : "bg-white"
-                } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none border-white hover:bg-slate-300 hover-parent`}
+                  isSelected("depression")
+                    ? "bg-orange"
+                    : "bg-white hover:bg-slate-300"
+                } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none hover-parent`}
               >
                 <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
                   Depression
@@ -148,8 +165,10 @@ const ChoiceFrame: NextPage = () => {
               <button
                 onClick={() => handleSelect("other")}
                 className={`${
-                  isSelected("other") ? "bg-orange" : "bg-white"
-                } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none border-white hover:bg-slate-300 hover-parent`}
+                  isSelected("other")
+                    ? "bg-orange"
+                    : "bg-white hover:bg-slate-300"
+                } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none  hover-parent`}
               >
                 <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
                   Other
@@ -161,7 +180,7 @@ const ChoiceFrame: NextPage = () => {
             <Link href="/Prsetup5a" className="no-underline">
               <button
                 disabled={activityLevel.length === 0}
-                className={`cursor-pointer [border:none] py-1 px-[18px] w-[103px] rounded-xl shadow-[0px_1px_10px_rgba(0,_0,_0,_0.3)] flex flex-row items-center justify-center box-border ${
+                className={`cursor-pointer [border:none] py-2 px-[18px] w-[103px] rounded-2xl shadow-[0px_1px_10px_rgba(0,_0,_0,_0.3)] flex flex-row items-center justify-center box-border ${
                   activityLevel.length === 0
                     ? "bg-slate-300"
                     : "bg-orange hover:bg-slate-300"

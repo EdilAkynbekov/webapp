@@ -16,8 +16,8 @@ const Setup1a: NextPage = () => {
   };
 
   return (
-    <div className="w-full h-full min-h-screen bg-saddlebrown overflow-hidden flex items-center justify-center py-[40px] px-[20px] md:px-[50px] md:py-[50px] lg:py-[0px] lg:px-[120px] xl:py-[10px] xl:px-[170px] box-border text-left text-lg text-black1 font-poppins">
-      <div className="flex-1 h-full mx-auto rounded-xl bg-white overflow-y-auto flex flex-col items-center justify-center">
+    <div className="w-full min-h-screen bg-saddlebrown overflow-hidden flex items-center justify-center py-[50px] px-[20px] md:px-[50px] md:py-[50px] lg:py-[110px] lg:px-[120px] xl:px-[170px] box-border text-left text-lg text-black1 font-poppins">
+      <div className="flex-1 mx-auto rounded-xl bg-white overflow-y-auto flex flex-col items-center justify-center">
         <div className="self-stretch flex flex-col items-start justify-start px-[20px] py-5 md:px-[40px] lg:px-20 gap-[26px]">
           <Link href="/" className="no-underline">
             <button className="cursor-pointer [border:none] p-0 bg-[transparent] w-10 relative h-10">
@@ -33,26 +33,26 @@ const Setup1a: NextPage = () => {
           </div>
         </div>
         <div className="self-stretch flex flex-col md:flex-row items-start justify-center px-[20px] md:px-[40px] py-0 lg:px-20 gap-[20px] md:gap-[40px] lg:gap-[80px] text-orange">
-          <div className="flex-1 flex flex-col items-start justify-start">
-            <div className="self-stretch flex flex-col items-start justify-start p-[5px] gap-[3px]">
+          {/* <div className="flex-1 flex flex-col items-start justify-start">
+            <div className="flex-1 self-stretch flex flex-col items-start justify-start p-[5px] gap-[3px]">
               <div className="self-stretch relative font-semibold">
                 Birthday
               </div>
-              {/* <DatePicker /> */}
+              
 
               <input
-                className="[outline:none] font-poppins text-base bg-[transparent] self-stretch rounded-8xs flex flex-row items-center justify-start p-2.5 text-gray border-[1px] border-solid border-gray max-w-[250px] lg:max-w-[1000px]"
+                className="[outline:none] flex-1 font-poppins text-base bg-[transparent] self-stretch rounded-8xs flex flex-row items-center justify-start p-2.5 text-gray border-[1px] border-solid border-gray "
                 placeholder="Select date"
                 type="text"
               />
               <div className="self-stretch relative text-sm text-black1" />
             </div>
-            <div className="self-stretch flex flex-col items-start justify-start p-[5px] gap-[3px]">
+            <div className="flex-1 self-stretch flex flex-col items-start justify-start p-[5px] gap-[3px]">
               <div className="self-stretch relative font-semibold">
                 Phone Number
               </div>
               <input
-                className="[outline:none] font-poppins text-base bg-[transparent] self-stretch rounded-8xs flex flex-row items-center justify-start p-2.5 text-gray border-[1px] border-solid border-gray max-w-[250px] lg:max-w-[1000px]"
+                className="[outline:none] flex-1 font-poppins text-base bg-[transparent] self-stretch rounded-8xs flex flex-row items-center justify-start p-2.5 text-gray border-[1px] border-solid border-gray"
                 placeholder="XXXX XXXX"
                 type="text"
               />
@@ -61,12 +61,49 @@ const Setup1a: NextPage = () => {
             <div className="self-stretch flex flex-col items-start justify-start p-[5px] gap-[7px]">
               <div className="self-stretch relative font-semibold">Gender</div>
               <div className="self-stretch flex flex-row items-center justify-start gap-[30px]">
-                <button className="cursor-pointer py-2.5 px-5 bg-white w-[115px] rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-col items-center justify-center border-[1px] border-solid border-white">
-                  <div className="w-[75px] relative text-base font-semibold font-poppins text-darkslategray text-center flex items-center justify-center">
+                <button className="flex-1 cursor-pointer py-2.5 px-5 bg-white w-[115px] rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-col items-center justify-center border-[1px] border-solid border-white">
+                  <div className=" w-[75px] relative text-base font-semibold font-poppins text-darkslategray text-center flex items-center justify-center">
                     Male
                   </div>
                 </button>
-                <button className="cursor-pointer py-2.5 px-[30px] bg-white w-[119px] rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-col items-center justify-center border-[1px] border-solid border-white">
+                <button className="flex-1 cursor-pointer py-2.5 px-[30px] bg-white w-[119px] rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-col items-center justify-center border-[1px] border-solid border-white">
+                  <div className="w-[79px] relative text-base font-semibold font-poppins text-darkslategray text-center flex items-center justify-center">
+                    Female
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div> */}
+          <div className="flex-1 flex flex-col items-start justify-start gap-[5px]">
+            <div className="flex-1 self-stretch flex flex-col items-start justify-start p-[5px] gap-[3px]">
+              <div className="self-stretch relative font-semibold">
+                Birthday
+              </div>
+              <input
+                className="[outline:none] flex-1 font-poppins text-base bg-[transparent] self-stretch rounded-8xs flex flex-row items-center justify-start p-2.5 text-gray border-[1px] border-solid border-gray"
+                placeholder="Select Date"
+                type="text"
+              />
+            </div>
+            <div className="flex-1 self-stretch flex flex-col  p-[5px] gap-[3px]">
+              <div className="self-stretch relative font-semibold">
+                Phone Number
+              </div>
+              <input
+                className="[outline:none] flex-1 font-poppins text-base bg-[transparent] self-stretch rounded-8xs flex flex-row items-center justify-start p-2.5 text-gray border-[1px] border-solid border-gray"
+                placeholder="XXXX XXXX"
+                type="text"
+              />
+            </div>
+            <div className="self-stretch flex flex-col items-start justify-start p-[5px] gap-[7px]">
+              <div className="self-stretch relative font-semibold">Gender</div>
+              <div className="self-stretch flex flex-row items-center justify-start gap-[15px]">
+                <button className="flex-1 cursor-pointer py-2.5 px-[30px] bg-white w-[115px] rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-col items-center justify-center border-[1px] border-solid border-white">
+                  <div className=" w-[75px] relative text-base font-semibold font-poppins text-darkslategray text-center flex items-center justify-center">
+                    Male
+                  </div>
+                </button>
+                <button className="flex-1 cursor-pointer py-2.5 px-[30px] bg-white w-[119px] rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-col items-center justify-center border-[1px] border-solid border-white">
                   <div className="w-[79px] relative text-base font-semibold font-poppins text-darkslategray text-center flex items-center justify-center">
                     Female
                   </div>
@@ -74,23 +111,23 @@ const Setup1a: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className="flex-1 flex flex-col items-start justify-start gap-[5px] max-w-[270px] lg:max-w-[1000px]">
-            <div className="self-stretch flex flex-col items-start justify-start p-[5px] gap-[3px]">
+          <div className="flex-1 flex flex-col items-start justify-start gap-[5px] max-w-[530px] md:max-w-[1000px]">
+            <div className="flex-1 self-stretch flex flex-col items-start justify-start p-[5px] gap-[3px]">
               <div className="self-stretch relative font-semibold">
                 Height (cm)
               </div>
               <input
-                className="[outline:none] font-poppins text-base bg-[transparent] self-stretch rounded-8xs flex flex-row items-center justify-start p-2.5 text-gray border-[1px] border-solid border-gray"
+                className="[outline:none] flex-1 font-poppins text-base bg-[transparent] self-stretch rounded-8xs flex flex-row items-center justify-start p-2.5 text-gray border-[1px] border-solid border-gray"
                 placeholder="0"
                 type="text"
               />
             </div>
-            <div className="self-stretch flex flex-col items-start justify-start p-[5px] gap-[3px]">
+            <div className="flex-1 self-stretch flex flex-col items-start justify-start p-[5px] gap-[3px]">
               <div className="self-stretch relative font-semibold">
                 Weight (kg)
               </div>
               <input
-                className="[outline:none] font-poppins text-base bg-[transparent] self-stretch rounded-8xs flex flex-row items-center justify-start p-2.5 text-gray border-[1px] border-solid border-gray"
+                className="[outline:none] flex-1 font-poppins text-base bg-[transparent] self-stretch rounded-8xs flex flex-row items-center justify-start p-2.5 text-gray border-[1px] border-solid border-gray"
                 placeholder="0"
                 type="text"
               />
@@ -100,29 +137,50 @@ const Setup1a: NextPage = () => {
                 Number of Meals Per Day
               </div>
               <div className="self-stretch flex flex-row items-center justify-start gap-[15px]">
-                <button className="cursor-pointer py-2.5 px-5 bg-white rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] flex flex-col items-start justify-start border-[1px] border-solid border-white">
+                <button className="flex-1 cursor-pointer py-2.5 px-5 bg-white rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] flex flex-col items-start justify-start border-[1px] border-solid border-white">
                   <div className="relative text-lg font-semibold font-poppins text-darkslategray text-center">
                     2
                   </div>
                 </button>
-                <button className="cursor-pointer py-2.5 px-5 bg-white rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] flex flex-col items-start justify-start border-[1px] border-solid border-white">
+                <button className="flex-1 cursor-pointer py-2.5 px-5 bg-white rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] flex flex-col items-start justify-start border-[1px] border-solid border-white">
                   <div className="relative text-lg font-semibold font-poppins text-darkslategray text-center">
                     3
                   </div>
                 </button>
-                <button className="cursor-pointer py-2.5 px-5 bg-white rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] flex flex-col items-start justify-start border-[1px] border-solid border-white">
+                <button className="flex-1 cursor-pointer py-2.5 px-5 bg-white rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] flex flex-col items-start justify-start border-[1px] border-solid border-white">
                   <div className="relative text-lg font-semibold font-poppins text-darkslategray text-center">
                     4
                   </div>
                 </button>
-                <button className="cursor-pointer py-2.5 px-5 bg-white rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] flex flex-col items-start justify-start border-[1px] border-solid border-white">
+                <button className="flex-1 cursor-pointer py-2.5 px-5 bg-white rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] flex flex-col items-start justify-start border-[1px] border-solid border-white">
                   <div className="relative text-lg font-semibold font-poppins text-darkslategray text-center">
                     5
                   </div>
                 </button>
               </div>
             </div>
-            <div className="self-stretch relative text-xs text-black1">
+            <div className="max-w-7xl mx-auto">
+              <div className="relative group">
+                <div className="relative px-7 py-6 bg-white rounded-lg leading-none flex justify-start space-x-6">
+                  <div className="space-y-2 flex justify-start max-[100px]">
+                    <ul className="m-0 font-inherit text-xs md:text-mini lg:text-mid xl:text-lg pl-4 pr-2 md:pr-[20px] lg:pr-20 overflow-hidden">
+                      <li className="max-w-[350px] lg:max-w-[530px]">
+                        You work a desk job with no physical demands
+                      </li>
+                      <li className="max-w-[350px] lg:max-w-[530px]">
+                        You do intentional exercise every day for at least 30
+                        mins OR you do vigorous activity for less than 30 mins
+                      </li>
+                      <li className="max-w-[350px] lg:max-w-[530px]">
+                        You spend most of your day sitting
+                      </li>
+                      {/* Add other list items here */}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {/* <div className="self-stretch relative text-xs text-black1">
               <p className="m-0">
                 <span>
                   <span className="font-poppins text-black1">
@@ -173,6 +231,7 @@ const Setup1a: NextPage = () => {
                 </span>
               </p>
             </div>
+            */}
           </div>
         </div>
         <div className="self-stretch flex flex-col items-end justify-end py-5 px-[70px]">

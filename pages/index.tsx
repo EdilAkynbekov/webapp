@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Logo from "../assets/images/logo_O2EZ.png";
 import ButtonPrimary from "../components/ButtonPrimary";
 import Link from "next/link";
 import Head from "next/head";
@@ -11,7 +12,7 @@ export default function Home() {
       </Head>
 
       {/* Yellow Sidebar */}
-      <div className="bg-yellow-400 lg:w-1/3 flex flex-col items-center justify-center p-8 text-white">
+      <div className="bg-[#ffb527] lg:w-1/3 flex flex-col items-center justify-center p-8 text-white">
         {/* Logo and other elements can be added here */}
         <h2 className="text-2xl font-bold mb-2">
           Are you a Healthcare Professional?
@@ -25,7 +26,7 @@ export default function Home() {
       <div className="flex-1 flex flex-col p-8 justify-center items-center lg:items-start">
         {/* Language Selector and Logo at the top */}
         <div className="self-end flex justify-between items-center w-full mb-12">
-          <Image src="/logo 1.svg" alt="Logo" width={100} height={50} />
+          <Image src={Logo} alt="Logo" width={100} height={100} />
           <select className="border border-gray-300 rounded-full py-1 px-4 bg-white text-sm">
             <option>English (US)</option>
             {/* Additional language options */}

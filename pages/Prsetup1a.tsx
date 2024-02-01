@@ -16,8 +16,8 @@ const Setup1a: NextPage = () => {
   };
 
   return (
-    <div className="w-full relative bg-saddlebrown overflow-hidden flex flex-row items-center justify-center py-[40px] px-[20px] md:px-[50px] md:py-[50px] lg:py-[100px] lg:px-[120px] xl:py-[150px] xl:px-[170px] box-border text-left text-lg text-black1 font-poppins">
-      <div className="flex-1 rounded-xl bg-white overflow-y-auto flex flex-col items-center justify-center">
+    <div className="w-full h-full min-h-screen bg-saddlebrown overflow-hidden flex items-center justify-center py-[40px] px-[20px] md:px-[50px] md:py-[50px] lg:py-[0px] lg:px-[120px] xl:py-[10px] xl:px-[170px] box-border text-left text-lg text-black1 font-poppins">
+      <div className="flex-1 h-full mx-auto rounded-xl bg-white overflow-y-auto flex flex-col items-center justify-center">
         <div className="self-stretch flex flex-col items-start justify-start px-[20px] py-5 md:px-[40px] lg:px-20 gap-[26px]">
           <Link href="/" className="no-underline">
             <button className="cursor-pointer [border:none] p-0 bg-[transparent] w-10 relative h-10">

@@ -11,8 +11,8 @@ const Setup3a: NextPage = () => {
     setIsPressed(true);
   };
   return (
-    <div className="w-full relative bg-saddlebrown overflow-hidden flex flex-row items-center justify-center py-[40px] px-[20px] md:px-[50px] md:py-[50px] lg:py-[100px] lg:px-[120px] xl:py-[150px] xl:px-[170px] box-border tracking-[normal]">
-      <section className="w-[951px] rounded-[50px] bg-white overflow-y-auto shrink-0 flex flex-col items-end justify-start py-5 px-0 box-border max-w-full gap-[10px] md:gap-[20px] lg:gap-[54px] ">
+    <div className="w-full h-full min-h-screen bg-saddlebrown overflow-hidden flex items-center justify-center py-[20px] px-[20px] md:px-[50px] md:py-[50px] lg:py-[100px] lg:px-[0px] xl:py-[0px] xl:px-[170px] box-border text-left text-lg text-black1 font-poppins">
+      <section className="w-[951px] rounded-[50px] bg-white  shrink-0 flex flex-col items-end justify-start py-5 px-0 box-border max-w-full gap-[10px] md:gap-[20px] lg:gap-[54px] ">
         <FrameGroup />
         <div className="self-stretch flex flex-col items-end justify-end py-5 px-[70px]">
           <Link href="/Prsetup4a" className="no-underline">

@@ -6,23 +6,15 @@ import Link from "next/link";
 
 type ActivityLevel =
   | "no"
-  | "egg"
-  | "milk"
-  | "soy"
-  | "peanuts"
-  | "sesame"
-  | "nuts"
-  | "cereals"
-  | "buckwheat"
-  | "shellfish"
-  | "molluscan"
-  | "fish"
-  | "mustard"
-  | "lupin"
-  | "celery"
+  | "diabetes"
+  | "testosterone"
+  | "pressure"
+  | "stroke"
+  | "cholesterol"
+  | "eating"
+  | "depression"
   | "other";
-
-const ProfileSetup5: NextPage = () => {
+const ChoiceFrame: NextPage = () => {
   const router = useRouter();
   const [isPressed, setIsPressed] = useState(false);
   // Explicitly set the type of the state to an array of ActivityLevel
@@ -46,10 +38,11 @@ const ProfileSetup5: NextPage = () => {
   };
 
   const isSelected = (level: ActivityLevel) => activityLevel.includes(level);
+
   return (
     <section className="w-[951px] relative rounded-xl bg-white flex flex-col items-center justify-start py-5 px-0 box-border gap-[20px] md:gap-[54px] text-left text-lg text-black font-poppins">
       <div className="self-stretch flex flex-col items-start justify-start px-[20px] py-5 md:px-[40px] lg:px-20 gap-[26px]">
-        <Link href="/Prsetup4a" className="no-underline">
+        <Link href="/Prsetup3" className="no-underline">
           <button className="cursor-pointer [border:none] p-0 bg-[transparent] w-10 relative h-10">
             <img
               className="relative w-[33.2px] h-[33.3px]"
@@ -59,13 +52,11 @@ const ProfileSetup5: NextPage = () => {
           </button>
         </Link>
         <div className="self-stretch relative font-semibold flex items-center h-5 shrink-0">
-          Are you allergic to anythng?
+          Are you at risk of any of the following?
         </div>
       </div>
       <div className="self-stretch flex flex-col items-center justify-start gap-[34px] text-center text-sm text-darkslategray px-[30px] md:px-[60px] lg:px-[120px]">
-        {/* Grid container */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-[15px] md:gap-[20px] lg:gap-[30px] w-full ">
-          {/* First div taking up the full width of the grid */}
+        <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-[15px] md:gap-[20px] lg:gap-[30px] w-full ">
           <button
             onClick={() => handleSelect("no")}
             className={`${
@@ -76,146 +67,77 @@ const ProfileSetup5: NextPage = () => {
               No
             </div>
           </button>
+
           {/* Other items */}
           {/* Example button */}
           <button
-            onClick={() => handleSelect("egg")}
+            onClick={() => handleSelect("diabetes")}
             className={`${
-              isSelected("egg") ? "bg-orange" : "bg-white"
+              isSelected("diabetes") ? "bg-orange" : "bg-white"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none border-white hover:bg-slate-300 hover-parent`}
           >
             <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Egg
+              Diabetes
             </div>
           </button>
           <button
-            onClick={() => handleSelect("milk")}
+            onClick={() => handleSelect("testosterone")}
             className={`${
-              isSelected("milk") ? "bg-orange" : "bg-white"
+              isSelected("testosterone") ? "bg-orange" : "bg-white"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none border-white hover:bg-slate-300 hover-parent`}
           >
             <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Milk
+              Testosterone Deficiency
             </div>
           </button>
           <button
-            onClick={() => handleSelect("soy")}
+            onClick={() => handleSelect("pressure")}
             className={`${
-              isSelected("soy") ? "bg-orange" : "bg-white"
+              isSelected("pressure") ? "bg-orange" : "bg-white"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none border-white hover:bg-slate-300 hover-parent`}
           >
             <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Soy
+              High Blood Pressure
             </div>
           </button>
           <button
-            onClick={() => handleSelect("peanuts")}
+            onClick={() => handleSelect("stroke")}
             className={`${
-              isSelected("peanuts") ? "bg-orange" : "bg-white"
+              isSelected("stroke") ? "bg-orange" : "bg-white"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none border-white hover:bg-slate-300 hover-parent`}
           >
             <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Peanuts
+              Heart Disease / Stroke
             </div>
           </button>
           <button
-            onClick={() => handleSelect("sesame")}
+            onClick={() => handleSelect("cholesterol")}
             className={`${
-              isSelected("sesame") ? "bg-orange" : "bg-white"
+              isSelected("cholesterol") ? "bg-orange" : "bg-white"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none border-white hover:bg-slate-300 hover-parent`}
           >
             <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Sesame
+              High Cholesterol
             </div>
           </button>
           <button
-            onClick={() => handleSelect("nuts")}
+            onClick={() => handleSelect("eating")}
             className={`${
-              isSelected("nuts") ? "bg-orange" : "bg-white"
+              isSelected("eating") ? "bg-orange" : "bg-white"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none border-white hover:bg-slate-300 hover-parent`}
           >
             <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Tree Nuts
+              Eating Disorder
             </div>
           </button>
           <button
-            onClick={() => handleSelect("cereals")}
+            onClick={() => handleSelect("depression")}
             className={`${
-              isSelected("cereals") ? "bg-orange" : "bg-white"
+              isSelected("depression") ? "bg-orange" : "bg-white"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none border-white hover:bg-slate-300 hover-parent`}
           >
             <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Cereals w/ Gluten
-            </div>
-          </button>
-          <button
-            onClick={() => handleSelect("buckwheat")}
-            className={`${
-              isSelected("buckwheat") ? "bg-orange" : "bg-white"
-            } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none border-white hover:bg-slate-300 hover-parent`}
-          >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Buckwheat
-            </div>
-          </button>
-          <button
-            onClick={() => handleSelect("shellfish")}
-            className={`${
-              isSelected("shellfish") ? "bg-orange" : "bg-white"
-            } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none border-white hover:bg-slate-300 hover-parent`}
-          >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Crustacean Shellfish
-            </div>
-          </button>
-          <button
-            onClick={() => handleSelect("molluscan")}
-            className={`${
-              isSelected("molluscan") ? "bg-orange" : "bg-white"
-            } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none border-white hover:bg-slate-300 hover-parent`}
-          >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Molluscan Shellfish
-            </div>
-          </button>
-          <button
-            onClick={() => handleSelect("fish")}
-            className={`${
-              isSelected("fish") ? "bg-orange" : "bg-white"
-            } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none border-white hover:bg-slate-300 hover-parent`}
-          >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Fish
-            </div>
-          </button>
-          <button
-            onClick={() => handleSelect("mustard")}
-            className={`${
-              isSelected("mustard") ? "bg-orange" : "bg-white"
-            } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none border-white hover:bg-slate-300 hover-parent`}
-          >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Mustard
-            </div>
-          </button>
-          <button
-            onClick={() => handleSelect("lupin")}
-            className={`${
-              isSelected("lupin") ? "bg-orange" : "bg-white"
-            } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none border-white hover:bg-slate-300 hover-parent`}
-          >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Lupin
-            </div>
-          </button>
-          <button
-            onClick={() => handleSelect("celery")}
-            className={`${
-              isSelected("celery") ? "bg-orange" : "bg-white"
-            } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center min-w-[106px] border-none border-white hover:bg-slate-300 hover-parent`}
-          >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Celery
+              Depression
             </div>
           </button>
           <button
@@ -230,9 +152,8 @@ const ProfileSetup5: NextPage = () => {
           </button>
         </div>
       </div>
-
       <div className="self-stretch flex flex-col items-end justify-end py-5 px-[70px]">
-        <Link href="/Prsetup6a" className="no-underline">
+        <Link href="/Prsetup5a" className="no-underline">
           <button
             disabled={activityLevel.length === 0}
             className={`cursor-pointer [border:none] py-1 px-[18px] w-[103px] rounded-xl shadow-[0px_1px_10px_rgba(0,_0,_0,_0.3)] flex flex-row items-center justify-center box-border ${
@@ -252,4 +173,4 @@ const ProfileSetup5: NextPage = () => {
   );
 };
 
-export default ProfileSetup5;
+export default ChoiceFrame;

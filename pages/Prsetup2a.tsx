@@ -16,8 +16,8 @@ const Setup2a = () => {
     setIsPressed(true);
   };
   return (
-    <div className=" bg-saddlebrown py-[40px] px-[20px] md:px-[50px] md:py-[50px] lg:py-[100px] lg:px-[120px] xl:py-[150px] xl:px-[170px] text-left text-base text-black1 font-poppins ">
-      <div className="flex-1 rounded-xl bg-white flex flex-col items-start justify-start gap-[10px] z-[0]">
+    <div className="w-full h-full min-h-screen bg-saddlebrown overflow-hidden flex items-center justify-center py-[40px] px-[20px] md:px-[50px] md:py-[50px] lg:py-[100px] lg:px-[120px] xl:py-[150px] xl:px-[170px] box-border text-left text-lg text-black1 font-poppins">
+      <div className="flex-1 h-[770px] mx-auto overflow-y-auto  rounded-xl bg-white flex flex-col items-start justify-start gap-[10px] z-[0]">
         <div className="self-stretch flex flex-col items-start justify-start py-5 px-[20px] md:px-[50px] lg:px-20 gap-[26px]">
           <Link href="/Prsetup1a" className="no-underline">
             <button className="cursor-pointer [border:none] p-0 bg-[transparent] w-10 relative h-10">

@@ -5,24 +5,30 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 
 type ActivityLevel =
-  | "beef"
-  | "pork"
-  | "lamb"
-  | "soy"
-  | "chicken"
-  | "duck"
-  | "fish"
-  | "tofu"
-  | "egg"
-  | "nuts"
-  | "legumes"
+  | "rice"
+  | "noodles"
+  | "pasta"
+  | "bread"
+  | "sweetpotato"
+  | "potato"
+  | "quinoa"
+  | "lentils"
   | "beans"
-  | "milk"
-  | "oat"
-  | "almond"
-  | "coconut"
-  | "cheese"
-  | "yogurt";
+  | "oats"
+  | "cereal"
+  | "corn"
+  | "avocado"
+  | "artichoke"
+  | "greens"
+  | "broccoli"
+  | "carrot"
+  | "sprouts"
+  | "apple"
+  | "pear"
+  | "rasp"
+  | "orange"
+  | "blue"
+  | "pumpkin";
 
 const ChoiceFrame: NextPage = () => {
   const router = useRouter();
@@ -62,113 +68,93 @@ const ChoiceFrame: NextPage = () => {
       <div className="self-stretch flex flex-col items-center justify-start gap-[34px] text-center text-sm text-darkslategray px-[20px] md:px-[30px] lg:px-[50px]">
         {/* Grid container */}
         <div className="self-stretch flex flex-col items-start justify-start px-[0px] py-0 gap-[0px]">
-          <div className="w-[87px] items-start justify-start py-0 px-[0px] box-border text-base text-white">
+          <div className="w-[150px] items-start justify-start py-0 px-[0px] box-border text-base text-white">
             <div className="flex-1 rounded-xl bg-black flex flex-row items-start justify-center p-px">
-              <b className="h-[31px] w-[77.4px] relative flex items-center justify-center">
-                Protein
+              <b className="h-[31px] w-[150px] relative flex items-center justify-center">
+                Carbohydrates
               </b>
             </div>
           </div>
         </div>
         <div className="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-8 xl:grid-cols-8 gap-[10px] w-full ">
           <button
-            onClick={() => handleSelect("beef")}
+            onClick={() => handleSelect("rice")}
             className={`${
-              isSelected("beef") ? "bg-orange" : "bg-white"
+              isSelected("rice") ? "bg-orange" : "bg-white"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px]  flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center border-none border-white hover:bg-slate-300 hover-parent`}
           >
             <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Beef
+              Rice
             </div>
           </button>
           <button
-            onClick={() => handleSelect("pork")}
+            onClick={() => handleSelect("noodles")}
             className={`${
-              isSelected("pork") ? "bg-orange" : "bg-white"
+              isSelected("noodles") ? "bg-orange" : "bg-white"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center border-none border-white hover:bg-slate-300 hover-parent`}
           >
             <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Pork
+              Noodles
             </div>
           </button>
           <button
-            onClick={() => handleSelect("lamb")}
+            onClick={() => handleSelect("pasta")}
             className={`${
-              isSelected("lamb") ? "bg-orange" : "bg-white"
+              isSelected("pasta") ? "bg-orange" : "bg-white"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  border-none border-white hover:bg-slate-300 hover-parent`}
           >
             <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Lamb
+              Pasta
             </div>
           </button>
           <button
-            onClick={() => handleSelect("chicken")}
+            onClick={() => handleSelect("bread")}
             className={`${
-              isSelected("chicken") ? "bg-orange" : "bg-white"
+              isSelected("bread") ? "bg-orange" : "bg-white"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  border-none border-white hover:bg-slate-300 hover-parent`}
           >
             <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Chicken
+              Bread
             </div>
           </button>
           <button
-            onClick={() => handleSelect("duck")}
+            onClick={() => handleSelect("sweetpotato")}
             className={`${
-              isSelected("duck") ? "bg-orange" : "bg-white"
+              isSelected("sweetpotato") ? "bg-orange" : "bg-white"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  border-none border-white hover:bg-slate-300 hover-parent`}
           >
             <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Duck
+              Sweet Potato
             </div>
           </button>
           <button
-            onClick={() => handleSelect("fish")}
+            onClick={() => handleSelect("potato")}
             className={`${
-              isSelected("fish") ? "bg-orange" : "bg-white"
+              isSelected("potato") ? "bg-orange" : "bg-white"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center border-none border-white hover:bg-slate-300 hover-parent`}
           >
             <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Fish
+              Potato
             </div>
           </button>{" "}
           <button
-            onClick={() => handleSelect("tofu")}
+            onClick={() => handleSelect("quinoa")}
             className={`${
-              isSelected("tofu") ? "bg-orange" : "bg-white"
+              isSelected("quinoa") ? "bg-orange" : "bg-white"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  border-none border-white hover:bg-slate-300 hover-parent`}
           >
             <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Tofu
+              Quinoa
             </div>
           </button>{" "}
           <button
-            onClick={() => handleSelect("egg")}
+            onClick={() => handleSelect("lentils")}
             className={`${
-              isSelected("egg") ? "bg-orange" : "bg-white"
+              isSelected("lentils") ? "bg-orange" : "bg-white"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center border-none border-white hover:bg-slate-300 hover-parent`}
           >
             <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Egg
-            </div>
-          </button>{" "}
-          <button
-            onClick={() => handleSelect("nuts")}
-            className={`${
-              isSelected("nuts") ? "bg-orange" : "bg-white"
-            } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center border-none border-white hover:bg-slate-300 hover-parent`}
-          >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Nuts
-            </div>
-          </button>{" "}
-          <button
-            onClick={() => handleSelect("legumes")}
-            className={`${
-              isSelected("legumes") ? "bg-orange" : "bg-white"
-            } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center border-none border-white hover:bg-slate-300 hover-parent`}
-          >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Legumes
+              Lentils
             </div>
           </button>{" "}
           <button
@@ -180,6 +166,36 @@ const ChoiceFrame: NextPage = () => {
             <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
               Beans
             </div>
+          </button>{" "}
+          <button
+            onClick={() => handleSelect("oats")}
+            className={`${
+              isSelected("oats") ? "bg-orange" : "bg-white"
+            } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center border-none border-white hover:bg-slate-300 hover-parent`}
+          >
+            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+              Oats
+            </div>
+          </button>{" "}
+          <button
+            onClick={() => handleSelect("cereal")}
+            className={`${
+              isSelected("cereal") ? "bg-orange" : "bg-white"
+            } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center border-none border-white hover:bg-slate-300 hover-parent`}
+          >
+            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+              Cereal
+            </div>
+          </button>
+          <button
+            onClick={() => handleSelect("corn")}
+            className={`${
+              isSelected("corn") ? "bg-orange" : "bg-white"
+            } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center border-none border-white hover:bg-slate-300 hover-parent`}
+          >
+            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+              Corn
+            </div>
           </button>
         </div>
       </div>
@@ -189,87 +205,137 @@ const ChoiceFrame: NextPage = () => {
           <div className="w-[87px] items-start justify-start py-0 px-[0px] box-border text-base text-white">
             <div className="flex-1 rounded-xl bg-black flex flex-row items-start justify-center p-px">
               <b className="h-[31px] w-[77.4px] relative flex items-center justify-center">
-                Dairy
+                Fiber
               </b>
             </div>
           </div>
         </div>
         <div className="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-8 xl:grid-cols-8 gap-[10px] w-full ">
           <button
-            onClick={() => handleSelect("milk")}
+            onClick={() => handleSelect("avocado")}
             className={`${
-              isSelected("milk") ? "bg-orange" : "bg-white"
+              isSelected("avocado") ? "bg-orange" : "bg-white"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center border-none border-white hover:bg-slate-300 hover-parent`}
           >
             <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Milk
+              Avocado
             </div>
           </button>
           <button
-            onClick={() => handleSelect("soy")}
+            onClick={() => handleSelect("artichoke")}
             className={`${
-              isSelected("soy") ? "bg-orange" : "bg-white"
+              isSelected("artichoke") ? "bg-orange" : "bg-white"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center border-none border-white hover:bg-slate-300 hover-parent`}
           >
             <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Soy Milk
+              Artichoke
             </div>
           </button>{" "}
           <button
-            onClick={() => handleSelect("oat")}
+            onClick={() => handleSelect("greens")}
             className={`${
-              isSelected("oat") ? "bg-orange" : "bg-white"
+              isSelected("greens") ? "bg-orange" : "bg-white"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center border-none border-white hover:bg-slate-300 hover-parent`}
           >
             <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Oat Milk
+              Leafy Greens
             </div>
           </button>{" "}
           <button
-            onClick={() => handleSelect("almond")}
+            onClick={() => handleSelect("broccoli")}
             className={`${
-              isSelected("almond") ? "bg-orange" : "bg-white"
+              isSelected("broccoli") ? "bg-orange" : "bg-white"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center border-none border-white hover:bg-slate-300 hover-parent`}
           >
             <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Almond Milk
+              Broccoli
             </div>
           </button>{" "}
           <button
-            onClick={() => handleSelect("coconut")}
+            onClick={() => handleSelect("carrot")}
             className={`${
-              isSelected("coconut") ? "bg-orange" : "bg-white"
+              isSelected("carrot") ? "bg-orange" : "bg-white"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center border-none border-white hover:bg-slate-300 hover-parent`}
           >
             <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Coconut Milk
+              Carrot
             </div>
           </button>{" "}
           <button
-            onClick={() => handleSelect("cheese")}
+            onClick={() => handleSelect("pumpkin")}
             className={`${
-              isSelected("cheese") ? "bg-orange" : "bg-white"
+              isSelected("pumpkin") ? "bg-orange" : "bg-white"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center border-none border-white hover:bg-slate-300 hover-parent`}
           >
             <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Cheese
+              Pumpkin
             </div>
           </button>{" "}
           <button
-            onClick={() => handleSelect("yogurt")}
+            onClick={() => handleSelect("sprouts")}
             className={`${
-              isSelected("yogurt") ? "bg-orange" : "bg-white"
+              isSelected("sprouts") ? "bg-orange" : "bg-white"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center border-none border-white hover:bg-slate-300 hover-parent`}
           >
             <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
-              Yogurt
+              Sprouts
+            </div>
+          </button>
+          <button
+            onClick={() => handleSelect("apple")}
+            className={`${
+              isSelected("apple") ? "bg-orange" : "bg-white"
+            } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center border-none border-white hover:bg-slate-300 hover-parent`}
+          >
+            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+              Apple
+            </div>
+          </button>
+          <button
+            onClick={() => handleSelect("pear")}
+            className={`${
+              isSelected("pear") ? "bg-orange" : "bg-white"
+            } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center border-none border-white hover:bg-slate-300 hover-parent`}
+          >
+            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+              Pear
+            </div>
+          </button>
+          <button
+            onClick={() => handleSelect("rasp")}
+            className={`${
+              isSelected("rasp") ? "bg-orange" : "bg-white"
+            } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center border-none border-white hover:bg-slate-300 hover-parent`}
+          >
+            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+              Raspberries
+            </div>
+          </button>
+          <button
+            onClick={() => handleSelect("orange")}
+            className={`${
+              isSelected("orange") ? "bg-orange" : "bg-white"
+            } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center border-none border-white hover:bg-slate-300 hover-parent`}
+          >
+            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+              Orange
+            </div>
+          </button>
+          <button
+            onClick={() => handleSelect("blue")}
+            className={`${
+              isSelected("blue") ? "bg-orange" : "bg-white"
+            } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center border-none border-white hover:bg-slate-300 hover-parent`}
+          >
+            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+              Blueberries
             </div>
           </button>
         </div>
       </div>
 
       <div className="self-stretch flex flex-col items-end justify-end py-5 px-[70px]">
-        <Link href="/Prsetup7a" className="no-underline">
+        <Link href="/Prsetup8a" className="no-underline">
           <button
             disabled={activityLevel.length === 0}
             className={`cursor-pointer [border:none] py-1 px-[18px] w-[103px] rounded-xl shadow-[0px_1px_10px_rgba(0,_0,_0,_0.3)] flex flex-row items-center justify-center box-border ${

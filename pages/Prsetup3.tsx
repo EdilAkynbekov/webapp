@@ -1,7 +1,6 @@
 import type { NextPage } from "next";
 import React, { useState } from "react";
 import FrameGroup from "../components/frame-group";
-import NextButton from "../components/NextButton";
 import Link from "next/link";
 
 const Setup3a: NextPage = () => {

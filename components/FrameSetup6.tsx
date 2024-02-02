@@ -274,7 +274,7 @@ const ChoiceFrame: NextPage = () => {
         </div>
       </div>
 
-      <div className="self-stretch flex flex-col items-end justify-end py-5 px-[70px]">
+      <div className="self-stretch flex flex-col items-end justify-end py-5 px-[30px] md:px-[70px]">
         <Link href="/Prsetup7a" className="no-underline">
           <button
             disabled={activityLevel.length === 0}

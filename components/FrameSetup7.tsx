@@ -65,7 +65,7 @@ const ChoiceFrame: NextPage = () => {
         </div>
       </div>
 
-      <div className="self-stretch flex flex-col items-center justify-start gap-[34px] text-center text-sm text-darkslategray px-[20px] md:px-[30px] lg:px-[50px]">
+      <div className="self-stretch flex flex-col items-center justify-start gap-[34px] text-center text-sm10 md:text-sm text-darkslategray px-[20px] md:px-[30px] lg:px-[50px]">
         {/* Grid container */}
         <div className="self-stretch flex flex-col items-start justify-start px-[0px] py-0 gap-[0px]">
           <div className="w-[150px] items-start justify-start py-0 px-[0px] box-border text-base text-white">
@@ -83,7 +83,7 @@ const ChoiceFrame: NextPage = () => {
               isSelected("rice") ? "bg-orange" : "bg-white hover:bg-slate-300"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px]  flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  hover-parent`}
           >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+            <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins text-darkslategray text-center">
               Rice
             </div>
           </button>
@@ -95,7 +95,7 @@ const ChoiceFrame: NextPage = () => {
                 : "bg-white hover:bg-slate-300"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  hover-parent`}
           >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+            <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins text-darkslategray text-center">
               Noodles
             </div>
           </button>
@@ -105,7 +105,7 @@ const ChoiceFrame: NextPage = () => {
               isSelected("pasta") ? "bg-orange" : "bg-white hover:bg-slate-300"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center   hover-parent`}
           >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+            <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins text-darkslategray text-center">
               Pasta
             </div>
           </button>
@@ -115,7 +115,7 @@ const ChoiceFrame: NextPage = () => {
               isSelected("bread") ? "bg-orange" : "bg-white hover:bg-slate-300"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center   hover-parent`}
           >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+            <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins text-darkslategray text-center">
               Bread
             </div>
           </button>
@@ -127,7 +127,7 @@ const ChoiceFrame: NextPage = () => {
                 : "bg-white hover:bg-slate-300"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center   hover-parent`}
           >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+            <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins text-darkslategray text-center">
               Sweet Potato
             </div>
           </button>
@@ -137,7 +137,7 @@ const ChoiceFrame: NextPage = () => {
               isSelected("potato") ? "bg-orange" : "bg-white hover:bg-slate-300"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  hover-parent`}
           >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+            <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins text-darkslategray text-center">
               Potato
             </div>
           </button>{" "}
@@ -147,7 +147,7 @@ const ChoiceFrame: NextPage = () => {
               isSelected("quinoa") ? "bg-orange" : "bg-white hover:bg-slate-300"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center   hover-parent`}
           >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+            <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins text-darkslategray text-center">
               Quinoa
             </div>
           </button>{" "}
@@ -159,7 +159,7 @@ const ChoiceFrame: NextPage = () => {
                 : "bg-white hover:bg-slate-300"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  hover-parent`}
           >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+            <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins text-darkslategray text-center">
               Lentils
             </div>
           </button>{" "}
@@ -169,7 +169,7 @@ const ChoiceFrame: NextPage = () => {
               isSelected("beans") ? "bg-orange" : "bg-white hover:bg-slate-300"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  hover-parent`}
           >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+            <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins text-darkslategray text-center">
               Beans
             </div>
           </button>{" "}
@@ -179,7 +179,7 @@ const ChoiceFrame: NextPage = () => {
               isSelected("oats") ? "bg-orange" : "bg-white hover:bg-slate-300"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  hover-parent`}
           >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+            <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins text-darkslategray text-center">
               Oats
             </div>
           </button>{" "}
@@ -189,7 +189,7 @@ const ChoiceFrame: NextPage = () => {
               isSelected("cereal") ? "bg-orange" : "bg-white hover:bg-slate-300"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  hover-parent`}
           >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+            <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins text-darkslategray text-center">
               Cereal
             </div>
           </button>
@@ -199,13 +199,13 @@ const ChoiceFrame: NextPage = () => {
               isSelected("corn") ? "bg-orange" : "bg-white hover:bg-slate-300"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  hover-parent`}
           >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+            <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins text-darkslategray text-center">
               Corn
             </div>
           </button>
         </div>
       </div>
-      <div className="self-stretch flex flex-col items-center justify-start gap-[34px] text-center text-sm text-darkslategray px-[20px] md:px-[30px] lg:px-[50px]">
+      <div className="self-stretch flex flex-col items-center justify-start gap-[34px] text-center text-sm10 md:text-sm text-darkslategray px-[20px] md:px-[30px] lg:px-[50px]">
         {/* Grid container */}
         <div className="self-stretch flex flex-col items-start justify-start px-[0px] py-0 gap-[0px]">
           <div className="w-[87px] items-start justify-start py-0 px-[0px] box-border text-base text-white">
@@ -225,7 +225,7 @@ const ChoiceFrame: NextPage = () => {
                 : "bg-white hover:bg-slate-300"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  hover-parent`}
           >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+            <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins text-darkslategray text-center">
               Avocado
             </div>
           </button>
@@ -237,7 +237,7 @@ const ChoiceFrame: NextPage = () => {
                 : "bg-white hover:bg-slate-300"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  hover-parent`}
           >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+            <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins text-darkslategray text-center">
               Artichoke
             </div>
           </button>{" "}
@@ -247,7 +247,7 @@ const ChoiceFrame: NextPage = () => {
               isSelected("greens") ? "bg-orange" : "bg-white hover:bg-slate-300"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  hover-parent`}
           >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+            <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins text-darkslategray text-center">
               Leafy Greens
             </div>
           </button>{" "}
@@ -259,7 +259,7 @@ const ChoiceFrame: NextPage = () => {
                 : "bg-white hover:bg-slate-300"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  hover-parent`}
           >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+            <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins text-darkslategray text-center">
               Broccoli
             </div>
           </button>{" "}
@@ -269,7 +269,7 @@ const ChoiceFrame: NextPage = () => {
               isSelected("carrot") ? "bg-orange" : "bg-white hover:bg-slate-300"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  hover-parent`}
           >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+            <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins text-darkslategray text-center">
               Carrot
             </div>
           </button>{" "}
@@ -281,7 +281,7 @@ const ChoiceFrame: NextPage = () => {
                 : "bg-white hover:bg-slate-300"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  hover-parent`}
           >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+            <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins text-darkslategray text-center">
               Pumpkin
             </div>
           </button>{" "}
@@ -293,7 +293,7 @@ const ChoiceFrame: NextPage = () => {
                 : "bg-white hover:bg-slate-300"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  hover-parent`}
           >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+            <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins text-darkslategray text-center">
               Sprouts
             </div>
           </button>
@@ -303,7 +303,7 @@ const ChoiceFrame: NextPage = () => {
               isSelected("apple") ? "bg-orange" : "bg-white hover:bg-slate-300"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  hover-parent`}
           >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+            <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins text-darkslategray text-center">
               Apple
             </div>
           </button>
@@ -313,7 +313,7 @@ const ChoiceFrame: NextPage = () => {
               isSelected("pear") ? "bg-orange" : "bg-white hover:bg-slate-300"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  hover-parent`}
           >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+            <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins text-darkslategray text-center">
               Pear
             </div>
           </button>
@@ -323,7 +323,7 @@ const ChoiceFrame: NextPage = () => {
               isSelected("rasp") ? "bg-orange" : "bg-white hover:bg-slate-300"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  hover-parent`}
           >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+            <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins text-darkslategray text-center">
               Raspberries
             </div>
           </button>
@@ -333,7 +333,7 @@ const ChoiceFrame: NextPage = () => {
               isSelected("orange") ? "bg-orange" : "bg-white hover:bg-slate-300"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  hover-parent`}
           >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+            <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins text-darkslategray text-center">
               Orange
             </div>
           </button>
@@ -343,14 +343,14 @@ const ChoiceFrame: NextPage = () => {
               isSelected("blue") ? "bg-orange" : "bg-white hover:bg-slate-300"
             } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  hover-parent`}
           >
-            <div className="flex-1 relative text-sm font-semibold font-poppins text-darkslategray text-center">
+            <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins text-darkslategray text-center">
               Blueberries
             </div>
           </button>
         </div>
       </div>
 
-      <div className="self-stretch flex flex-col items-end justify-end py-5 px-[70px]">
+      <div className="self-stretch flex flex-col items-end justify-end py-5 px-[30px] md:px-[70px]">
         <Link href="/Prsetup8a" className="no-underline">
           <button
             disabled={activityLevel.length === 0}

@@ -214,7 +214,7 @@ const ChoiceFrame: NextPage = () => {
       </div>
 
       <div className="self-stretch flex flex-col items-end justify-end py-5 px-[70px]">
-        <Link href="/Prsetup8a" className="no-underline">
+        <Link href="/Prsetup1b" className="no-underline">
           <button
             disabled={activityLevel.length === 0}
             className={`cursor-pointer [border:none] py-2 px-[18px] w-[103px] rounded-2xl shadow-[0px_1px_10px_rgba(0,_0,_0,_0.3)] flex flex-row items-center justify-center box-border ${

@@ -44,7 +44,7 @@ const AddOtherBox = (props: IProps) => {
         </div>
         <div className="self-stretch flex flex-col items-end justify-end py-5 px-[30px] lg:px-[70px]">
           <button
-            className={`cursor-pointer [border:none] py-1 px-[18px] bg-orange w-[103px] rounded-xl shadow-[0px_1px_10px_rgba(0,_0,_0,_0.3)] flex flex-row items-center justify-center box-border  hover:bg-slate-300`}
+            className={`cursor-pointer [border:none] py-2 px-[18px] bg-orange w-[103px] rounded-2xl shadow-[0px_1px_10px_rgba(0,_0,_0,_0.3)] flex flex-row items-center justify-center box-border hover:bg-slate-300`}
             onClick={() => {
               setActivityLevel((prev) => {
                 prev.concat;

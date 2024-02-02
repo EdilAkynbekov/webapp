@@ -32,10 +32,10 @@ const Setup1a = () => {
             Tell us more about you
           </div>
         </div>
-        <div className="self-stretch flex flex-col md:flex-row items-start justify-center px-[20px] md:px-[40px] py-0 lg:px-20 gap-[20px] md:gap-[40px] lg:gap-[80px] text-orange">
-          <div className="flex-1 flex flex-col items-start justify-start">
-            <div className="flex-1 self-stretch flex flex-col items-start justify-start p-[5px] gap-[3px]">
-              <div className="self-stretch relative font-semibold">
+        <div className="m-0 self-stretch flex flex-row flex-wrap items-start justify-center py-0 px-5 md:px-10 box-border gap-[20px] max-w-full md:gap-[20px] lg:gap-[40px] lg:pl-20 lg:pr-10 lg:box-border">
+          <div className="flex-1 flex flex-col items-start justify-start min-w-[231px] max-w-full">
+            <div className="self-stretch flex flex-col items-start justify-start pt-[5px] px-[5px] pb-[26px] gap-[3px]">
+              <div className="self-stretch relative font-semibold font-poppins">
                 Birthday
               </div>
               {/* <DatePicker /> */}
@@ -47,7 +47,7 @@ const Setup1a = () => {
               />
               <div className="self-stretch relative text-sm text-black1" />
             </div>
-            <div className="flex-1 self-stretch flex flex-col items-start justify-start p-[5px] gap-[3px]">
+            <div className="self-stretch flex flex-col items-start justify-start pt-[5px] px-[5px] pb-[26px] gap-[3px]">
               <div className="self-stretch relative font-semibold">
                 Phone Number
               </div>
@@ -65,11 +65,11 @@ const Setup1a = () => {
                   onClick={() => {
                     setActivityLevel("male");
                   }}
-                  className={`flex-1 cursor-pointer py-2.5 px-5  ${
+                  className={`flex-1 cursor-pointer py-3 px-5  ${
                     activityLevel === "male"
                       ? "bg-orange"
                       : "bg-white hover:bg-slate-300"
-                  } w-[115px] rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-col items-center justify-center `}
+                  } w-[115px] h-[47px] rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-col items-center justify-center `}
                 >
                   <div className=" w-[75px] relative text-base font-semibold font-poppins text-darkslategray text-center flex items-center justify-center">
                     Male
@@ -79,7 +79,7 @@ const Setup1a = () => {
                   onClick={() => {
                     setActivityLevel("female");
                   }}
-                  className={`flex-1 cursor-pointer py-2.5 px-5  ${
+                  className={`flex-1 cursor-pointer py-3 px-5  ${
                     activityLevel === "female"
                       ? "bg-orange"
                       : "bg-white hover:bg-slate-300"
@@ -92,8 +92,8 @@ const Setup1a = () => {
               </div>
             </div>
           </div>
-          <div className="flex-1 flex flex-col items-start justify-start gap-[5px] max-w-[270px] md:max-w-[1000px]">
-            <div className="flex-1 self-stretch flex flex-col items-start justify-start p-[5px] gap-[3px]">
+          <div className="flex-1 flex flex-col items-start justify-start min-w-[231px] max-w-full">
+            <div className="self-stretch flex flex-col items-start justify-start pt-[5px] px-[5px] pb-[26px] gap-[3px]">
               <div className="self-stretch relative font-semibold">
                 Height (cm)
               </div>
@@ -103,7 +103,7 @@ const Setup1a = () => {
                 type="text"
               />
             </div>
-            <div className="flex-1 self-stretch flex flex-col items-start justify-start p-[5px] gap-[3px]">
+            <div className="self-stretch flex flex-col items-start justify-start pt-[8px] px-[5px] pb-[26px] gap-[3px]">
               <div className="self-stretch relative font-semibold">
                 Weight (kg)
               </div>
@@ -113,11 +113,11 @@ const Setup1a = () => {
                 type="text"
               />
             </div>
-            <div className="self-stretch flex flex-col items-start justify-start p-[5px] gap-[7px]">
+            <div className="self-stretch flex flex-col items-start justify-start pt-[12px] px-[5px] pb-[15px] gap-[3px]">
               <div className="self-stretch relative font-semibold">
                 Number of Meals Per Day
               </div>
-              <div className="self-stretch flex flex-row items-center justify-start gap-[15px]">
+              <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">
                 <button
                   onClick={() => {
                     setActivityLevel1("1");
@@ -176,8 +176,8 @@ const Setup1a = () => {
                 </button>
               </div>
             </div>
-            <div className="self-stretch relative text-xs text-black1">
-              <p className="m-0">
+            <div className="self-stretch relative text-xs text-black1 max-w-[500px]">
+              <p className="mb-6 text-start justify-start">
                 <span>
                   <span className="font-poppins text-black1">
                     Individuals with the following conditions are
@@ -205,21 +205,21 @@ const Setup1a = () => {
                   </span>
                 </span>
               </p>
-              <p className="m-0">
+              <p className="m-0 text-mini">
                 <span>
                   <span>
                     <span>{`2. Type 1 & Type 2 Diabetes`}</span>
                   </span>
                 </span>
               </p>
-              <p className="m-0">
+              <p className="m-0 text-mini">
                 <span>
                   <span>
                     <span>3. Pregnant / Breastfeeding</span>
                   </span>
                 </span>
               </p>
-              <p className="m-0">
+              <p className="m-0 text-mini">
                 <span>
                   <span>
                     <span>4. Weight Gain Diet</span>
@@ -230,7 +230,7 @@ const Setup1a = () => {
           </div>
         </div>
         <div className="self-stretch flex flex-col items-end justify-end py-5 px-[70px]">
-          <Link href="/Prsetup3" className="no-underline">
+          <Link href="/Prsetup2a" className="no-underline">
             <button
               disabled={activityLevel === "" || activityLevel1 === ""}
               className={` ${

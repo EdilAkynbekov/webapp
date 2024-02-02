@@ -35,7 +35,7 @@ const Setup1a = () => {
         <div className="m-0 self-stretch flex flex-row flex-wrap items-start justify-center py-0 px-5 md:px-10 box-border gap-[20px] max-w-full md:gap-[20px] lg:gap-[40px] lg:pl-20 lg:pr-10 lg:box-border">
           <div className="flex-1 flex flex-col items-start justify-start min-w-[231px] max-w-full">
             <div className="self-stretch flex flex-col items-start justify-start pt-[5px] px-[5px] pb-[26px] gap-[3px]">
-              <div className="self-stretch relative font-semibold font-poppins">
+              <div className="self-stretch relative font-semibold font-poppins text-[#FFB527]">
                 Birthday
               </div>
               {/* <DatePicker /> */}
@@ -48,7 +48,7 @@ const Setup1a = () => {
               <div className="self-stretch relative text-sm text-black1" />
             </div>
             <div className="self-stretch flex flex-col items-start justify-start pt-[5px] px-[5px] pb-[26px] gap-[3px]">
-              <div className="self-stretch relative font-semibold">
+              <div className="self-stretch relative font-semibold text-[#FFB527]">
                 Phone Number
               </div>
               <input
@@ -59,7 +59,9 @@ const Setup1a = () => {
               <div className="self-stretch relative text-sm text-black1" />
             </div>
             <div className="self-stretch flex flex-col items-start justify-start p-[5px] gap-[7px]">
-              <div className="self-stretch relative font-semibold">Gender</div>
+              <div className="self-stretch relative font-semibold text-[#FFB527]">
+                Gender
+              </div>
               <div className="self-stretch flex flex-row items-center justify-start gap-[30px]">
                 <button
                   onClick={() => {
@@ -94,7 +96,7 @@ const Setup1a = () => {
           </div>
           <div className="flex-1 flex flex-col items-start justify-start min-w-[231px] max-w-full">
             <div className="self-stretch flex flex-col items-start justify-start pt-[5px] px-[5px] pb-[26px] gap-[3px]">
-              <div className="self-stretch relative font-semibold">
+              <div className="self-stretch relative font-semibold text-[#FFB527]">
                 Height (cm)
               </div>
               <input
@@ -104,7 +106,7 @@ const Setup1a = () => {
               />
             </div>
             <div className="self-stretch flex flex-col items-start justify-start pt-[8px] px-[5px] pb-[26px] gap-[3px]">
-              <div className="self-stretch relative font-semibold">
+              <div className="self-stretch relative font-semibold text-[#FFB527]">
                 Weight (kg)
               </div>
               <input
@@ -114,7 +116,7 @@ const Setup1a = () => {
               />
             </div>
             <div className="self-stretch flex flex-col items-start justify-start pt-[12px] px-[5px] pb-[15px] gap-[3px]">
-              <div className="self-stretch relative font-semibold">
+              <div className="self-stretch relative font-semibold text-[#FFB527]">
                 Number of Meals Per Day
               </div>
               <div className="self-stretch flex flex-row items-center justify-start gap-[10px]">

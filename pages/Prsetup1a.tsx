@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
-
+import ProgressBar from "../components/common/ProgressBar2";
 import Link from "next/link";
 
 const Setup1a = () => {
@@ -16,8 +16,8 @@ const Setup1a = () => {
     setIsPressed(true);
   };
   return (
-    <div className="w-full min-h-screen bg-saddlebrown overflow-hidden flex items-center justify-center py-[50px] px-[20px] md:px-[50px] md:py-[50px] lg:py-[110px] lg:px-[120px] xl:px-[170px] box-border text-left text-lg text-black1 font-poppins">
-      <div className="flex-1 mx-auto rounded-xl bg-white overflow-y-auto flex flex-col items-center justify-center">
+    <div className="w-full min-h-screen bg-saddlebrown overflow-hidden flex items-center justify-center py-[50px] px-[20px] md:px-[50px] md:py-[50px] lg:px-[120px] xl:px-[170px] box-border text-left text-lg text-black1 font-poppins">
+      <div className="flex-1 mx-auto rounded-xl bg-white overflow-y-auto flex flex-col items-center justify-center my-10">
         <div className="self-stretch flex flex-col items-start justify-start px-[20px] py-5 md:px-[40px] lg:px-20 gap-[26px]">
           <Link href="/" className="no-underline">
             <button className="cursor-pointer [border:none] p-0 bg-[transparent] w-10 relative h-10">
@@ -251,6 +251,21 @@ const Setup1a = () => {
           </Link>
         </div>
       </div>
+      <ProgressBar
+        steps={8}
+        currentStep={0}
+        navigationRoutes={[
+          "Prsetup1a",
+          "Prsetup2a",
+          "Prsetup3",
+          "Prsetup4a",
+          "Prsetup5a",
+          "Prsetup6a",
+          "Prsetup7a",
+          "Prsetup8a",
+        ]}
+        className="bottom-[90%] lg:top-[113%] xl:top-[94%]"
+      />
     </div>
   );
 };

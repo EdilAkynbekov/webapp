@@ -146,6 +146,7 @@ const FrameGroup: NextPage = () => {
           </div>
         </div>
       </div>
+      
     </div>
   );
 };

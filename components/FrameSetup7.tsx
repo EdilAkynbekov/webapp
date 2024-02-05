@@ -49,7 +49,7 @@ const ChoiceFrame: NextPage = () => {
 
   const isSelected = (level: ActivityLevel) => activityLevel.includes(level);
   return (
-    <section className="w-[951px] relative rounded-xl bg-white flex flex-col items-center justify-start py-5 px-0 box-border gap-[20px] md:gap-[40px] text-left text-lg text-black font-poppins">
+    <section className="w-[951px] relative rounded-xl bg-white flex flex-col items-center justify-start py-5 px-0 box-border gap-[20px] md:gap-[40px] text-left text-lg text-black font-poppins my-10 lg:my-20">
       <div className="self-stretch flex flex-col items-start justify-start px-[20px] py-5 md:px-[40px] lg:px-16 gap-[26px]">
         <Link href="/Prsetup5a" className="no-underline">
           <button className="cursor-pointer [border:none] p-0 bg-[transparent] w-10 relative h-10">

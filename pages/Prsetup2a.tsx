@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Image from "next/image";
 import React, { useState } from "react";
 import Link from "next/link";
+import ProgressBar from "../components/common/ProgressBar2";
 
 const Setup2a = () => {
   const router = useRouter();
@@ -16,8 +17,8 @@ const Setup2a = () => {
     setIsPressed(true);
   };
   return (
-    <div className="w-full min-h-screen bg-saddlebrown overflow-hidden flex items-center justify-center py-[40px] px-[20px] md:px-[50px] md:py-[50px] lg:py-[100px] lg:px-[120px] xl:py-[150px] xl:px-[170px] box-border text-left text-lg text-black1 font-poppins">
-      <div className="flex-1 mx-auto overflow-y-auto  rounded-xl bg-white flex flex-col items-start justify-start gap-[10px] z-[0] font-poppins">
+    <div className="w-full min-h-screen bg-saddlebrown overflow-hidden flex items-center justify-center py-[40px] px-[20px] md:px-[50px] md:py-[50px] lg:py-[60px] lg:px-[100px] xl:py-[60px] xl:px-[170px] box-border text-left text-lg text-black1 font-poppins">
+      <div className="flex-1 mx-auto overflow-y-auto  rounded-xl bg-white flex flex-col items-start justify-start gap-[10px] z-[0] font-poppins my-10">
         <div className="self-stretch flex flex-col items-start justify-start py-5 px-[20px] md:px-[50px] lg:px-20 gap-[26px]">
           <Link href="/Prsetup1a" className="no-underline">
             <button className="cursor-pointer [border:none] p-0 bg-[transparent] w-10 relative h-10">
@@ -239,6 +240,21 @@ const Setup2a = () => {
         </div>
       </div>
       {/* Additional buttons or elements */}
+      <ProgressBar
+        steps={8}
+        currentStep={1}
+        navigationRoutes={[
+          "Prsetup1a",
+          "Prsetup2a",
+          "Prsetup3",
+          "Prsetup4a",
+          "Prsetup5a",
+          "Prsetup6a",
+          "Prsetup7a",
+          "Prsetup8a",
+        ]}
+        className="bottom-[91%] lg:top-[163%] xl:top-[122%]"
+      />
     </div>
   );
 };

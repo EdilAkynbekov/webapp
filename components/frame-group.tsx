@@ -73,7 +73,7 @@ const FrameGroup: NextPage = () => {
   const router = useRouter();
 
   return (
-    <div className="self-stretch flex flex-col items-center justify-start gap-[34px] max-w-full text-center text-lg text-black font-poppins md:gap-[17px] ">
+    <div className="self-stretch flex flex-col items-center justify-start gap-[34px] max-w-full text-center text-lg text-black font-poppins md:gap-[17px]">
       <div className="w-[791px] flex flex-col items-start justify-start gap-[26px] lg:min-h-[150px] max-w-full text-left pl-8 md:pl-12 lg:pl-12 mb-4 md:mb-8">
         <div className="flex flex-row items-center justify-center">
           <Link href="/Prsetup2a" className="no-underline">
@@ -146,7 +146,6 @@ const FrameGroup: NextPage = () => {
           </div>
         </div>
       </div>
-      
     </div>
   );
 };

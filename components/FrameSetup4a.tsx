@@ -48,8 +48,8 @@ const ChoiceFrame: NextPage = () => {
           setActivityLevel={setActivityLevel}
         />
       ) : (
-        <section className="w-[951px] relative rounded-xl bg-white flex flex-col items-center justify-start py-5 px-0 box-border gap-[20px] md:gap-[54px] text-left text-lg text-black font-poppins my-10">
-          <div className="self-stretch flex flex-col items-start justify-start px-[20px] py-5 md:px-[40px] lg:px-20 gap-[26px]">
+        <section className="w-[951px] relative rounded-xl bg-white flex flex-col items-center justify-start py-5 px-0 box-border  text-left text-lg text-black font-poppins my-10">
+          <div className="self-stretch flex flex-col items-start justify-start px-[20px] md:px-[40px] lg:px-20 gap-[26px] mb-4 md:mb-0">
             <Link href="/Prsetup3" className="no-underline">
               <button className="cursor-pointer [border:none] p-0 bg-[transparent] w-10 relative h-10">
                 <img
@@ -62,6 +62,11 @@ const ChoiceFrame: NextPage = () => {
             <div className="self-stretch relative font-semibold flex items-center h-5 shrink-0">
               Are you at risk of any of the following?
             </div>
+          </div>
+          <div className="self-stretch  px-[20px] md:px-[40px] lg:px-20 mb-4 md:mb-8">
+            <p className="text-red text-xs">
+              <b className="font-poppins">{` Choose at least one option `}</b>
+            </p>
           </div>
           <div className="self-stretch flex flex-col items-center justify-start gap-[34px] text-center text-sm text-darkslategray px-[30px] md:px-[60px] lg:px-[120px]">
             <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-[15px] md:gap-[20px] lg:gap-[30px] w-full ">
@@ -176,7 +181,7 @@ const ChoiceFrame: NextPage = () => {
               </button>
             </div>
           </div>
-          <div className="self-stretch flex flex-col items-end justify-end py-5 px-[70px]">
+          <div className="self-stretch flex flex-col items-end justify-end py-5 px-[30px] md:px-[70px]">
             <Link href="/Prsetup5a" className="no-underline">
               <button
                 disabled={activityLevel.length === 0}

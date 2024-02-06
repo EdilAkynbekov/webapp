@@ -19,7 +19,7 @@ const Setup2a = () => {
   return (
     <div className="w-full min-h-screen bg-saddlebrown overflow-hidden flex items-center justify-center py-[40px] px-[20px] md:px-[50px] md:py-[50px] lg:py-[60px] lg:px-[100px] xl:py-[60px] xl:px-[170px] box-border text-left text-lg text-black1 font-poppins">
       <div className="flex-1 mx-auto overflow-y-auto  rounded-xl bg-white flex flex-col items-start justify-start gap-[10px] z-[0] font-poppins my-10">
-        <div className="self-stretch flex flex-col items-start justify-start py-5 px-[20px] md:px-[50px] lg:px-20 gap-[26px]">
+        <div className="self-stretch flex flex-col items-start justify-start pt-5 px-[20px] md:px-[50px] lg:px-20 gap-[26px]">
           <Link href="/Prsetup1a" className="no-underline">
             <button className="cursor-pointer [border:none] p-0 bg-[transparent] w-10 relative h-10">
               <img
@@ -33,9 +33,12 @@ const Setup2a = () => {
             How active are you?
           </div>
         </div>
-        {/* Activity Level Options */}
-        {/* Repeat this block for each activity level option */}
-        {/*Box start*/}
+        <div className="self-stretch flex  px-[20px] md:px-[50px] lg:px-20 mb-4 md:mb-0">
+          <p className="text-red text-xs">
+            <b className="font-poppins">{` Choose at least one option `}</b>
+          </p>
+        </div>
+
         <div className="self-stretch flex flex-col md:flex-row items-center justify-center py-2.5 px-[10px] md:pr-[20px] md:pl-[30px] lg:pl-[60px] xl:pl-[50px] gap-[10px] md:gap-[20px] lg:gap-[40px] xl:gap-[30px] 2xl:gap-[50px]">
           <div className="w-[50%] mx-auto">
             <div className="relative group">
@@ -219,7 +222,7 @@ const Setup2a = () => {
           </div>
         </div>
         {/*Box end*/}
-        <div className="self-stretch flex flex-col items-end justify-end py-5 px-[70px]">
+        <div className="self-stretch flex flex-col items-end justify-end py-5 px-[30px] md:px-[70px]">
           <Link href="/Prsetup3" className="no-underline">
             <button
               disabled={activityLevel === ""}
@@ -239,7 +242,7 @@ const Setup2a = () => {
           </Link>
         </div>
       </div>
-      {/* Additional buttons or elements */}
+
       <ProgressBar
         steps={8}
         currentStep={1}

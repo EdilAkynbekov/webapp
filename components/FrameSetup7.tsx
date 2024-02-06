@@ -49,9 +49,9 @@ const ChoiceFrame: NextPage = () => {
 
   const isSelected = (level: ActivityLevel) => activityLevel.includes(level);
   return (
-    <section className="w-[951px] relative rounded-xl bg-white flex flex-col items-center justify-start py-5 px-0 box-border gap-[20px] md:gap-[40px] text-left text-lg text-black font-poppins my-10 lg:my-20">
-      <div className="self-stretch flex flex-col items-start justify-start px-[20px] py-5 md:px-[40px] lg:px-16 gap-[26px]">
-        <Link href="/Prsetup5a" className="no-underline">
+    <section className="w-[951px] relative rounded-xl bg-white flex flex-col items-center justify-start py-5 px-0 box-border text-left text-lg text-black font-poppins my-10 lg:my-20">
+      <div className="self-stretch flex flex-col items-start justify-start px-[20px] pt-5 md:px-[40px] lg:px-16 gap-[26px]">
+        <Link href="/Prsetup6a" className="no-underline">
           <button className="cursor-pointer [border:none] p-0 bg-[transparent] w-10 relative h-10">
             <img
               className="relative w-[33.2px] h-[33.3px]"
@@ -64,7 +64,11 @@ const ChoiceFrame: NextPage = () => {
           What do you like?
         </div>
       </div>
-
+      <div className="self-stretch  px-[20px] md:px-[40px] lg:px-16 mb-4 md:mb-5">
+        <p className="text-red text-xs">
+          <b className="font-poppins">{` Choose at least one option `}</b>
+        </p>
+      </div>
       <div className="self-stretch flex flex-col items-center justify-start gap-[34px] text-center text-sm10 md:text-sm text-darkslategray px-[20px] md:px-[30px] lg:px-[50px]">
         {/* Grid container */}
         <div className="self-stretch flex flex-col items-start justify-start px-[0px] py-0 gap-[0px]">
@@ -207,7 +211,7 @@ const ChoiceFrame: NextPage = () => {
       </div>
       <div className="self-stretch flex flex-col items-center justify-start gap-[34px] text-center text-sm10 md:text-sm text-darkslategray px-[20px] md:px-[30px] lg:px-[50px]">
         {/* Grid container */}
-        <div className="self-stretch flex flex-col items-start justify-start px-[0px] py-0 gap-[0px]">
+        <div className="self-stretch flex flex-col items-start justify-start px-[0px] pt-5 pb-0 gap-[0px]">
           <div className="w-[87px] items-start justify-start py-0 px-[0px] box-border text-base text-white">
             <div className="flex-1 rounded-xl bg-black flex flex-row items-start justify-center p-px">
               <b className="h-[31px] w-[77.4px] relative flex items-center justify-center">

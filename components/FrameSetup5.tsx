@@ -55,8 +55,8 @@ const ProfileSetup5: NextPage = () => {
           setActivityLevel={setActivityLevel}
         />
       ) : (
-        <section className="w-[951px] relative rounded-xl bg-white flex flex-col items-center justify-start py-5 px-0 box-border gap-[20px] md:gap-[54px] text-left text-lg text-black font-poppins my-10 lg:my-20">
-          <div className="self-stretch flex flex-col items-start justify-start px-[20px] py-5 md:px-[40px] lg:px-20 gap-[26px]">
+        <section className="w-[951px] relative rounded-xl bg-white flex flex-col items-center justify-start py-5 px-0 box-border text-left text-lg text-black font-poppins my-10 lg:my-20">
+          <div className="self-stretch flex flex-col items-start justify-start px-[20px] pt-5 md:px-[40px] lg:px-20 gap-[26px]">
             <Link href="/Prsetup4a" className="no-underline">
               <button className="cursor-pointer [border:none] p-0 bg-[transparent] w-10 relative h-10">
                 <img
@@ -69,6 +69,11 @@ const ProfileSetup5: NextPage = () => {
             <div className="self-stretch relative font-semibold flex items-center h-5 shrink-0">
               Are you allergic to anythng?
             </div>
+          </div>
+          <div className="self-stretch items-start justify-start  px-[20px] md:px-[40px] lg:px-20 mb-4 md:mb-8">
+            <p className="text-red text-xs">
+              <b className="font-poppins">{` Choose at least one option `}</b>
+            </p>
           </div>
           <div className="self-stretch flex flex-col items-center justify-start gap-[34px] text-center text-sm10 md:text-sm text-darkslategray px-[30px] md:px-[60px] lg:px-[120px]">
             {/* Grid container */}
@@ -179,7 +184,8 @@ const ProfileSetup5: NextPage = () => {
                 } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  border-none  hover-parent`}
               >
                 <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins text-darkslategray text-center">
-                  Buckwheat
+                  Buckwh <br />
+                  eat
                 </div>
               </button>
               <button

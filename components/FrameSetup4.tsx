@@ -33,6 +33,11 @@ const ChoiceFrame: NextPage = () => {
               Are you at risk of any of the following?
             </div>
           </div>
+          <div className="self-stretch flex  px-[20px] md:px-[50px] lg:px-20 h-2">
+            <p className="text-red text-xs">
+              <b className="font-poppins">{` Choose at least one option `}</b>
+            </p>
+          </div>
           <div className="self-stretch flex flex-col items-center justify-start gap-[34px] text-center text-sm text-darkslategray px-[30px] md:px-[60px] lg:px-[120px]">
             <div className="grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-[15px] md:gap-[20px] lg:gap-[30px] w-full ">
               <button

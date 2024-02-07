@@ -73,7 +73,7 @@ const Setup1a = () => {
                       : "bg-white hover:bg-slate-300"
                   } w-[115px] h-[47px] rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-col items-center justify-center `}
                 >
-                  <div className=" w-[75px] relative text-base font-semibold font-poppins text-darkslategray text-center flex items-center justify-center">
+                  <div className=" w-[75px] relative text-base font-semibold font-poppins text-black1 text-center flex items-center justify-center">
                     Male
                   </div>
                 </button>
@@ -87,7 +87,7 @@ const Setup1a = () => {
                       : "bg-white hover:bg-slate-300"
                   } w-[115px] rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-col items-center justify-center `}
                 >
-                  <div className=" w-[75px] relative text-base font-semibold font-poppins text-darkslategray text-center flex items-center justify-center">
+                  <div className=" w-[75px] relative text-base font-semibold font-poppins text-black1 text-center flex items-center justify-center">
                     Female
                   </div>
                 </button>
@@ -130,7 +130,7 @@ const Setup1a = () => {
                       : "bg-white hover:bg-slate-300"
                   } rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] flex flex-col items-start justify-start `}
                 >
-                  <div className="relative text-lg font-semibold font-poppins text-darkslategray text-center">
+                  <div className="relative text-lg font-semibold font-poppins text-black1 text-center">
                     2
                   </div>
                 </button>
@@ -144,7 +144,7 @@ const Setup1a = () => {
                       : "bg-white hover:bg-slate-300"
                   } rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] flex flex-col items-start justify-start `}
                 >
-                  <div className="relative text-lg font-semibold font-poppins text-darkslategray text-center">
+                  <div className="relative text-lg font-semibold font-poppins text-black1 text-center">
                     3
                   </div>
                 </button>
@@ -158,7 +158,7 @@ const Setup1a = () => {
                       : "bg-white hover:bg-slate-300"
                   } rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] flex flex-col items-start justify-start `}
                 >
-                  <div className="relative text-lg font-semibold font-poppins text-darkslategray text-center">
+                  <div className="relative text-lg font-semibold font-poppins text-black1 text-center">
                     4
                   </div>
                 </button>
@@ -172,7 +172,7 @@ const Setup1a = () => {
                       : "bg-white hover:bg-slate-300"
                   } rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] flex flex-col items-start justify-start `}
                 >
-                  <div className="relative text-lg font-semibold font-poppins text-darkslategray text-center">
+                  <div className="relative text-lg font-semibold font-poppins text-black1 text-center">
                     5
                   </div>
                 </button>

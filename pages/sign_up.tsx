@@ -35,6 +35,7 @@ const SignUp = () => {
         justifyContent={"center"}
         width={isMobile ? "100%" : "40%"}
         height={isMobile ? "27%" : "100%"}
+        marginBottom={isMobile ? "20px" : "0"}
       >
         <Image
           style={{ marginBottom: isMobile ? "-20px" : "-10px" }}

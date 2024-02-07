@@ -11,7 +11,7 @@ const Setup3a: NextPage = () => {
     setIsPressed(true);
   };
   return (
-    <div className="w-full min-h-screen bg-saddlebrown overflow-hidden flex items-center justify-center py-[63px] px-[30px] md:px-[50px] md:py-[50px] lg:py-[100px] lg:px-[0px] xl:py-[0px] xl:px-[0px] box-border rounded-xl text-left text-lg text-black1 font-poppins ">
+    <div className="w-full min-h-screen bg-saddlebrown overflow-hidden flex items-center justify-center py-[63px] px-[30px] md:px-[50px] md:py-[50px] lg:py-[100px] lg:px-[0px] xl:py-[0px] xl:px-[0px] box-border text-left text-lg text-black1 font-poppins ">
       <section className="w-[951px] rounded-2xl bg-white  shrink-0 flex flex-col items-end justify-start py-5 px-0 box-border max-w-full gap-[10px] md:gap-[20px] lg:gap-[54px] my-10 ">
         <FrameGroup />
         <div className="self-stretch flex flex-col items-end justify-end py-5 px-[30px] md:px-[70px]">

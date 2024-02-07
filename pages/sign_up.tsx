@@ -16,6 +16,7 @@ import {
 import Logo from "../assets/images/logo_O2EZ.png";
 import { Box, Button, Input } from "@mui/material";
 import CustomButton from "../components/common/CustomButton";
+import Link from "next/link";
 const SignUp = () => {
   const firstBreakPoint = useMediaQuery("(max-width: 820px)");
   const isMobile = useMediaQuery("(max-width: 600px)");
@@ -49,11 +50,11 @@ const SignUp = () => {
             Are you a Healthcare Professional?
           </Heading6>
         </Box>
-        <Button className={styles.btn}>
+        <CustomButton variant="secondary">
           <BodyText size="sm" fontWeight="700">
             Sign up to O2EZ Pro
           </BodyText>
-        </Button>
+        </CustomButton>
       </Box>
       <div className={styles.rightBox}>
         <Box
@@ -120,7 +121,13 @@ const SignUp = () => {
                 </BodyText>
               </CustomButton>
               <CaptionText size="lg">
-                Already have an account? <b> Log in here</b>
+                Already have an account?{" "}
+                <Link
+                  href={"/sign_in"}
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  <b> Log in here</b>
+                </Link>
               </CaptionText>
             </Box>
           </form>

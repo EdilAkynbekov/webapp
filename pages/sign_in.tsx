@@ -1,5 +1,6 @@
 import React from "react";
 import UnstyledButton from "../components/common/UnstylesButton";
+import Link from "next/link";
 import CustomInput from "../components/common/CustomInput";
 import styles from "../styles/homepage.module.scss";
 import Image from "next/image";
@@ -49,11 +50,11 @@ const SignIn = () => {
             Are you a Healthcare Professional?
           </Heading6>
         </Box>
-        <Button className={styles.btn}>
+        <CustomButton variant="secondary">
           <BodyText size="sm" fontWeight="700">
             Log in to O2EZ Pro
           </BodyText>
-        </Button>
+        </CustomButton>
       </Box>
       <div className={styles.rightBox}>
         <Box
@@ -115,7 +116,13 @@ const SignIn = () => {
                 </BodyText>
               </CustomButton>
               <CaptionText size="lg">
-                You don't have an account yet? <b> Sign Up</b>
+                You don't have an account yet?
+                <Link
+                  href={"/sign_up"}
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  <b> Sign Up</b>
+                </Link>
               </CaptionText>
             </Box>
           </form>

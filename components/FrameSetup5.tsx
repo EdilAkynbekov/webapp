@@ -78,9 +78,9 @@ const ProfileSetup5: NextPage = () => {
             </div>
           </div>
 
-          <div className="self-stretch flex flex-col items-center justify-start gap-[34px] text-center text-sm10 md:text-sm  px-[30px] md:px-[60px] lg:px-[120px]">
+          <div className="self-stretch flex flex-col items-center justify-start gap-[34px] text-center text-sm10 md:text-sm text-black1  px-[30px] md:px-[60px] lg:px-[120px]">
             {/* Grid container */}
-            <div className="grid grid-cols-4 gap-[15px] md:gap-[20px] lg:gap-[30px] w-full text-sm10 md:text-sm">
+            <div className="grid grid-cols-4 gap-[15px] md:gap-[20px] lg:gap-[30px] w-full text-sm10 md:text-sm text-black1">
               {/* First div taking up the full width of the grid */}
               <button
                 onClick={() => handleSelect("no")}
@@ -88,7 +88,7 @@ const ProfileSetup5: NextPage = () => {
                   isSelected("no") ? "bg-orange" : "bg-white hover:bg-slate-300"
                 } col-span-full h-[62px] cursor-pointer py-[10px] md:py-[20px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  border-none  hover-parent`}
               >
-                <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins  text-center">
+                <div className="flex-1 relative text-sm10 md:text-sm text-black1 font-semibold font-poppins  text-center">
                   No
                 </div>
               </button>
@@ -102,7 +102,7 @@ const ProfileSetup5: NextPage = () => {
                     : "bg-white hover:bg-slate-300"
                 } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  border-none  hover-parent`}
               >
-                <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins  text-center">
+                <div className="flex-1 relative text-sm10 md:text-sm text-black1 font-semibold font-poppins  text-center">
                   Egg
                 </div>
               </button>
@@ -114,7 +114,7 @@ const ProfileSetup5: NextPage = () => {
                     : "bg-white hover:bg-slate-300"
                 } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  border-none  hover-parent`}
               >
-                <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins  text-center">
+                <div className="flex-1 relative text-sm10 md:text-sm text-black1 font-semibold font-poppins  text-center">
                   Milk
                 </div>
               </button>
@@ -126,7 +126,7 @@ const ProfileSetup5: NextPage = () => {
                     : "bg-white hover:bg-slate-300"
                 } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  border-none  hover-parent`}
               >
-                <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins  text-center">
+                <div className="flex-1 relative text-sm10 md:text-sm text-black1 font-semibold font-poppins  text-center">
                   Soy
                 </div>
               </button>
@@ -138,7 +138,7 @@ const ProfileSetup5: NextPage = () => {
                     : "bg-white hover:bg-slate-300"
                 } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  border-none  hover-parent`}
               >
-                <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins  text-center">
+                <div className="flex-1 relative text-sm10 md:text-sm text-black1 font-semibold font-poppins  text-center">
                   Peanuts
                 </div>
               </button>
@@ -150,7 +150,7 @@ const ProfileSetup5: NextPage = () => {
                     : "bg-white hover:bg-slate-300"
                 } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  border-none  hover-parent`}
               >
-                <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins  text-center">
+                <div className="flex-1 relative text-sm10 md:text-sm text-black1 font-semibold font-poppins  text-center">
                   Sesame
                 </div>
               </button>
@@ -162,7 +162,7 @@ const ProfileSetup5: NextPage = () => {
                     : "bg-white hover:bg-slate-300"
                 } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  border-none  hover-parent`}
               >
-                <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins  text-center">
+                <div className="flex-1 relative text-sm10 md:text-sm text-black1 font-semibold font-poppins  text-center">
                   Tree Nuts
                 </div>
               </button>
@@ -174,7 +174,7 @@ const ProfileSetup5: NextPage = () => {
                     : "bg-white hover:bg-slate-300"
                 } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  border-none  hover-parent`}
               >
-                <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins  text-center">
+                <div className="flex-1 relative text-sm10 md:text-sm text-black1 font-semibold font-poppins  text-center">
                   Cereals w/ Gluten
                 </div>
               </button>
@@ -186,7 +186,7 @@ const ProfileSetup5: NextPage = () => {
                     : "bg-white hover:bg-slate-300"
                 } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  border-none  hover-parent`}
               >
-                <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins  text-center">
+                <div className="flex-1 relative text-sm10 md:text-sm text-black1 font-semibold font-poppins  text-center">
                   Buckwh <br />
                   eat
                 </div>
@@ -223,7 +223,7 @@ const ProfileSetup5: NextPage = () => {
                     : "bg-white hover:bg-slate-300"
                 } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  border-none  hover-parent`}
               >
-                <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins  text-center">
+                <div className="flex-1 relative text-sm10 md:text-sm text-black1 font-semibold font-poppins  text-center">
                   Fish
                 </div>
               </button>
@@ -235,7 +235,7 @@ const ProfileSetup5: NextPage = () => {
                     : "bg-white hover:bg-slate-300"
                 } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  border-none  hover-parent`}
               >
-                <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins  text-center">
+                <div className="flex-1 relative text-sm10 md:text-sm text-black1 font-semibold font-poppins  text-center">
                   Mustard
                 </div>
               </button>
@@ -247,7 +247,7 @@ const ProfileSetup5: NextPage = () => {
                     : "bg-white hover:bg-slate-300"
                 } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  border-none  hover-parent`}
               >
-                <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins  text-center">
+                <div className="flex-1 relative text-sm10 md:text-sm text-black1 font-semibold font-poppins  text-center">
                   Lupin
                 </div>
               </button>
@@ -259,7 +259,7 @@ const ProfileSetup5: NextPage = () => {
                     : "bg-white hover:bg-slate-300"
                 } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  border-none  hover-parent`}
               >
-                <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins  text-center">
+                <div className="flex-1 relative text-sm10 md:text-sm text-black1 font-semibold font-poppins  text-center">
                   Celery
                 </div>
               </button>
@@ -271,7 +271,7 @@ const ProfileSetup5: NextPage = () => {
                     : "bg-white hover:bg-slate-300"
                 } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  border-none  hover-parent`}
               >
-                <div className="flex-1 relative text-sm10 md:text-sm font-semibold font-poppins  text-center">
+                <div className="flex-1 relative text-sm10 md:text-sm text-black1 font-semibold font-poppins  text-center">
                   Other
                 </div>
               </button>

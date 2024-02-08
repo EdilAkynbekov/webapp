@@ -199,7 +199,7 @@ const ProfileSetup5: NextPage = () => {
                     : "bg-white hover:bg-slate-300"
                 } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  border-none  hover-parent`}
               >
-                <div className="flex-1 relative text-sm8 md:text-sm font-semibold font-poppins  text-center">
+                <div className="flex-1 relative text-sm8 md:text-sm text-black1 font-semibold font-poppins  text-center">
                   Crustacean Shellfish
                 </div>
               </button>
@@ -211,7 +211,7 @@ const ProfileSetup5: NextPage = () => {
                     : "bg-white hover:bg-slate-300"
                 } h-[62px] cursor-pointer py-[20px] md:py-[30px] px-[9px] flex-1 rounded-8xs shadow-[0px_1px_10px_rgba(0,_0,_0,_0.25)] box-border flex flex-row items-center justify-center  border-none  hover-parent`}
               >
-                <div className="flex-1 relative text-sm8 md:text-sm font-semibold font-poppins  text-center">
+                <div className="flex-1 relative text-sm8 md:text-sm text-black1 font-semibold font-poppins  text-center">
                   Molluscan Shellfish
                 </div>
               </button>

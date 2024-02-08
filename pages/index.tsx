@@ -1,118 +1,142 @@
+import React from "react";
+import UnstyledButton from "../components/common/UnstylesButton";
+import CustomInput from "../components/common/CustomInput";
+import styles from "../styles/homepage.module.scss";
 import Image from "next/image";
+import { useMediaQuery } from "@mui/material";
+import GoogleSVG from "../assets/images/googl.svg";
+import FacebookSVG from "../assets/images/facebook.svg";
+import BTNImage from "../components/common/BTNImage";
+import {
+  BodyText,
+  CaptionText,
+  Heading3,
+  Heading6,
+} from "../components/typography";
 import Logo from "../assets/images/logo_O2EZ.png";
-import ButtonPrimary from "../components/ButtonPrimary";
+import { Box, Button, Input } from "@mui/material";
+import CustomButton from "../components/common/CustomButton";
 import Link from "next/link";
-import Head from "next/head";
+const SignUp = () => {
+  const firstBreakPoint = useMediaQuery("(max-width: 820px)");
+  const isMobile = useMediaQuery("(max-width: 600px)");
 
-export default function Home() {
   return (
-    <div className="flex flex-col lg:flex-row min-h-screen bg-white">
-      <Head>
-        <title>Responsive Sign Up Page</title>
-      </Head>
-
-      {/* Yellow Sidebar */}
-      <div className="bg-[#ffb527] lg:w-1/3 flex flex-col items-center justify-center p-8 text-white">
-        {/* Logo and other elements can be added here */}
-        <h2 className="text-2xl font-bold mb-2">
-          Are you a Healthcare Professional?
-        </h2>
-        <button className="bg-white text-yellow-400 rounded-lg px-10 py-2 font-semibold mt-4">
-          Sign Up here
-        </button>
+    <Box
+      width={"100%"}
+      height={"100%"}
+      bgcolor={"#FFB527"}
+      display={"flex"}
+      flexDirection={isMobile ? "column" : "row"}
+    >
+      <Box
+        display={"flex"}
+        flexDirection={"column"}
+        alignItems={"center"}
+        justifyContent={"center"}
+        width={isMobile ? "100%" : "40%"}
+        height={isMobile ? "27%" : "100%"}
+        marginBottom={isMobile ? "20px" : "0"}
+      >
+        <Image
+          style={{ marginBottom: isMobile ? "-20px" : "-10px" }}
+          src={Logo}
+          alt="Logo"
+          width={isMobile ? 120 : 180}
+          height={isMobile ? 120 : 180}
+        />
+        <Box width={firstBreakPoint ? "80%" : "50%"} textAlign={"center"}>
+          <Heading6 className={styles.title}>
+            Are you a Healthcare Professional?
+          </Heading6>
+        </Box>
+        <CustomButton variant="secondary">
+          <BodyText size="sm" fontWeight="700">
+            Sign up to O2EZ Pro
+          </BodyText>
+        </CustomButton>
+      </Box>
+      <div className={styles.rightBox}>
+        <Box
+          width={"80%"}
+          height={"100%"}
+          m={"auto"}
+          display={"flex"}
+          flexDirection={"column"}
+          justifyContent={"center"}
+          alignItems={"center"}
+        >
+          <Box width={"100%"}>
+            <Heading3>Create An Account</Heading3>
+            <Box
+              display={"flex"}
+              gap={"1rem"}
+              width={"100%"}
+              flexDirection={firstBreakPoint ? "column" : "row"}
+            >
+              <BTNImage src={GoogleSVG} style={{ flex: 1 }}>
+                <BodyText size="sm" fontSize={"12px"}>
+                  Sign Up with Google
+                </BodyText>
+              </BTNImage>
+              <BTNImage src={FacebookSVG} style={{ flex: 1 }}>
+                <BodyText size="sm" fontSize={"12px"}>
+                  Sign Up with Facebook
+                </BodyText>
+              </BTNImage>
+            </Box>
+            <div className={styles.separator}>
+              <BodyText size="lg" fontSize="24px">
+                &#9135; OR &#9135;
+              </BodyText>
+            </div>
+          </Box>
+          <form className={styles.form}>
+            <Box display={"flex"} gap={"16px"}>
+              <CustomInput
+                label="First Name"
+                style={{ flex: 1 }}
+                inputStyle={{ width: "100%" }}
+              />
+              <CustomInput
+                label="Last Name"
+                style={{ flex: 1 }}
+                inputStyle={{ width: "100%" }}
+              />
+            </Box>
+            <CustomInput
+              label="Email Address"
+              style={{ flex: 1 }}
+              inputStyle={{ width: "100%" }}
+            />
+            <CustomInput
+              label="Password"
+              style={{ flex: 1 }}
+              inputStyle={{ width: "100%" }}
+            />
+            <Box alignSelf={"flex-end"} mt={"30px"} textAlign={"center"}>
+              <Link href="/Prsetup1a" className="no-underline">
+                <CustomButton style={{ marginBottom: "10px" }}>
+                  <BodyText size="sm" fontWeight="700">
+                    Create Account
+                  </BodyText>
+                </CustomButton>
+              </Link>
+              <CaptionText size="lg">
+                Already have an account?{" "}
+                <Link
+                  href={"/sign_in"}
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  <b> Log in here</b>
+                </Link>
+              </CaptionText>
+            </Box>
+          </form>
+        </Box>
       </div>
-
-      {/* Main Content Area */}
-      <div className="flex-1 flex flex-col p-8 justify-center items-center lg:items-start">
-        {/* Language Selector and Logo at the top */}
-        <div className="self-end flex justify-between items-center w-full mb-12">
-          <Image src={Logo} alt="Logo" width={100} height={100} />
-          <select className="border border-gray-300 rounded-full py-1 px-4 bg-white text-sm">
-            <option>English (US)</option>
-            {/* Additional language options */}
-          </select>
-        </div>
-
-        {/* Welcome Back Title */}
-        <h1 className="text-4xl font-bold mb-8">Create Account</h1>
-
-        {/* Social Sign In */}
-        <div className="flex gap-4 mb-8">
-          <button className="bg-blue-500 hover:bg-blue-600 text-white rounded-lg px-6 py-2 font-semibold">
-            Sign in with Google
-          </button>
-          <button className="bg-blue-700 hover:bg-blue-800 text-white rounded-lg px-6 py-2 font-semibold">
-            Sign in with Facebook
-          </button>
-        </div>
-
-        {/* Or Divider */}
-        <div className="text-gray-500 mb-8">- OR -</div>
-
-        {/* Sign In Form */}
-        <div className="w-full max-w-md">
-          <div className="mb-6">
-            <label htmlFor="fname" className="sr-only">
-              First Name
-            </label>
-            <input
-              id="fname"
-              type="text"
-              className="form-input w-full rounded-lg border border-gray-300 py-3 px-4 mb-3"
-              placeholder="First Name"
-            />
-          </div>
-          <div className="mb-6">
-            <label htmlFor="lname" className="sr-only">
-              Last Name
-            </label>
-            <input
-              id="lname"
-              type="text"
-              className="form-input w-full rounded-lg border border-gray-300 py-3 px-4 mb-3"
-              placeholder="Last Name"
-            />
-          </div>
-          <div className="mb-6">
-            <label htmlFor="email" className="sr-only">
-              Email Address
-            </label>
-            <input
-              id="email"
-              type="email"
-              className="form-input w-full rounded-lg border border-gray-300 py-3 px-4 mb-3"
-              placeholder="Email Address"
-            />
-          </div>
-          <div className="mb-6">
-            <label htmlFor="password" className="sr-only">
-              Password
-            </label>
-            <input
-              id="password"
-              type="password"
-              className="form-input w-full rounded-lg border border-gray-300 py-3 px-4"
-              placeholder="Password"
-            />
-          </div>
-          <Link href="/Prsetup1a" className="no-underline">
-            <ButtonPrimary
-              title="Next"
-              className="block w-full cursor-pointer"
-            />
-          </Link>
-        </div>
-
-        {/* Bottom Links */}
-        <div className="flex flex-col lg:flex-row justify-between items-center w-full mt-8">
-          <Link
-            href="/signin2"
-            className="text-blue-600 hover:text-blue-700 hover:underline text-sm"
-          >
-            Already have an account? Sign In
-          </Link>
-        </div>
-      </div>
-    </div>
+    </Box>
   );
-}
+};
+
+export default SignUp;

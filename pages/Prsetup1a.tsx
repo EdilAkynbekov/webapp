@@ -16,7 +16,7 @@ const Setup1a = () => {
     setIsPressed(true);
   };
   return (
-    <div className="w-full min-h-screen bg-saddlebrown overflow-hidden flex flex-col items-center justify-center py-[50px] px-[30px] md:px-[50px] md:py-[50px] lg:px-[120px] xl:px-[170px] box-border text-left text-lg text-black1 font-poppins">
+    <div className="w-full min-h-screen bg-saddlebrown overflow-hidden flex flex-col items-center justify-center py-[50px] px-[20px] md:px-[50px] md:py-[50px] lg:px-[120px] xl:px-[170px] box-border text-left text-lg text-black1 font-poppins">
       <ProgressBar
         steps={8}
         currentStep={0}

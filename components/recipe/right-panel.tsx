@@ -7,13 +7,13 @@ const RightPanel: NextPage = () => {
         <img
           className="h-[30px] w-[30px] relative hidden"
           alt=""
-          src="C:\Projects\webapp\public\menu.svg"
+          src="../../public/vercel.svg"
         />
         <img
           className="h-[150px] w-[140px] relative rounded-11xl object-cover"
           loading="eager"
           alt=""
-          src="/frame-1000002377-1@2x.png"
+          src="/menu.svg"
         />
       </div>
       <div className="self-stretch flex-1 flex flex-col items-start justify-start gap-[10px]">
@@ -22,21 +22,23 @@ const RightPanel: NextPage = () => {
             className="h-6 w-6 relative overflow-hidden shrink-0 object-cover"
             loading="eager"
             alt=""
-            src="/menu-icon1@2x.png"
+            src="/menu_icon.svg"
           />
-          <div className="flex flex-row items-center justify-center py-[5px] px-2.5">
-            <div className="relative font-semibold">Dashboard</div>
-          </div>
+          <button className="flex flex-row items-center justify-center py-[5px] px-2.5 font-semibold bg-white cursor-pointer">
+            Dashboard
+          </button>
         </div>
         <div className="flex-1 rounded-8xs flex flex-row items-center justify-start py-0 pr-[38px] pl-2.5 gap-[5px]">
           <img
             className="h-6 w-6 relative overflow-hidden shrink-0 object-cover"
             loading="eager"
             alt=""
-            src="/menu-icon-11@2x.png"
+            src="/menu_icon1.svg"
           />
-          <div className="flex flex-row items-center justify-center py-[5px] px-2">
-            <div className="relative font-semibold">Nutrition Tracker</div>
+          <div className="flex flex-row items-center justify-center py-[5px] pl-1">
+            <button className="relative font-semibold bg-white cursor-pointer">
+              Nutrition Tracker
+            </button>
           </div>
         </div>
         <div className="self-stretch flex-1 rounded-8xs flex flex-row items-center justify-start py-0 pr-0 pl-2.5 gap-[5px]">
@@ -44,7 +46,7 @@ const RightPanel: NextPage = () => {
             className="h-6 w-6 relative overflow-hidden shrink-0"
             loading="eager"
             alt=""
-            src="/menu-icon-2.svg"
+            src="/menu_icon3.svg"
           />
           <div className="flex flex-row items-center justify-center py-[5px] px-2.5">
             <div className="relative font-semibold">Profile</div>
@@ -55,7 +57,7 @@ const RightPanel: NextPage = () => {
             className="h-6 w-6 relative overflow-hidden shrink-0 object-cover"
             loading="eager"
             alt=""
-            src="/menu-icon-31@2x.png"
+            src="/menu_icon4.svg"
           />
           <div className="flex flex-row items-center justify-center py-[5px] px-2.5">
             <div className="relative font-semibold">Appointments</div>
@@ -66,7 +68,7 @@ const RightPanel: NextPage = () => {
             className="h-6 w-6 relative overflow-hidden shrink-0"
             loading="eager"
             alt=""
-            src="/menu-icon-4.svg"
+            src="/menu_icon (1).svg"
           />
           <div className="flex flex-row items-center justify-center py-[5px] px-2">
             <div className="relative font-semibold">Consultation Notes</div>
@@ -77,7 +79,7 @@ const RightPanel: NextPage = () => {
             className="h-6 w-6 relative overflow-hidden shrink-0 object-cover"
             loading="eager"
             alt=""
-            src="/menu-icon-51@2x.png"
+            src="/menu_icon (2).svg"
           />
           <div className="flex flex-row items-center justify-center py-[5px] px-2">
             <div className="relative font-semibold">Dietitian Network</div>
@@ -87,7 +89,7 @@ const RightPanel: NextPage = () => {
           <img
             className="h-6 w-6 relative overflow-hidden shrink-0"
             alt=""
-            src="/menu-icon-61.svg"
+            src="/menu_icon (3).svg"
           />
           <input
             className="w-[68px] [border:none] [outline:none] bg-[transparent] h-7 flex flex-row items-center justify-center py-[5px] px-2.5 box-border font-poppins font-semibold text-xs text-white"
@@ -100,7 +102,7 @@ const RightPanel: NextPage = () => {
             className="h-6 w-6 relative overflow-hidden shrink-0 object-cover"
             loading="eager"
             alt=""
-            src="/menu-icon-71@2x.png"
+            src="/menu_icon (4).svg"
           />
           <div className="flex flex-row items-center justify-center py-[5px] px-2">
             <div className="relative font-semibold">Shopping List</div>
@@ -110,14 +112,11 @@ const RightPanel: NextPage = () => {
       <div className="self-stretch h-[272px] flex flex-row items-end justify-start py-5 px-2.5 box-border flex-[0.8529] text-gray-100">
         <div className="flex flex-row items-center justify-start py-0 pr-7 pl-0 gap-[5px]">
           <img
-            className="h-6 w-6 relative"
+            className="h-24 w-24 relative"
             loading="eager"
             alt=""
-            src="/sign-out-squre.svg"
+            src="/sign_out.svg"
           />
-          <div className="rounded-8xs flex flex-row items-center justify-center py-[5px] px-[3px]">
-            <div className="relative font-semibold">Sign out</div>
-          </div>
         </div>
       </div>
     </div>

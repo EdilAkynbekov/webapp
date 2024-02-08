@@ -7,6 +7,7 @@ import { useMediaQuery } from "@mui/material";
 import GoogleSVG from "../assets/images/googl.svg";
 import FacebookSVG from "../assets/images/facebook.svg";
 import BTNImage from "../components/common/BTNImage";
+import { useRouter } from "next/router";
 import {
   BodyText,
   CaptionText,
@@ -18,8 +19,12 @@ import { Box, Button, Input } from "@mui/material";
 import CustomButton from "../components/common/CustomButton";
 import Link from "next/link";
 const SignUp = () => {
+  const router = useRouter();
   const firstBreakPoint = useMediaQuery("(max-width: 820px)");
   const isMobile = useMediaQuery("(max-width: 600px)");
+  const handleClick = () => {
+    router.push("/Prsetup1a");
+  };
 
   return (
     <Box

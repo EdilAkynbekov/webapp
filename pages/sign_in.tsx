@@ -110,11 +110,13 @@ const SignIn = () => {
             </CaptionText>
 
             <Box alignSelf={"flex-end"} mt={"30px"} textAlign={"end"}>
-              <CustomButton style={{ marginBottom: "10px" }}>
-                <BodyText size="sm" fontWeight="700">
-                  Log In
-                </BodyText>
-              </CustomButton>
+              <Link href="/Prsetup1a" className="no-underline">
+                <CustomButton style={{ marginBottom: "10px" }}>
+                  <BodyText size="sm" fontWeight="700">
+                    Log In
+                  </BodyText>
+                </CustomButton>
+              </Link>
               <CaptionText size="lg">
                 You don't have an account yet?
                 <Link

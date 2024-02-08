@@ -74,7 +74,7 @@ const FrameGroup: NextPage = () => {
 
   return (
     <div className="self-stretch flex flex-col items-center justify-start gap-[34px] max-w-full text-center text-lg text-black font-poppins md:gap-[17px]">
-      <div className="w-[791px] flex flex-col items-start justify-start gap-[26px] lg:min-h-[150px] max-w-full text-left pl-8 md:pl-12 lg:pl-12 mb-4 md:mb-8">
+      <div className="w-[791px] flex flex-col items-start justify-start gap-[26px] lg:min-h-[150px] max-w-full text-left pl-8 md:pl-12 lg:pl-12 mb-4 md:mb-6 lg:mb-4 ">
         <div className="flex flex-row items-center justify-center">
           <Link href="/Prsetup2a" className="no-underline">
             <button className="cursor-pointer [border:none] p-0 bg-[transparent] w-10 relative h-10">
@@ -90,7 +90,7 @@ const FrameGroup: NextPage = () => {
           What is your goal?
         </div>
       </div>
-      <div className="w-[80%] lg:w-[651px] flex items-center justify-center text-sm max-w-[600px] md:max-w-full mb-0 md:mb-4 lg:mb-8 ">
+      <div className="w-[80%] lg:w-[651px] flex items-center justify-center text-sm max-w-[600px] md:max-w-full mb-8 md:mb-4 lg:mb-8 ">
         <PrettoSlider
           valueLabelDisplay="on"
           aria-label="pretto slider"
@@ -134,7 +134,7 @@ const FrameGroup: NextPage = () => {
               </p>
             </div>
           </div>
-          <div className="self-stretch relative text-black text-sm8 md:text-xs">
+          <div className="self-stretch relative text-black text-sm8 md:text-xs mb-6">
             <p className="m-0">
               We suggest consulting a medical professional for a more accurate
               estimation.

@@ -62,8 +62,8 @@ module.exports = {
       sm: "14px",
       lg: "18px",
       "2xl":"24px",
-      sm10: "10px",
-      sm8:"8px",
+      sm10: "11px",
+      sm8:"9px",
 
       inherit: "inherit",
     },

@@ -1,11 +1,13 @@
 import { Fragment } from "react";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import type { AppProps } from "next/app";
 import "./global.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const pathname = useRouter().pathname;
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <Fragment>

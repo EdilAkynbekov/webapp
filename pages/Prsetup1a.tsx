@@ -16,9 +16,24 @@ const Setup1a = () => {
     setIsPressed(true);
   };
   return (
-    <div className="w-full min-h-screen bg-saddlebrown overflow-hidden flex items-center justify-center py-[50px] px-[20px] md:px-[50px] md:py-[50px] lg:px-[120px] xl:px-[170px] box-border text-left text-lg text-black1 font-poppins">
-      <div className="flex-1 mx-auto rounded-xl bg-white overflow-y-auto flex flex-col items-center justify-center my-10">
-        <div className="self-stretch flex flex-col items-start justify-start px-[20px] py-5 md:px-[40px] lg:px-20 gap-[26px]">
+    <div className="w-full min-h-screen bg-saddlebrown overflow-hidden flex flex-col items-center justify-center py-[50px] px-[30px] md:px-[50px] md:py-[50px] lg:px-[120px] xl:px-[170px] box-border text-left text-lg text-black1 font-poppins">
+      <ProgressBar
+        steps={8}
+        currentStep={0}
+        navigationRoutes={[
+          "Prsetup1a",
+          "Prsetup2a",
+          "Prsetup3",
+          "Prsetup4a",
+          "Prsetup5a",
+          "Prsetup6a",
+          "Prsetup7a",
+          "Prsetup8a",
+        ]}
+        className="md:hidden"
+      />
+      <div className="w-full xl:w-[951px] relative rounded-xl bg-white flex flex-col items-center justify-start py-5 px-0 box-border text-left text-lg text-black font-poppins my-10 lg:mt-20 ">
+        <div className="self-stretch flex flex-col items-start justify-start px-[20px] py-5 md:px-[40px] lg:px-12 gap-[26px]">
           <Link href="/" className="no-underline">
             <button className="cursor-pointer [border:none] p-0 bg-[transparent] w-10 relative h-10">
               <img
@@ -32,7 +47,7 @@ const Setup1a = () => {
             Tell us more about you
           </div>
         </div>
-        <div className="m-0 self-stretch flex flex-row flex-wrap items-start justify-center py-0 px-5 md:px-10 box-border gap-[20px] max-w-full md:gap-[20px] lg:gap-[40px] lg:pl-20 lg:pr-10 lg:box-border">
+        <div className="m-0 self-stretch flex flex-row flex-wrap items-start justify-center py-0 px-5 md:px-10 box-border gap-[20px] max-w-full md:gap-[20px] lg:gap-[40px] lg:pl-12 lg:pr-10 lg:box-border">
           <div className="flex-1 flex flex-col items-start justify-start min-w-[231px] max-w-full">
             <div className="self-stretch flex flex-col items-start justify-start pt-[5px] px-[5px] pb-[26px] gap-[3px]">
               <div className="self-stretch relative font-semibold font-poppins text-[#FFB527]">
@@ -231,7 +246,7 @@ const Setup1a = () => {
             </div>
           </div>
         </div>
-        <div className="self-stretch flex flex-col items-end justify-end py-5 px-[70px]">
+        <div className="self-stretch flex flex-col items-end justify-end py-5 px-[30px] md:px-[70px]">
           <Link href="/Prsetup2a" className="no-underline">
             <button
               disabled={activityLevel === "" || activityLevel1 === ""}
@@ -264,7 +279,7 @@ const Setup1a = () => {
           "Prsetup7a",
           "Prsetup8a",
         ]}
-        className="bottom-[90%] lg:top-[113%] xl:top-[94%]"
+        className="hidden lg:block "
       />
     </div>
   );

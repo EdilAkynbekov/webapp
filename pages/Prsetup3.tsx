@@ -11,8 +11,23 @@ const Setup3a: NextPage = () => {
     setIsPressed(true);
   };
   return (
-    <div className="w-full min-h-screen bg-saddlebrown overflow-hidden flex items-center justify-center py-[63px] px-[30px] md:px-[50px] md:py-[50px] lg:py-[100px] lg:px-[0px] xl:py-[0px] xl:px-[0px] box-border text-left text-lg text-black1 font-poppins ">
-      <section className="w-[951px] rounded-2xl bg-white  shrink-0 flex flex-col items-end justify-start py-5 px-0 box-border max-w-full gap-[10px] md:gap-[20px] lg:gap-[54px] my-10 ">
+    <div className="w-full min-h-screen relative bg-saddlebrown flex flex-col items-center justify-center py-[40px] px-[30px] md:px-[50px] md:py-[50px] lg:py-[0px] lg:px-[120px] xl:py-[0px] xl:px-[170px] box-border">
+      <ProgressBar
+        steps={8}
+        currentStep={2}
+        navigationRoutes={[
+          "Prsetup1a",
+          "Prsetup2a",
+          "Prsetup3",
+          "Prsetup4a",
+          "Prsetup5a",
+          "Prsetup6a",
+          "Prsetup7a",
+          "Prsetup8a",
+        ]}
+        className="md:hidden"
+      />
+      <section className="w-full xl:w-[951px] min-h-[503px] relative rounded-xl bg-white flex flex-col items-center justify-start py-5 px-0 box-border  text-left text-lg text-black font-poppins my-10 xl:mb-16">
         <FrameGroup />
         <div className="self-stretch flex flex-col items-end justify-end py-5 px-[30px] md:px-[70px]">
           <Link href="/Prsetup4a" className="no-underline">
@@ -44,7 +59,7 @@ const Setup3a: NextPage = () => {
           "Prsetup7a",
           "Prsetup8a",
         ]}
-        className="bottom-[88%] lg:top-[125%] xl:top-[94%]"
+        className="hidden lg:block mb-0 lg:mb-6"
       />
     </div>
   );

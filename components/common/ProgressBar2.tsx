@@ -22,7 +22,7 @@ const ProgressBar: React.FC<ProgressBarProps> = ({
     }
   };
 
-  const navClasses = `w-[280px] md:w-[0px] lg:w-[480px] absolute h-5 ${className}`;
+  const navClasses = `w-[280px] md:w-[0px] lg:w-[480px] relative h-5 ${className}`;
 
   return (
     <nav className={navClasses}>

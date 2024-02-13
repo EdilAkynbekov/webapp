@@ -40,7 +40,7 @@ const ChoiceFrame: NextPage = () => {
       setShowPopup(true);
     } else {
       setShowPopup(false); // Hide error message if at least one option is selected
-      router.push("/Recipe"); // Navigate to "Prsetup5a" page
+      router.push("/RecipeA"); // Navigate to "Prsetup5a" page
     }
   };
 
@@ -231,9 +231,22 @@ const ChoiceFrame: NextPage = () => {
           onClick={handleClick}
         >
           <b className="flex-1 relative text-lg font-poppins text-white text-center">
-            Next
+            Recipe
           </b>
         </button>
+        <Link className="no-underline" href="/Recipe">
+          <button
+            className={`cursor-pointer [border:none] py-1 px-[18px] w-[103px] rounded-2xl shadow-[0px_1px_10px_rgba(0,_0,_0,_0.3)] flex flex-row items-center justify-center box-border ${
+              activityLevel.length === 0
+                ? "bg-slate-300"
+                : "bg-orange hover:bg-slate-300"
+            } `}
+          >
+            <b className="flex-1 relative text-lg font-poppins text-white text-center">
+              Recipe Profile
+            </b>
+          </button>
+        </Link>
       </div>
       {showPopup && (
         <div className="fixed inset-0 flex items-center justify-center z-50 ">

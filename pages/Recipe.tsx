@@ -1,7 +1,50 @@
-import type { NextPage } from "next";
 import RightPanel from "../components/recipe/right-panel";
+import type { NextPage } from "next";
+import React, { useState } from "react";
+import { useCallback } from "react";
+import { useRouter } from "next/router";
+import Link from "next/link";
+type ActivityLevel =
+  | "pan"
+  | "wok"
+  | "skillet"
+  | "pot"
+  | "stockpot"
+  | "saucepan"
+  | "blender"
+  | "ricecooker"
+  | "oven"
+  | "fryer"
+  | "steamer"
+  | "sous"
+  | "pressure";
 
 const RecipeProfileA: NextPage = () => {
+  const router = useRouter();
+  const [isPressed, setIsPressed] = useState(false);
+  // Explicitly set the type of the state to an array of ActivityLevel
+  const [activityLevel, setActivityLevel] = useState<ActivityLevel[]>([]);
+  const [showPopup, setShowPopup] = useState(false);
+
+  const handleSelect = (level: ActivityLevel) => {
+    setActivityLevel((prev) =>
+      prev.includes(level) ? prev.filter((l) => l !== level) : [...prev, level]
+    );
+  };
+
+  const handleClick = () => {
+    console.log("Pressed");
+    setIsPressed(true);
+
+    if (activityLevel.length === 0) {
+      setShowPopup(true);
+    } else {
+      setShowPopup(false); // Hide error message if at least one option is selected
+      router.push("/Recipe"); // Navigate to "Prsetup5a" page
+    }
+  };
+
+  const isSelected = (level: ActivityLevel) => activityLevel.includes(level);
   return (
     <div className="w-full min-h-screen bg-orange overflow-y-auto flex flex-row items-start justify-start py-0 pr-10 pl-0 box-border gap-[40px] tracking-[normal] text-center text-xs text-black font-poppins mq675:gap-[40px] mq750:pl-5 mq750:box-border">
       <div className="h-[832px] w-[220px] rounded-tl-none rounded-tr-11xl rounded-br-11xl rounded-bl-none bg-white overflow-hidden shrink-0 flex flex-col items-start justify-start py-0 px-2.5 box-border gap-[10px] mq750:hidden">
@@ -20,6 +63,7 @@ const RecipeProfileA: NextPage = () => {
           </div>
         </div>
       </div>
+
       <section className="flex-1 flex flex-col items-start justify-start pt-10 px-0 pb-0 box-border max-w-[calc(100%_-_260px)] text-center text-lg text-orange font-poppins mq750:max-w-full">
         <div className="self-stretch flex flex-col items-start justify-start gap-[30px] max-w-full">
           <div className="self-stretch flex flex-row flex-wrap items-end justify-center gap-[45px] max-w-full mq450:gap-[45px]">

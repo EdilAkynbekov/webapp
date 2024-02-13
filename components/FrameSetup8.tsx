@@ -40,7 +40,7 @@ const ChoiceFrame: NextPage = () => {
       setShowPopup(true);
     } else {
       setShowPopup(false); // Hide error message if at least one option is selected
-      router.push("/RecipeA"); // Navigate to "Prsetup5a" page
+      router.push("/Recipe"); // Navigate to "Prsetup5a" page
     }
   };
 

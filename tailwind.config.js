@@ -21,6 +21,7 @@ module.exports = {
         darkgray: "#a0a0a0",
         orange: "#ffb527",
         "gray-50": "#333333"
+        
       },
       spacing: {},
       fontFamily: {
@@ -64,9 +65,10 @@ module.exports = {
       "2xl":"24px",
       sm10: "11px",
       sm8:"9px",
-
+      xxl: "64px",
       inherit: "inherit",
     },
+    
   },
   corePlugins: {
     preflight: false,

@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 
 const RightPanel: NextPage = () => {
   return (
-    <div className="h-[832px] w-[220px] rounded-tl-none rounded-tr-3xl rounded-br-3xl rounded-bl-none bg-white overflow-hidden shrink-0 flex flex-col items-start justify-start py-0 px-2.5 box-border gap-[10px] text-center text-xs text-black font-poppins mq750:hidden">
+    <div className="min-h-screen w-[220px] rounded-tl-none rounded-tr-3xl rounded-br-3xl rounded-bl-none bg-white overflow-hidden shrink-0 flex-col items-start justify-start py-0 px-2.5 box-border gap-[10px] text-center text-xs text-black font-poppins mq975:hidden">
       <div className="self-stretch flex flex-row items-center justify-center gap-[10px]">
         <img
           className="h-[30px] w-[30px] relative hidden"
@@ -109,7 +109,7 @@ const RightPanel: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="self-stretch h-[272px] flex flex-row items-end justify-start py-5 px-2.5 box-border flex-[0.8529] text-gray-100">
+      <div className="self-stretch h-[470px] flex flex-row items-end justify-start py-5 px-2.5 box-border flex-[0.8529] text-gray-100">
         <div className="flex flex-row items-center justify-start py-0 pr-7 pl-0 gap-[5px]">
           <img
             className="h-24 w-24 relative"

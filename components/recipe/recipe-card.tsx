@@ -2,16 +2,16 @@ import type { NextPage } from "next";
 
 const RecipeCard: NextPage = () => {
   return (
-    <div className="h-[300px] w-[234px] rounded-xl bg-[#FCE6B2] flex flex-col items-start justify-start pt-0 px-0 pb-2.5 box-border gap-[13px] text-left text-xs text-saddlebrown font-poppins">
-      <div className="self-stretch flex flex-col items-end justify-start">
-        <button className="cursor-pointer py-1.5 px-4 bg-black rounded-tl-none rounded-tr-xl rounded-br-none rounded-bl-xl shadow-[0px_0px_10px_1px_rgba(0,_0,_0,_0.25)] flex flex-row items-start justify-end whitespace-nowrap border-[0.5px] border-solid border-gray-200 hover:bg-[#2f4f4f] hover:box-border hover:border-[0.5px] hover:border-solid hover:border-darkslategray-200">
+    <div className="group h-[300px] w-[234px] cursor-pointer rounded-xl bg-[#FCE6B2] flex flex-col items-start justify-start pt-0 px-0 pb-2.5 box-border gap-[13px] text-left text-xs text-saddlebrown font-poppins hover:bg-[#866B31]">
+      <div className="self-stretch flex flex-col items-end justify-start cursor-pointer">
+        <button className="cursor-pointer py-1.5 px-4 bg-black rounded-tl-none rounded-tr-xl rounded-br-none rounded-bl-xl shadow-[0px_0px_10px_1px_rgba(0,_0,_0,_0.25)] flex flex-row items-start justify-end whitespace-nowrap border-[0.5px] border-solid">
           <div className="relative text-xs font-semibold font-poppins text-orange text-center">
             Normal | 20 mins
           </div>
         </button>
       </div>
       <div className="flex flex-row items-center justify-start py-0 pr-[22px] pl-2.5">
-        <div className="relative font-semibold">
+        <div className="relative font-semibold group-hover:text-orange">
           Vegetarian | Vegan | High Protein
         </div>
       </div>
@@ -23,7 +23,7 @@ const RecipeCard: NextPage = () => {
           src="/dish.svg"
         />
       </div>
-      <div className="self-stretch flex flex-row items-start justify-start py-[5px] px-2.5 text-lg text-black">
+      <div className="self-stretch flex flex-row items-start justify-start py-[5px] px-2.5 text-lg group-hover:text-white text-black">
         <h3 className="m-0 h-[86px] flex-1 relative text-inherit tracking-[-0.02em] leading-[18.07px] capitalize font-semibold font-inherit inline-block">{`Tomato pasta with tomato cream `}</h3>
       </div>
     </div>

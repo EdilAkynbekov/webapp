@@ -105,7 +105,7 @@ const RecipeProfileA: NextPage = () => {
       <RightPanel />
 
       <section className="flex-1 flex flex-col items-start justify-start pt-10 px-0 pb-0 box-border max-w-[calc(100%_-_260px)] text-center text-lg text-orange font-poppins mq750:max-w-full">
-        <div className="self-stretch flex flex-col items-start justify-start gap-[30px] max-w-full pr-16">
+        <div className="self-stretch flex flex-col items-start justify-start gap-[30px] max-w-full pr-20">
           <div className="self-stretch flex flex-row flex-wrap items-end justify-between gap-[45px] max-w-full pr-4">
             <div className="flex flex-row items-start justify-start py-5 px-0 box-border min-w-[216px] max-w-full text-left text-[64px] text-white">
               <h1 className="m-0 w-[216px] relative text-inherit leading-[18.07px] font-bold font-inherit flex items-center mq750:text-[51px] mq750:leading-[14px] mq450:text-[38px] mq450:leading-[11px]">
@@ -155,7 +155,7 @@ const RecipeProfileA: NextPage = () => {
                   Vegetarian | Vegan | High Protein
                 </div>
               </div>
-              <div className="self-stretch h-[291px] flex flex-col items-start justify-start">
+              <div className="self-stretch max-w-[600px] h-[291px] flex flex-col items-start justify-start">
                 <img
                   className="self-stretch flex-1 relative rounded-xl max-w-full overflow-hidden max-h-full object-cover"
                   loading="eager"

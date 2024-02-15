@@ -25,3 +25,19 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+.self-stretch.overflow-y-auto::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.self-stretch.overflow-y-auto {
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE 10+ */
+}
+
+/* Fallback for other browsers: might not be perfect for hiding but can reduce scrollbar visibility */
+.self-stretch.overflow-y-auto {
+  overflow-y: scroll;
+}

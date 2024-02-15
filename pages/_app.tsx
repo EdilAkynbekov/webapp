@@ -5,7 +5,6 @@ import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import type { AppProps } from "next/app";
 import "./global.css";
-
 function MyApp({ Component, pageProps }: AppProps) {
   const pathname = useRouter().pathname;
   return (

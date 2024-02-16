@@ -104,7 +104,7 @@ const RecipeProfileA: NextPage = () => {
     <div className="w-full min-h-screen bg-orange overflow-y-auto flex flex-row items-start justify-start py-0 pr-10 pl-0 box-border gap-[40px] tracking-[normal] text-center text-xs text-black font-poppins mq675:gap-[40px] mq750:pl-5 mq750:box-border">
       <RightPanel />
 
-      <section className="flex-1 flex flex-col items-start justify-start pt-10 px-0 pb-0 box-border max-w-[calc(100%_-_260px)] text-center text-lg text-orange font-poppins mq750:max-w-full">
+      <section className="flex-1 flex flex-col items-start justify-start pt-10 pl-[260px] pb-0 box-border max-w-[calc(100%_-_260px)] text-center text-lg text-orange font-poppins mq750:max-w-full">
         <div className="self-stretch flex flex-col items-start justify-start gap-[30px] max-w-full pr-20">
           <div className="self-stretch flex flex-row flex-wrap items-end justify-between gap-[45px] max-w-full pr-4">
             <div className="flex flex-row items-start justify-start py-5 px-0 box-border min-w-[216px] max-w-full text-left text-[64px] text-white">

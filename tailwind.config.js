@@ -35,14 +35,16 @@ module.exports = {
 
         poppins: "Poppins",
       },
-      borderRadius: {
+       borderRadius: {
+        xl: "20px",
+        "8xs": "5px",
+        "31xl": "50px",
         "12xs": "1px",
         sm: "14px",
-
-        "4xs": "9px",
-        "8xs": "5px",
-        "47xl": "66px",
-
+        "11xl": "30px",
+        mini: "15px",
+        "81xl": "100px",
+        "3xs": "10px",
       },
     },
     fontSize: {
@@ -67,6 +69,38 @@ module.exports = {
       sm8:"9px",
       xxl: "64px",
       inherit: "inherit",
+       lg: "18px",
+      mini: "15px",
+      xs: "12px",
+      sm: "14px",
+      base: "16px",
+      smi: "13px",
+      "3xs": "10px",
+      "5xl": "24px",
+      "45xl": "64px",
+      xl: "20px",
+      inherit: "inherit",
+    },
+    screens: {
+      // Add your new screens here
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+      // Keep your custom media queries
+      mq975: {
+        raw: "screen and (max-width: 975px)",
+      },
+      mq950: {
+        raw: "screen and (max-width: 950px)",
+      },
+      mq700: {
+        raw: "screen and (max-width: 700px)",
+      },
+      mq450: {
+        raw: "screen and (max-width: 450px)",
+      },
     },
     
   },

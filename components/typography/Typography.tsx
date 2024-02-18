@@ -21,7 +21,7 @@ type BodyTextProps = {
   lineHeight?: string;
   color?: string;
   stress?: boolean;
-  size: "lg" | "sm";
+  size: "lg" | "sm" | "exsm";
   children: any;
 };
 
@@ -160,6 +160,7 @@ const BodyText = (props: BodyTextProps) => {
   const textSize = {
     lg: styles.bodyTextLG,
     sm: styles.bodyTextSM,
+    exsm: styles.bodyTextEXSM,
   };
   return (
     <p

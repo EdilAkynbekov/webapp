@@ -260,7 +260,8 @@ const ChoiceFrame: NextPage = () => {
             </b>
           </button>
         </Link>
-        <Link className="no-underline" href="/Profile">
+
+        <Link className="no-underline" href="/ProfileA">
           <button
             className={`cursor-pointer [border:none] py-1 px-[18px] w-[103px] rounded-2xl shadow-[0px_1px_10px_rgba(0,_0,_0,_0.3)] flex flex-row items-center justify-center box-border ${
               activityLevel.length === 0

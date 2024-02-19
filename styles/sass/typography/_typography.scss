@@ -2,13 +2,13 @@
 
 @mixin heading1 {
   font-weight: 700; // Bold
-  font-size: 52px;
+  font-size: 64px;
   line-height: 43.75px;
 }
 
 @mixin heading1--sm {
   font-weight: 700; // Bold
-  font-size: 34px;
+  font-size: 38px;
   line-height: 40px;
 }
 @mixin heading2 {

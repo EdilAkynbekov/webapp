@@ -4,9 +4,9 @@ import RightPanel from "../components/recipe/right-panel";
 
 const RecipeIngredientA: NextPage = () => {
   return (
-    <div className="w-full min-h-screen bg-orange overflow-y-auto flex flex-row items-center justify-start py-0 pr-10 pl-0 box-border gap-[40px] tracking-[normal] text-center text-xs text-black font-poppins mq675:gap-[40px] mq750:pl-5 mq750:box-border">
+    <div className="w-full min-h-screen bg-orange overflow-y-auto flex flex-row items-center justify-center py-0 pr-10 pl-0 box-border gap-[40px] tracking-[normal] text-center text-xs text-black font-poppins mq675:gap-[40px] mq750:pl-5 mq750:box-border">
       <RightPanel />
-      <section className="flex-1 flex flex-col items-start justify-start py-10 pl-[260px] box-border gap-[30px] max-w-[calc(100%_-_260px)] text-left text-[64px] text-white font-poppins mq750:pt-[26px] mq750:pb-[26px] mq750:box-border mq750:max-w-full">
+      <section className="flex-1 flex flex-col items-center justify-center py-10 pl-[200px] box-border gap-[30px] max-w-[calc(100%_-_260px)] text-left text-[64px] text-white font-poppins mq750:pt-[26px] mq750:pb-[26px] mq750:box-border mq750:max-w-full">
         <div className="self-stretch flex flex-row flex-wrap items-end justify-center gap-[45px] max-w-full mq450:gap-[45px]">
           <div className="flex-1 flex flex-row items-center justify-start py-5 px-0 box-border min-w-[216px] max-w-full">
             <h1 className="m-0 w-[216px] relative text-inherit tracking-[-0.02em] leading-[18.07px] font-bold font-inherit flex items-center mq750:text-[51px] mq750:leading-[14px] mq450:text-[38px] mq450:leading-[11px]">

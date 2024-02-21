@@ -1,152 +1,239 @@
-import type { NextPage } from "next";
-import IngredientsList from "../components/recipe/recipe-ingredients";
-import RightPanel from "../components/recipe/right-panel";
+import React, { useState } from "react";
+import RightPanel from "../components/recipe/right-panel"; // Make sure this is the correct path
+import IngredientsList from "../components/recipe/recipe-ingredients"; // Make sure this is the correct path
+import { Box, Button, Typography, IconButton } from "@mui/material";
+import AddIcon from "@mui/icons-material/Add";
+import RemoveIcon from "@mui/icons-material/Remove";
+import BlenderIcon from "@mui/icons-material/Blender"; // assuming you have an icon for a blender
+import EquipmentList from "../components/recipe/EquipmentList";
 
-const RecipeIngredientA: NextPage = () => {
+// Assuming you have a specific type for ingredient items
+type IngredientItem = {
+  name: string;
+  quantity: number; // Base quantity for 1 serving
+  unit: string;
+};
+
+type EquipmentList = {
+  equipment: string[];
+};
+
+const RecipeComponent = () => {
+  // Base ingredients for 1 serving
+  const baseIngredients: IngredientItem[] = [
+    { name: "Extra Virgin Olive Oil", quantity: 2, unit: "tbsp" },
+    { name: "Garlic", quantity: 2, unit: "cloves" },
+    { name: "Beetroot", quantity: 100, unit: "g" },
+    { name: "Tofu", quantity: 20, unit: "g" },
+    { name: "Pasta", quantity: 120, unit: "g" },
+    { name: "Extra Virgin Olive Oil", quantity: 2, unit: "tbsp" },
+    { name: "Garlic", quantity: 2, unit: "cloves" },
+    { name: "Beetroot", quantity: 100, unit: "g" },
+    { name: "Tofu", quantity: 20, unit: "g" },
+    { name: "Pasta", quantity: 120, unit: "g" },
+    // Add more base ingredients if needed
+  ];
+  const equipmentList: EquipmentList = {
+    equipment: ["Blender", "Oven", "Frying Pan"],
+  };
+
+  // State for the serving size
+  const [servingSize, setServingSize] = useState(1);
+
+  // Function to adjust ingredient quantities based on serving size
+  const getAdjustedIngredients = () =>
+    baseIngredients.map((ingredient) => ({
+      ...ingredient,
+      quantity: ingredient.quantity * servingSize,
+    }));
+
+  // Handlers to increment and decrement the serving size
+  const incrementServingSize = () => setServingSize(servingSize + 1);
+  const decrementServingSize = () => {
+    if (servingSize > 1) {
+      setServingSize(servingSize - 1);
+    }
+  };
+
+  // Render adjusted ingredients
+  const adjustedIngredients = getAdjustedIngredients();
+
   return (
-    <div className="w-full min-h-screen bg-orange overflow-y-auto flex flex-row items-center justify-center py-0 pr-10 pl-0 box-border gap-[40px] tracking-[normal] text-center text-xs text-black font-poppins mq675:gap-[40px] mq750:pl-5 mq750:box-border">
+    <Box className="w-full relative bg-[#FFB527] min-h-screen overflow-y-auto flex flex-row items-start justify-center py-0 pr-[30px] pl-[30px] md:pr-0 md:pl-0 lg:pr-10 lg:pl-0 box-border gap-[40px] text-center text-xs text-black1 font-poppins">
       <RightPanel />
-      <section className="flex-1 flex flex-col items-center justify-center py-10 pl-[200px] box-border gap-[30px] max-w-[calc(100%_-_260px)] text-left text-[64px] text-white font-poppins mq750:pt-[26px] mq750:pb-[26px] mq750:box-border mq750:max-w-full">
-        <div className="self-stretch flex flex-row flex-wrap items-end justify-center gap-[45px] max-w-full mq450:gap-[45px]">
-          <div className="flex-1 flex flex-row items-center justify-start py-5 px-0 box-border min-w-[216px] max-w-full">
-            <h1 className="m-0 w-[216px] relative text-inherit tracking-[-0.02em] leading-[18.07px] font-bold font-inherit flex items-center mq750:text-[51px] mq750:leading-[14px] mq450:text-[38px] mq450:leading-[11px]">
-              Recipe
-            </h1>
-          </div>
-          <div className="w-[279px] flex flex-row items-end justify-center gap-[45px] mq450:gap-[45px]">
-            <button className="cursor-pointer [border:none] py-1 px-[18px] bg-black hover:bg-white rounded-xl shadow-[0px_1px_10px_rgba(0,_0,_0,_0.3)] flex flex-row items-center justify-center hover:bg-darkslategray-200">
-              <b className="h-[27px] relative text-lg flex font-poppins text-orange text-center items-center justify-center">
-                Previous
-              </b>
-            </button>
-            <button className="cursor-pointer [border:none] py-1 px-[18px] bg-black hover:bg-white flex-1 rounded-xl shadow-[0px_1px_10px_rgba(0,_0,_0,_0.3)] flex flex-row items-center justify-center hover:bg-darkslategray-200">
-              <b className="h-[27px] relative text-lg flex font-poppins text-orange text-center items-center justify-center">
-                Next
-              </b>
-            </button>
-          </div>
-        </div>
-        <div className="self-stretch rounded-xl bg-white overflow-y-auto flex flex-row items-start justify-center py-[30px] px-[39px] box-border gap-[20px] max-w-full text-lg text-black mq750:pt-5 mq750:pb-5 mq750:box-border">
-          <div className="h-[603px] w-48 rounded-xl flex flex-col items-center justify-start py-0 pr-2.5 pl-0 box-border gap-[30px] mq675:hidden">
-            <div className="self-stretch flex flex-col items-start justify-center gap-[22px]">
-              <div className="self-stretch flex flex-row items-start justify-center">
-                <b className="flex-1 relative tracking-[-0.02em] leading-[30px]">
-                  Serving Size:
-                </b>
-              </div>
-              <div className="self-stretch rounded-[10px] bg-black flex flex-row items-center justify-between py-2.5 px-5 gap-[20px] text-[20px] text-white font-inter">
-                <img
-                  className="h-[30px] w-[30px] cursor-pointer relative rounded-6xs min-h-[30px]"
-                  alt=""
-                  src="/Frame 37.svg"
-                />
-                <b className="relative mq450:text-[16px]">1</b>
-                <img
-                  className="h-[30px] w-[30px] cursor-pointer relative rounded-6xs min-h-[30px]"
-                  loading="eager"
-                  alt=""
-                  src="/Frame 38.svg"
-                />
-              </div>
-            </div>
-            <div className="self-stretch flex flex-col items-start justify-start gap-[22px]">
-              <div className="self-stretch flex flex-row items-start justify-start">
-                <b className="h-[27px] flex-1 relative inline-block">
-                  You Need:
-                </b>
-              </div>
-              <div className="self-stretch flex flex-col items-center justify-center gap-[16px]">
-                <button className="cursor-pointer [border:none] py-0 px-2.5 bg-orange self-stretch rounded-xl flex flex-col items-center justify-center">
-                  <div className="flex flex-row items-center justify-center p-2.5">
-                    <div className="relative text-xs font-semibold font-poppins text-black text-center">
-                      Blender
-                    </div>
-                  </div>
-                </button>
-                <button className="cursor-pointer [border:none] py-0 px-2.5 bg-orange self-stretch rounded-xl flex flex-col items-center justify-center">
-                  <div className="flex flex-row items-center justify-center p-2.5">
-                    <div className="relative text-xs font-semibold font-poppins text-black text-center">
-                      Pan
-                    </div>
-                  </div>
-                </button>
-                <button className="cursor-pointer [border:none] py-0 px-2.5 bg-orange self-stretch rounded-xl flex flex-col items-center justify-center">
-                  <div className="flex flex-row items-center justify-center p-2.5">
-                    <div className="relative text-xs font-semibold font-poppins text-black text-center">
-                      Oven
-                    </div>
-                  </div>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="flex-1 flex flex-col items-center justify-start gap-[5px] max-w-[calc(100%_-_212px)] mq675:max-w-full">
-            <div className="self-stretch flex flex-row items-center justify-between gap-[20px] mq450:flex-wrap">
-              <b className="relative">Ingredients</b>
-              <div className="flex flex-row items-center justify-end text-3xs">
-                <div className="relative cursor-pointer font-semibold">
+      <Box className="flex-1 flex flex-col items-center justify-center py-10 md:pl-10 md:pr-10 lg:pr-0 lg:pl-[260px] text-white">
+        <Box className="self-stretch flex flex-row flex-wrap items-end justify-between gap-10 mb-6">
+          <Typography
+            variant="h1"
+            component="h1"
+            sx={{
+              fontSize: "64px",
+              fontWeight: "bold",
+              "@media (max-width: 750px)": { fontSize: "51px" },
+              "@media (max-width: 450px)": { fontSize: "38px" },
+            }}
+          >
+            Recipe
+          </Typography>
+          <Box className="flex flex-row items-end justify-center gap-10">
+            <Button className="text-orange bg-black hover:bg-white self-stretch rounded-xl cursor-pointer font-bold shadow-[0px_1px_10px_rgba(0,_0,_0,_0.3)] flex flex-row items-center justify-center py-1 px-[25px] font-poppins">
+              Previous
+            </Button>
+            <Button className="text-orange bg-black hover:bg-white self-stretch rounded-xl cursor-pointer font-bold shadow-[0px_1px_10px_rgba(0,_0,_0,_0.3)] flex flex-row items-center justify-center py-1 px-[45px] font-poppins">
+              Next
+            </Button>
+          </Box>
+        </Box>
+        {/* ... rest of the component */}
+        <Box
+          className="self-stretch rounded-xl bg-white overflow-y-auto flex flex-col md:flex-row items-start gap-5 text-black"
+          sx={{
+            maxWidth: "100%",
+            "@media (max-width: 750px)": { padding: "5px" },
+          }}
+        >
+          <Box
+            className="min-w-[200px] flex flex-col justify-start gap-5"
+            sx={{
+              padding: "20px",
+              "@media (max-width: 750px)": { padding: "10px" },
+            }}
+          >
+            {" "}
+            <Typography
+              variant="h1"
+              component="h1"
+              sx={{
+                fontSize: "20px",
+                fontWeight: "bold",
+                "@media (max-width: 750px)": { fontSize: "51px" },
+                "@media (max-width: 450px)": { fontSize: "38px" },
+              }}
+            >
+              Serving Size
+            </Typography>
+            <Box className="flex flex-row justify-center items-center bg-black text-white rounded-lg">
+              <IconButton
+                onClick={decrementServingSize}
+                disabled={servingSize === 1}
+                className="bg-white rounded-[5px] py-1 mr-4 hover:bg-white"
+              >
+                <RemoveIcon />
+              </IconButton>
+              <Typography variant="h5">{servingSize}</Typography>
+              <IconButton
+                className="bg-white rounded-[5px] py-1 mx-2 ml-4 my-2 hover:bg-white"
+                onClick={incrementServingSize}
+              >
+                <AddIcon />
+              </IconButton>
+            </Box>
+            <Typography
+              variant="h1"
+              component="h1"
+              sx={{
+                fontSize: "20px",
+                fontWeight: "bold",
+                "@media (max-width: 750px)": { fontSize: "51px" },
+                "@media (max-width: 450px)": { fontSize: "38px" },
+              }}
+            >
+              You need:
+            </Typography>
+            <EquipmentList equipment={equipmentList.equipment} />
+          </Box>
+          <Box className="flex-1 flex flex-col justify-start gap-5 py-5 px-5">
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+
+                className: "self-stretch w-full",
+              }}
+            >
+              <Box className="flex flex-row mb-4">
+                <Typography
+                  variant="h1"
+                  component="h1"
+                  sx={{
+                    fontSize: "20px",
+                    fontWeight: "bold",
+                    "@media (max-width: 750px)": { fontSize: "51px" },
+                    "@media (max-width: 450px)": { fontSize: "38px" },
+                  }}
+                >
+                  Ingredients
+                </Typography>
+                <Button
+                  className="flex-1 w-full items-end justify-end text-black1"
+                  variant="text"
+                  sx={{}}
+                >
                   + Add to Shopping List
-                </div>
-              </div>
-            </div>
-            <IngredientsList
-              vector193="/vector-193.svg"
-              showRecipeItem
-              recipeItemVisible
-            />
-            <div className="self-stretch flex flex-row items-center justify-between gap-[20px] mq450:flex-wrap mq450:justify-center">
-              <b className="relative">Seasonings</b>
-              <div className="flex flex-row items-center justify-end text-3xs">
-                <div className="relative cursor-pointer font-semibold">
+                </Button>
+              </Box>
+              <IngredientsList
+                className="bg-[#6C6C6F] text-white"
+                ingredients={adjustedIngredients.map(
+                  (ingredient) =>
+                    `${ingredient.name}         ${ingredient.quantity} ${ingredient.unit}`
+                )}
+                isDarkMode={false}
+              />
+              {/* ... rest
+        {/* ... of the content */}
+            </Box>
+
+            {/* Add to Shopping List Button */}
+
+            {/* Seasonings Section, if seasonings need to be adjusted similarly, follow the same pattern as for ingredients */}
+            {/* ... Seasonings Section ... */}
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <Box className="flex justify-between flex-row mb-4">
+                <Typography
+                  variant="h1"
+                  component="h1"
+                  sx={{
+                    fontSize: "20px",
+                    fontWeight: "bold",
+                    "@media (max-width: 750px)": { fontSize: "51px" },
+                    "@media (max-width: 450px)": { fontSize: "38px" },
+                  }}
+                >
+                  Seasonings
+                </Typography>
+                <Button
+                  className="flex-1 w-full items-end justify-end text-black1"
+                  variant="text"
+                  sx={{}}
+                >
                   + Add to Shopping List
-                </div>
-              </div>
-            </div>
-            <IngredientsList
-              vector193="/vector-195.svg"
-              showRecipeItem={false}
-              recipeItemVisible={false}
-              propBackgroundColor="#33363f"
-              propMinHeight="215px"
-              propColor="#ffb527"
-              propColor1="#ffb527"
-              propColor2="#ffb527"
-              propColor3="#ffb527"
-              propColor4="#ffb527"
-              propColor5="#ffb527"
-              propColor6="#ffb527"
-              propColor7="#ffb527"
-              propGap="15px"
-              propMinWidth="94px"
-              propColor8="#808080"
-              propFlex="1"
-              propMinWidth1="94px"
-              propColor9="#808080"
-              propDisplay="flex"
-              propHeight="21px"
-              propHeight1="170px"
-              propColor10="#ffb527"
-              propColor11="#ffb527"
-              propColor12="#ffb527"
-              propColor13="#ffb527"
-              propColor14="#ffb527"
-              propColor15="#ffb527"
-              propColor16="#ffb527"
-              propColor17="#ffb527"
-              propGap1="15px"
-              propMinWidth2="94px"
-              propColor18="#808080"
-              propFlex1="1"
-              propMinWidth3="94px"
-              propColor19="#808080"
-              propDisplay1="flex"
-              propHeight2="21px"
-            />
-          </div>
-        </div>
-      </section>
-    </div>
+                </Button>
+              </Box>
+              <IngredientsList
+                className="bg-[#33363F] text-[#FFB527]"
+                ingredients={adjustedIngredients.map(
+                  (ingredient) =>
+                    `${ingredient.name} ${ingredient.quantity}${ingredient.unit}`
+                )}
+                isDarkMode={false}
+              />
+              {/* ... rest
+        {/* ... of the content */}
+            </Box>
+          </Box>
+        </Box>
+        {/* Add to Shopping List Button for Seasonings */}
+
+        {/* ... Possibly other components like RightPanel, etc. ... */}
+      </Box>
+    </Box>
   );
 };
 
-export default RecipeIngredientA;
+export default RecipeComponent;

@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 
 const RightPanel: NextPage = () => {
   return (
-    <div className="min-h-screen h-full fixed w-[220px] left-0 rounded-tl-none rounded-tr-3xl rounded-br-3xl rounded-bl-none bg-white overflow-hidden flex-col justify-between py-0 px-2.5 box-border gap-[10px] text-center text-xs text-black font-poppins hidden lg:block">
+    <div className="min-h-screen h-full fixed w-[220px] left-0 top-0 rounded-tl-none rounded-tr-3xl rounded-br-3xl rounded-bl-none bg-white overflow-hidden flex-col justify-between py-0 px-2.5 box-border gap-[10px] text-center text-xs text-black font-poppins hidden lg:block">
       <div className="flex-1 flex flex-col overflow-auto">
         <div className="self-stretch flex flex-row items-center justify-center gap-[10px]">
           <img

@@ -1,0 +1,30 @@
+{
+  "servingSize": 1,
+  "equipment": ["Blender", "Pan", "Oven"],
+  "ingredients": [
+    {
+      "id": 1,
+      "name": "Extra Virgin Olive Oil",
+      "amount": "2 tbsp"
+    },
+    {
+      "id": 2,
+      "name": "Garlic",
+      "amount": "2 cloves"
+    }
+  ],
+  "seasonings": [
+    {
+      "id": 1,
+      "name": "Salt",
+      "amount": "to taste"
+    },
+    {
+      "id": 2,
+      "name": "Pepper",
+      "amount": "to taste"
+    }
+  ]
+}
+
+

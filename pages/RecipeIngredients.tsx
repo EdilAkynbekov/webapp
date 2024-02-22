@@ -26,10 +26,15 @@ const RecipeComponent = () => {
     { name: "Beetroot", quantity: 100, unit: "g" },
     { name: "Tofu", quantity: 20, unit: "g" },
     { name: "Pasta", quantity: 120, unit: "g" },
-    { name: "Extra Virgin Olive Oil", quantity: 2, unit: "tbsp" },
+    {
+      name: "Extra Virgin Olive Oil",
+      quantity: 2,
+      unit: "tbsp",
+    },
     { name: "Garlic", quantity: 2, unit: "cloves" },
     { name: "Beetroot", quantity: 100, unit: "g" },
     { name: "Tofu", quantity: 20, unit: "g" },
+    { name: "Pasta", quantity: 120, unit: "g" },
     { name: "Pasta", quantity: 120, unit: "g" },
     // Add more base ingredients if needed
   ];
@@ -86,7 +91,7 @@ const RecipeComponent = () => {
         </Box>
         {/* ... rest of the component */}
         <Box
-          className="self-stretch rounded-xl bg-white overflow-y-auto flex flex-col md:flex-row items-start gap-5 text-black"
+          className="self-stretch rounded-xl max-w-[951px] bg-white overflow-y-auto flex flex-col md:flex-row items-start gap-5 text-black mx-auto xl:min-w-[1000px]"
           sx={{
             maxWidth: "100%",
             "@media (max-width: 750px)": { padding: "5px" },
@@ -142,7 +147,7 @@ const RecipeComponent = () => {
             </Typography>
             <EquipmentList equipment={equipmentList.equipment} />
           </Box>
-          <Box className="flex-1 flex flex-col justify-start gap-5 py-5 px-5">
+          <Box className="flex-1 flex flex-col justify-center gap-5 py-5 px-5">
             <Box
               sx={{
                 display: "flex",

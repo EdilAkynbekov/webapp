@@ -20,7 +20,7 @@ const ProfileA: NextPage = () => {
     }
   };
   return (
-    <div className="w-full relative bg-[#FFB527] min-h-screen overflow-y-auto flex flex-row items-start justify-center py-0 lg:pr-10 lg:pl-0 box-border gap-[40px] text-center text-[11px] font-poppins font-bold text-black1 font-poppins">
+    <div className="w-full relative bg-[#FFB527] min-h-screen overflow-y-auto flex flex-row items-start justify-center py-0 lg:pr-10 lg:pl-0 box-border gap-[40px] text-center text-[11px]  font-bold text-black1 font-poppins">
       <RightPanel />
       <div className="flex-1 overflow-y-auto flex flex-col items-start justify-start py-10 px-0 lg:pl-[260px] gap-[35px] text-left text-45xl text-white">
         <div className="self-stretch flex flex-row items-start justify-start gap-[35px]">

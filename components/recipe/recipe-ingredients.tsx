@@ -31,7 +31,7 @@ const IngredientsList: React.FC<IngredientsListProps> = ({
 
   className,
 }) => {
-  const maxItemsPerColumn = 5;
+  const maxItemsPerColumn = 6;
 
   const columns = ingredients.reduce<IngredientItem[][]>((acc, item, index) => {
     const columnIndex = Math.floor(index / maxItemsPerColumn);

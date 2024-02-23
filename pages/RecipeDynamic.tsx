@@ -17,7 +17,7 @@ const recipes = [
   {
     title: "Quinoa and Black Bean Salad",
     imageUrl: "/dish.svg",
-    tags: "Vegan | Gluten-Free | High Protein",
+    tags: "Vegan | Gluten-Free",
     duration: "25 mins",
     difficulty: "Easy",
   },

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import RightPanel from "../components/recipe/right-panel"; // Make sure this is the correct path
 import IngredientsList from "../components/recipe/recipe-ingredients"; // Make sure this is the correct path
-import { Box, Button, Typography, IconButton } from "@mui/material";
+import { Box, Button, Typography, IconButton, Grid } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import RemoveIcon from "@mui/icons-material/Remove";
 import BlenderIcon from "@mui/icons-material/Blender"; // assuming you have an icon for a blender
@@ -62,7 +62,30 @@ const RecipeComponent = () => {
 
   // Render adjusted ingredients
   const adjustedIngredients = getAdjustedIngredients();
-
+  const renderIngredients = () => {
+    const ingredients = getAdjustedIngredients(); // This assumes your function to adjust ingredients based on serving size
+    return ingredients.map((ingredient, index) => (
+      <Grid item xs={6} key={index} className="justify-between inline-block ">
+        {" "}
+        {/* Adjust 'xs' value as per your layout responsiveness needs */}
+        <Box className="justify-between flex">
+          <Typography
+            variant="body1"
+            className="text-start font-poppins font-semibold text-[14px]"
+          >
+            {ingredient.name}
+          </Typography>
+          <Typography
+            variant="body1"
+            className="font-poppins font-semibold text-[14px]"
+            style={{ float: "right" }}
+          >
+            {`${ingredient.quantity} ${ingredient.unit}`}
+          </Typography>
+        </Box>
+      </Grid>
+    ));
+  };
   return (
     <Box className="w-full relative bg-[#FFB527] min-h-screen overflow-y-auto flex flex-row items-start justify-center py-0 pr-[30px] pl-[30px] md:pr-0 md:pl-0 lg:pr-10 lg:pl-0 box-border gap-[40px] text-center text-xs text-black1 font-poppins">
       <RightPanel />
@@ -81,17 +104,17 @@ const RecipeComponent = () => {
             Recipe
           </Typography>
           <Box className="flex flex-row items-end justify-center gap-10">
-            <Button className="text-orange bg-black hover:bg-white self-stretch rounded-xl cursor-pointer font-bold shadow-[0px_1px_10px_rgba(0,_0,_0,_0.3)] flex flex-row items-center justify-center py-1 px-[25px] font-poppins">
+            <Button className="text-orange bg-black hover:bg-[#555454] self-stretch rounded-xl cursor-pointer font-bold shadow-[0px_1px_10px_rgba(0,_0,_0,_0.3)] flex flex-row items-center justify-center py-1 px-[25px] font-poppins">
               Previous
             </Button>
-            <Button className="text-orange bg-black hover:bg-white self-stretch rounded-xl cursor-pointer font-bold shadow-[0px_1px_10px_rgba(0,_0,_0,_0.3)] flex flex-row items-center justify-center py-1 px-[45px] font-poppins">
+            <Button className="text-orange bg-black hover:bg-[#555454] self-stretch rounded-xl cursor-pointer font-bold shadow-[0px_1px_10px_rgba(0,_0,_0,_0.3)] flex flex-row items-center justify-center py-1 px-[45px] font-poppins">
               Next
             </Button>
           </Box>
         </Box>
         {/* ... rest of the component */}
         <Box
-          className="self-stretch rounded-xl max-w-[951px] bg-white overflow-y-auto flex flex-col md:flex-row items-start gap-5 text-black mx-auto xl:min-w-[1000px]"
+          className="self-stretch rounded-xl max-w-[951px] bg-white overflow-y-auto flex flex-col md:flex-row items-start gap-5 text-black mx-auto xl:min-w-[952px]"
           sx={{
             maxWidth: "100%",
             "@media (max-width: 750px)": { padding: "5px" },
@@ -177,14 +200,13 @@ const RecipeComponent = () => {
                   + Add to Shopping List
                 </Button>
               </Box>
-              <IngredientsList
-                className="bg-[#6C6C6F] text-white"
-                ingredients={adjustedIngredients.map(
-                  (ingredient) =>
-                    `${ingredient.name}         ${ingredient.quantity} ${ingredient.unit}`
-                )}
-                isDarkMode={false}
-              />
+              <Grid
+                container
+                spacing={2}
+                className="bg-[#808080] rounded-md px-4 py-4 text-white "
+              >
+                {renderIngredients()}
+              </Grid>
               {/* ... rest
         {/* ... of the content */}
             </Box>
@@ -220,15 +242,16 @@ const RecipeComponent = () => {
                   + Add to Shopping List
                 </Button>
               </Box>
-              <IngredientsList
-                className="bg-[#33363F] text-[#FFB527]"
-                ingredients={adjustedIngredients.map(
-                  (ingredient) =>
-                    `${ingredient.name} ${ingredient.quantity}${ingredient.unit}`
-                )}
-                isDarkMode={false}
-              />
-              {/* ... rest
+
+              <Grid
+                container
+                spacing={2}
+                className="bg-[#33363F] rounded-md px-4 py-4 text-[#FFB527] "
+              >
+                {renderIngredients()}
+              </Grid>
+              {/* ...
+               rest
         {/* ... of the content */}
             </Box>
           </Box>

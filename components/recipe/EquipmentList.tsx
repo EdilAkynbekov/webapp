@@ -10,7 +10,7 @@ const EquipmentList: React.FC<EquipmentListProps> = ({ equipment }) => {
       {equipment.map((item, index) => (
         <div
           key={index}
-          className="bg-orange rounded-xl p-2.5 m-1 text-center font-poppins text-base"
+          className="bg-orange rounded-xl p-2.5 m-1 text-center font-poppins text-base font-semibold"
         >
           {item}
         </div>

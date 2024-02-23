@@ -33,7 +33,7 @@ const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
           </div>
         </button>
       </div>
-      <div className="flex flex-row items-center justify-start py-0 pr-[22px] pl-2.5">
+      <div className="flex flex-row items-center justify-center py-0 mx-auto">
         <Typography
           gutterBottom
           variant="body2"
@@ -55,7 +55,7 @@ const RecipeCard: React.FC<RecipeCardProps> = ({ recipe }) => {
         <Typography
           variant="h5"
           component="h3"
-          className=" m-0 h-[86px] flex-1 relative text-inherit tracking-[-0.02em] leading-[18.07px] capitalize font-semibold font-inherit inline-block"
+          className=" m-0 h-[86px] flex-1 relative text-inherit tracking-[-0.02em] leading-[18.07px] capitalize font-semibold font-inherit inline-block text-center"
         >
           {recipe.title}
         </Typography>
